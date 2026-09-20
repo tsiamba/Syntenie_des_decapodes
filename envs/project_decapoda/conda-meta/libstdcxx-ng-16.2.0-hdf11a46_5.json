@@ -1,0 +1,31 @@
+{
+  "name": "libstdcxx-ng",
+  "version": "16.2.0",
+  "build": "hdf11a46_5",
+  "build_number": 5,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "subdir": "linux-64",
+  "fn": "libstdcxx-ng-16.2.0-hdf11a46_5.conda",
+  "md5": "c37fb00cb15b16cf1601914d68a509ea",
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/libstdcxx-ng-16.2.0-hdf11a46_5.conda",
+  "sha256": "855cee8f4b7abe06dc5918a66e0009492964926d5f5d6a033438dd6cab4e91e4",
+  "depends": [
+    "libstdcxx 16.2.0 h934c35e_5"
+  ],
+  "constrains": [],
+  "license": "GPL-3.0-only WITH GCC-exception-3.1",
+  "timestamp": 1789485853984,
+  "size": 28561,
+  "_requested_specs": [],
+  "package_tarball_full_path": "/home/elayoubi/.conda/pkgs/libstdcxx-ng-16.2.0-hdf11a46_5.conda",
+  "extracted_package_dir": "/home/elayoubi/.conda/pkgs/libstdcxx-ng-16.2.0-hdf11a46_5",
+  "files": [],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": []
+  },
+  "link": {
+    "source": "/home/elayoubi/.conda/pkgs/libstdcxx-ng-16.2.0-hdf11a46_5",
+    "type": 1
+  }
+}

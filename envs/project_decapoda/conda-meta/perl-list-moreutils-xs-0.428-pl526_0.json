@@ -1,0 +1,68 @@
+{
+  "name": "perl-list-moreutils-xs",
+  "version": "0.428",
+  "build": "pl526_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/bioconda/linux-64",
+  "subdir": "linux-64",
+  "fn": "perl-list-moreutils-xs-0.428-pl526_0.tar.bz2",
+  "md5": "65212b0ac443324d61e649d1752947c7",
+  "url": "https://conda.anaconda.org/bioconda/linux-64/perl-list-moreutils-xs-0.428-pl526_0.tar.bz2",
+  "sha256": "82c2a8d8e9f83877845ef2af4dc6bc7fd5a881dbb4d547e553aa16b9b528e749",
+  "depends": [
+    "perl >=5.26.2,<5.27.0a0",
+    "perl-xsloader"
+  ],
+  "constrains": [],
+  "license": "apache_2_0",
+  "timestamp": 1531687365310,
+  "size": 43749,
+  "_requested_specs": [],
+  "package_tarball_full_path": "/home/elayoubi/.conda/pkgs/perl-list-moreutils-xs-0.428-pl526_0.tar.bz2",
+  "extracted_package_dir": "/home/elayoubi/.conda/pkgs/perl-list-moreutils-xs-0.428-pl526_0",
+  "files": [
+    "lib/site_perl/5.26.2/x86_64-linux-thread-multi/List/MoreUtils/XS.pm",
+    "lib/site_perl/5.26.2/x86_64-linux-thread-multi/auto/List/MoreUtils/XS/.packlist",
+    "lib/site_perl/5.26.2/x86_64-linux-thread-multi/auto/List/MoreUtils/XS/XS.so",
+    "man/man3/List::MoreUtils::XS.3"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "lib/site_perl/5.26.2/x86_64-linux-thread-multi/List/MoreUtils/XS.pm",
+        "path_type": "hardlink",
+        "sha256": "0b229f404b6cf37249dfb8091213d4297e2101ab68d93a1726419f51eb2141f2",
+        "size_in_bytes": 3347,
+        "sha256_in_prefix": "0b229f404b6cf37249dfb8091213d4297e2101ab68d93a1726419f51eb2141f2"
+      },
+      {
+        "_path": "lib/site_perl/5.26.2/x86_64-linux-thread-multi/auto/List/MoreUtils/XS/.packlist",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "sha256": "325dbdf167843447fc50476e35eb95c1bbcfb9707420971a8cae20066b5742c2",
+        "size_in_bytes": 404,
+        "sha256_in_prefix": "d81a06a9315abf16d69f74621849682fa73b04e329f21096dd7f4b73771acff4"
+      },
+      {
+        "_path": "lib/site_perl/5.26.2/x86_64-linux-thread-multi/auto/List/MoreUtils/XS/XS.so",
+        "path_type": "hardlink",
+        "sha256": "e2e3790db851f6e4e17437ec59246dcb1ffcaf3fc94c7caea388d27db477e24d",
+        "size_in_bytes": 124126,
+        "sha256_in_prefix": "e2e3790db851f6e4e17437ec59246dcb1ffcaf3fc94c7caea388d27db477e24d"
+      },
+      {
+        "_path": "man/man3/List::MoreUtils::XS.3",
+        "path_type": "hardlink",
+        "sha256": "b538e11bee0a0343f4fd9f50f8a238a8b36936ef25854f7e6cf53189c640ab9e",
+        "size_in_bytes": 4608,
+        "sha256_in_prefix": "b538e11bee0a0343f4fd9f50f8a238a8b36936ef25854f7e6cf53189c640ab9e"
+      }
+    ]
+  },
+  "link": {
+    "source": "/home/elayoubi/.conda/pkgs/perl-list-moreutils-xs-0.428-pl526_0",
+    "type": 1
+  }
+}

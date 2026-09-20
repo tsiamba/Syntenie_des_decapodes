@@ -1,0 +1,52 @@
+{
+  "name": "ld_impl_linux-64",
+  "version": "2.46.1",
+  "build": "bootstrap_ha15bf96_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "subdir": "linux-64",
+  "fn": "ld_impl_linux-64-2.46.1-bootstrap_ha15bf96_2.conda",
+  "md5": "2c238120d4d57c422d6671036eae76a8",
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/ld_impl_linux-64-2.46.1-bootstrap_ha15bf96_2.conda",
+  "sha256": "87a2158a8f16f8082f8d57282ef8f7b56dee8647b95919948cf03df91574edeb",
+  "depends": [
+    "__glibc >=2.17,<3.0.a0"
+  ],
+  "constrains": [
+    "binutils_impl_linux-64 2.46.1"
+  ],
+  "license": "GPL-3.0-only",
+  "timestamp": 1784214414025,
+  "size": 744588,
+  "_requested_specs": [],
+  "package_tarball_full_path": "/home/elayoubi/.conda/pkgs/ld_impl_linux-64-2.46.1-bootstrap_ha15bf96_2.conda",
+  "extracted_package_dir": "/home/elayoubi/.conda/pkgs/ld_impl_linux-64-2.46.1-bootstrap_ha15bf96_2",
+  "files": [
+    "bin/x86_64-conda-linux-gnu-ld",
+    "x86_64-conda-linux-gnu/bin/ld"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "bin/x86_64-conda-linux-gnu-ld",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/binutils_split_1784214243145/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeh",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "sha256": "f4401b1fcec988c631a0a3c39f5da8932c1859fc5983728a9f8430fab7b51406",
+        "size_in_bytes": 2966864,
+        "sha256_in_prefix": "8cfeb047b112a6c4d63d39d1fd96f9ec35e9f2127883046608f5a991de5ba0b2"
+      },
+      {
+        "_path": "x86_64-conda-linux-gnu/bin/ld",
+        "path_type": "softlink",
+        "sha256": "f4401b1fcec988c631a0a3c39f5da8932c1859fc5983728a9f8430fab7b51406",
+        "size_in_bytes": 2966864
+      }
+    ]
+  },
+  "link": {
+    "source": "/home/elayoubi/.conda/pkgs/ld_impl_linux-64-2.46.1-bootstrap_ha15bf96_2",
+    "type": 1
+  }
+}

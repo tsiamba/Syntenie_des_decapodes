@@ -1,0 +1,83 @@
+{
+  "name": "libidn2",
+  "version": "2.3.8",
+  "build": "hfac485b_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "subdir": "linux-64",
+  "fn": "libidn2-2.3.8-hfac485b_1.conda",
+  "md5": "842a81de672ddcf476337c8bde3cad33",
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/libidn2-2.3.8-hfac485b_1.conda",
+  "sha256": "cc38c900b9a20fe75e61cbb594e749c57a06d96510722f5ddfa309682062b065",
+  "depends": [
+    "__glibc >=2.17,<3.0.a0",
+    "libgcc >=14",
+    "libunistring >=0,<1.0a0"
+  ],
+  "constrains": [],
+  "license": "LGPL-2.0-only",
+  "timestamp": 1760385590993,
+  "size": 139036,
+  "_requested_specs": [],
+  "package_tarball_full_path": "/home/elayoubi/.conda/pkgs/libidn2-2.3.8-hfac485b_1.conda",
+  "extracted_package_dir": "/home/elayoubi/.conda/pkgs/libidn2-2.3.8-hfac485b_1",
+  "files": [
+    "bin/idn2",
+    "include/idn2.h",
+    "lib/libidn2.so",
+    "lib/libidn2.so.0",
+    "lib/libidn2.so.0.4.0",
+    "lib/pkgconfig/libidn2.pc"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "bin/idn2",
+        "path_type": "hardlink",
+        "sha256": "f17dfb6a397060b647ca3948d6346566299b25e69d0988882ca4804e056b0ce1",
+        "size_in_bytes": 31696,
+        "sha256_in_prefix": "f17dfb6a397060b647ca3948d6346566299b25e69d0988882ca4804e056b0ce1"
+      },
+      {
+        "_path": "include/idn2.h",
+        "path_type": "hardlink",
+        "sha256": "1f55fc1e02b0c4436c41ad7bb8977c64cf3bb61075a4cc412d996878fac93127",
+        "size_in_bytes": 14191,
+        "sha256_in_prefix": "1f55fc1e02b0c4436c41ad7bb8977c64cf3bb61075a4cc412d996878fac93127"
+      },
+      {
+        "_path": "lib/libidn2.so",
+        "path_type": "softlink",
+        "sha256": "41c8d3b29ad3c157b9cb317ccdc40e9a09e2c11662e1ff8075bb9e3b65dd9e3d",
+        "size_in_bytes": 357656
+      },
+      {
+        "_path": "lib/libidn2.so.0",
+        "path_type": "softlink",
+        "sha256": "41c8d3b29ad3c157b9cb317ccdc40e9a09e2c11662e1ff8075bb9e3b65dd9e3d",
+        "size_in_bytes": 357656
+      },
+      {
+        "_path": "lib/libidn2.so.0.4.0",
+        "path_type": "hardlink",
+        "sha256": "41c8d3b29ad3c157b9cb317ccdc40e9a09e2c11662e1ff8075bb9e3b65dd9e3d",
+        "size_in_bytes": 357656,
+        "sha256_in_prefix": "41c8d3b29ad3c157b9cb317ccdc40e9a09e2c11662e1ff8075bb9e3b65dd9e3d"
+      },
+      {
+        "_path": "lib/pkgconfig/libidn2.pc",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/libidn2_1760385456268/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pla",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "sha256": "f0268221188ba98729a03bda0f0c42d002b10f4480d20d8d9f3c26b375625d90",
+        "size_in_bytes": 1022,
+        "sha256_in_prefix": "0d10a7d181ea1b989a1d8e745647e98864e3ce64c4abb306fb79163ee702ff3e"
+      }
+    ]
+  },
+  "link": {
+    "source": "/home/elayoubi/.conda/pkgs/libidn2-2.3.8-hfac485b_1",
+    "type": 1
+  }
+}

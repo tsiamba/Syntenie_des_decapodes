@@ -1,0 +1,45 @@
+{
+  "name": "rpsbproc",
+  "version": "0.5.0",
+  "build": "h6a68c12_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/bioconda/linux-64",
+  "subdir": "linux-64",
+  "fn": "rpsbproc-0.5.0-h6a68c12_1.tar.bz2",
+  "md5": "ef373c653f48a754162f5929679a2d8e",
+  "url": "https://conda.anaconda.org/bioconda/linux-64/rpsbproc-0.5.0-h6a68c12_1.tar.bz2",
+  "sha256": "2e6e0dc98b6728af01b7da9e471d4eaa0cbe20798467a9100f7dae1d9578b653",
+  "depends": [
+    "bzip2 >=1.0.8,<2.0a0",
+    "libgcc >=12",
+    "libsqlite >=3.46.0,<4.0a0",
+    "libstdcxx >=12",
+    "libzlib >=1.2.13,<2.0a0"
+  ],
+  "constrains": [],
+  "license": "Public Domain",
+  "timestamp": 1730828674619,
+  "size": 6426984,
+  "_requested_specs": [],
+  "package_tarball_full_path": "/home/elayoubi/.conda/pkgs/rpsbproc-0.5.0-h6a68c12_1.tar.bz2",
+  "extracted_package_dir": "/home/elayoubi/.conda/pkgs/rpsbproc-0.5.0-h6a68c12_1",
+  "files": [
+    "bin/rpsbproc"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "bin/rpsbproc",
+        "path_type": "hardlink",
+        "sha256": "6e2ea2a6e5d2a93c5b55bfc4f6c38aed809325d1a72c149dfb1eabbbed328738",
+        "size_in_bytes": 20378728,
+        "sha256_in_prefix": "6e2ea2a6e5d2a93c5b55bfc4f6c38aed809325d1a72c149dfb1eabbbed328738"
+      }
+    ]
+  },
+  "link": {
+    "source": "/home/elayoubi/.conda/pkgs/rpsbproc-0.5.0-h6a68c12_1",
+    "type": 1
+  }
+}

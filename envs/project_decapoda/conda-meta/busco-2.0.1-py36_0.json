@@ -1,0 +1,64 @@
+{
+  "name": "busco",
+  "version": "2.0.1",
+  "build": "py36_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/bioconda/linux-64",
+  "subdir": "linux-64",
+  "fn": "busco-2.0.1-py36_0.tar.bz2",
+  "md5": "dda18ad9e21a544dc28f87600140a8e0",
+  "url": "https://conda.anaconda.org/bioconda/linux-64/busco-2.0.1-py36_0.tar.bz2",
+  "sha256": "fc3ebb4e3cd9afed97aa80a19a0c7840d8322ad77a6bc105e86c9372a080f4ea",
+  "depends": [
+    "augustus",
+    "blast",
+    "hmmer",
+    "python 3.6*"
+  ],
+  "constrains": [],
+  "license": "GPL",
+  "size": 30004,
+  "requested_spec": "busco",
+  "package_tarball_full_path": "/home/elayoubi/.conda/pkgs/busco-2.0.1-py36_0.tar.bz2",
+  "extracted_package_dir": "/home/elayoubi/.conda/pkgs/busco-2.0.1-py36_0",
+  "files": [
+    "bin/BUSCO.py",
+    "bin/BUSCO_plot.py",
+    "bin/busco",
+    "bin/busco_plot"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "bin/BUSCO.py",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "sha256_in_prefix": "7d7b7766f7839b1d2d7109540f4a458743cc2eebd300ffb6e7e71147d9c07f43"
+      },
+      {
+        "_path": "bin/BUSCO_plot.py",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "sha256_in_prefix": "9d547ca7e9efcff5b6cc0f9ef20b7e0b1ea466bc9d3d9b3d1a17408e333613c5"
+      },
+      {
+        "_path": "bin/busco",
+        "path_type": "softlink"
+      },
+      {
+        "_path": "bin/busco_plot",
+        "path_type": "softlink"
+      }
+    ]
+  },
+  "link": {
+    "source": "/home/elayoubi/.conda/pkgs/busco-2.0.1-py36_0",
+    "type": 1
+  },
+  "requested_specs": [
+    "busco"
+  ]
+}

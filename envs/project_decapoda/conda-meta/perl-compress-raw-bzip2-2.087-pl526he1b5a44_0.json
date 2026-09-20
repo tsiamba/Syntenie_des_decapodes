@@ -1,0 +1,69 @@
+{
+  "name": "perl-compress-raw-bzip2",
+  "version": "2.087",
+  "build": "pl526he1b5a44_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/bioconda/linux-64",
+  "subdir": "linux-64",
+  "fn": "perl-compress-raw-bzip2-2.087-pl526he1b5a44_0.tar.bz2",
+  "md5": "452ca14d71cd5973a6db6998b50f30e3",
+  "url": "https://conda.anaconda.org/bioconda/linux-64/perl-compress-raw-bzip2-2.087-pl526he1b5a44_0.tar.bz2",
+  "sha256": "637ebbf40bf60183a7beadf4207e6fdf0fbab797fcdc0b2275b504084ae20f8a",
+  "depends": [
+    "libgcc-ng >=7.3.0",
+    "libstdcxx-ng >=7.3.0",
+    "perl >=5.26.2,<5.26.3.0a0"
+  ],
+  "constrains": [],
+  "license": "perl_5",
+  "timestamp": 1565464977921,
+  "size": 44560,
+  "_requested_specs": [],
+  "package_tarball_full_path": "/home/elayoubi/.conda/pkgs/perl-compress-raw-bzip2-2.087-pl526he1b5a44_0.tar.bz2",
+  "extracted_package_dir": "/home/elayoubi/.conda/pkgs/perl-compress-raw-bzip2-2.087-pl526he1b5a44_0",
+  "files": [
+    "lib/5.26.2/x86_64-linux-thread-multi/perllocal.pod",
+    "lib/site_perl/5.26.2/x86_64-linux-thread-multi/Compress/Raw/Bzip2.pm",
+    "lib/site_perl/5.26.2/x86_64-linux-thread-multi/auto/Compress/Raw/Bzip2/.packlist",
+    "lib/site_perl/5.26.2/x86_64-linux-thread-multi/auto/Compress/Raw/Bzip2/Bzip2.so"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "lib/5.26.2/x86_64-linux-thread-multi/perllocal.pod",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "sha256": "34bf019d9bc0fd6600dfb270d85633fa54d642eb902448147416b607420e1c3f",
+        "size_in_bytes": 272,
+        "sha256_in_prefix": "df0b306a81a6719419fa1d8a4f82a1770bfe59204648e54e4ff1fe3027c66e3c"
+      },
+      {
+        "_path": "lib/site_perl/5.26.2/x86_64-linux-thread-multi/Compress/Raw/Bzip2.pm",
+        "path_type": "hardlink",
+        "sha256": "8e796bf2ba071c52a0a34431f5fb84c824e198cba3ee59b9f52b36df9d60cfe4",
+        "size_in_bytes": 10783,
+        "sha256_in_prefix": "8e796bf2ba071c52a0a34431f5fb84c824e198cba3ee59b9f52b36df9d60cfe4"
+      },
+      {
+        "_path": "lib/site_perl/5.26.2/x86_64-linux-thread-multi/auto/Compress/Raw/Bzip2/.packlist",
+        "path_type": "hardlink",
+        "sha256": "3470e1982cdc15a75e8a9d706606304e7f23a1bdd031ad40858cf348ec607f55",
+        "size_in_bytes": 1084,
+        "sha256_in_prefix": "3470e1982cdc15a75e8a9d706606304e7f23a1bdd031ad40858cf348ec607f55"
+      },
+      {
+        "_path": "lib/site_perl/5.26.2/x86_64-linux-thread-multi/auto/Compress/Raw/Bzip2/Bzip2.so",
+        "path_type": "hardlink",
+        "sha256": "248926a48e488b31452fa80b6f1ed6852a23b4515d9089df4273e8b38e0c9458",
+        "size_in_bytes": 90280,
+        "sha256_in_prefix": "248926a48e488b31452fa80b6f1ed6852a23b4515d9089df4273e8b38e0c9458"
+      }
+    ]
+  },
+  "link": {
+    "source": "/home/elayoubi/.conda/pkgs/perl-compress-raw-bzip2-2.087-pl526he1b5a44_0",
+    "type": 1
+  }
+}

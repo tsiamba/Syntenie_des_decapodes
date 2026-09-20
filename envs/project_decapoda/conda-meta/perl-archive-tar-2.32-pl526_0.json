@@ -1,0 +1,70 @@
+{
+  "name": "perl-archive-tar",
+  "version": "2.32",
+  "build": "pl526_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/bioconda/linux-64",
+  "subdir": "linux-64",
+  "fn": "perl-archive-tar-2.32-pl526_0.tar.bz2",
+  "md5": "961b7fd4f58d59d7d4f9f3e48f679477",
+  "url": "https://conda.anaconda.org/bioconda/linux-64/perl-archive-tar-2.32-pl526_0.tar.bz2",
+  "sha256": "2506dad246f306e5262ccdae2c0e779f0c6425b90189d5d5afc9a6671fc1b350",
+  "depends": [
+    "perl >=5.26.2,<5.26.3.0a0",
+    "perl-io-compress",
+    "perl-io-zlib",
+    "perl-pathtools"
+  ],
+  "constrains": [],
+  "license": "perl_5",
+  "timestamp": 1541970788614,
+  "size": 31485,
+  "_requested_specs": [],
+  "package_tarball_full_path": "/home/elayoubi/.conda/pkgs/perl-archive-tar-2.32-pl526_0.tar.bz2",
+  "extracted_package_dir": "/home/elayoubi/.conda/pkgs/perl-archive-tar-2.32-pl526_0",
+  "files": [
+    "lib/site_perl/5.26.2/Archive/Tar.pm",
+    "lib/site_perl/5.26.2/Archive/Tar/Constant.pm",
+    "lib/site_perl/5.26.2/Archive/Tar/File.pm",
+    "lib/site_perl/5.26.2/x86_64-linux-thread-multi/auto/Archive/Tar/.packlist"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "lib/site_perl/5.26.2/Archive/Tar.pm",
+        "path_type": "hardlink",
+        "sha256": "c28a88caff37921f670b370772d79e690d312908c58b0e0f43219077f2b429cf",
+        "size_in_bytes": 75597,
+        "sha256_in_prefix": "c28a88caff37921f670b370772d79e690d312908c58b0e0f43219077f2b429cf"
+      },
+      {
+        "_path": "lib/site_perl/5.26.2/Archive/Tar/Constant.pm",
+        "path_type": "hardlink",
+        "sha256": "e28e14c049cfeddabc1499b22dd18a15262e411ef6c9816528130b15198126f8",
+        "size_in_bytes": 4203,
+        "sha256_in_prefix": "e28e14c049cfeddabc1499b22dd18a15262e411ef6c9816528130b15198126f8"
+      },
+      {
+        "_path": "lib/site_perl/5.26.2/Archive/Tar/File.pm",
+        "path_type": "hardlink",
+        "sha256": "21ba8335c9423969d51531f8f821b92a725cde12a746934e557bef344d0a23ee",
+        "size_in_bytes": 18737,
+        "sha256_in_prefix": "21ba8335c9423969d51531f8f821b92a725cde12a746934e557bef344d0a23ee"
+      },
+      {
+        "_path": "lib/site_perl/5.26.2/x86_64-linux-thread-multi/auto/Archive/Tar/.packlist",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "sha256": "324f19d4ce59920912bde9fce8f6b8398018866f236cf2faa121b965095ebdc5",
+        "size_in_bytes": 1170,
+        "sha256_in_prefix": "5bbdac6eb2b01159fac6bcfbae6e9ea0e903c7120602862838e7d39e685563d1"
+      }
+    ]
+  },
+  "link": {
+    "source": "/home/elayoubi/.conda/pkgs/perl-archive-tar-2.32-pl526_0",
+    "type": 1
+  }
+}

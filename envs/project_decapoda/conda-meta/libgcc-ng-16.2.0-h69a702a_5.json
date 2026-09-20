@@ -1,0 +1,31 @@
+{
+  "name": "libgcc-ng",
+  "version": "16.2.0",
+  "build": "h69a702a_5",
+  "build_number": 5,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "subdir": "linux-64",
+  "fn": "libgcc-ng-16.2.0-h69a702a_5.conda",
+  "md5": "e7c34906139296448e3554fafa3dbec2",
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/libgcc-ng-16.2.0-h69a702a_5.conda",
+  "sha256": "d298972e17697a5e96806d5f2c151c53efd0afa0ef10db5d6757a5b186817219",
+  "depends": [
+    "libgcc 16.2.0 ha9f2e26_5"
+  ],
+  "constrains": [],
+  "license": "GPL-3.0-only WITH GCC-exception-3.1",
+  "timestamp": 1789485811332,
+  "size": 28535,
+  "_requested_specs": [],
+  "package_tarball_full_path": "/home/elayoubi/.conda/pkgs/libgcc-ng-16.2.0-h69a702a_5.conda",
+  "extracted_package_dir": "/home/elayoubi/.conda/pkgs/libgcc-ng-16.2.0-h69a702a_5",
+  "files": [],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": []
+  },
+  "link": {
+    "source": "/home/elayoubi/.conda/pkgs/libgcc-ng-16.2.0-h69a702a_5",
+    "type": 1
+  }
+}
