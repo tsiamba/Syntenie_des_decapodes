@@ -1,6 +1,9 @@
 # Syntenie_des_decapodes
 
-To unsure that the dataset as a significant accuracy all chosen decapoda genomes are Refseq annotated chromosome level assemblies with single copy busso scores of 90% or higher, and Contig N50 of 200 or higher.
+## Y a t’il synténie entre les chromosomes décapodes malgré leurs larges différences de nombre ?
+
+>[!NOTE] 
+>To unsure that the dataset as a significant accuracy all chosen decapoda genomes are Refseq annotated chromosome level assemblies with single copy busso scores of 90% or higher, and Contig N50 of 200 or higher.
 
 
 | RefSeq | Species | Nb_Chromosomes | Contig_N50_kb | Scaffolds | BUSCO | BUSCO_Lineage |
