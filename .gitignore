@@ -1,5 +1,7 @@
-#Enlever Dossier et Fichier non nécessaire:
+#Enlever Dossier et Fichier non nécessaire ou trop gros:
 *.zip
+.gff
+.fna
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
