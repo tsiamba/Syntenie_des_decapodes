@@ -23,9 +23,10 @@ Dimanche 27 septembre Problème avec certain génomes qui sature le serveur / Cr
 Dimanche 27 Septembre : Lancement de BUSCO sur Isopode Jarea (Tsiambaka), lancement avec 3 coeurs sur le serveur, Analyse a duré 24190 secondes
 Lundi 28 septembre Vérification des analyses busco et modification du fichier log pour ajouter les dernières info sur l'analyse busco essayer de comprendre le problème d'analyse busco (Aurélio) - 45 min
 Mardi 29 septembre Vérification de la fin de l'analyse busco modification du script pour relancer sur ceux qui sont pas passez update le fichier log (Aurélio) - 20 min
+Mardi 06 octobre Installation de panda et plotly dans l'environnement pour script diagramme de sankey / Adaptation d'un code pré existant de mon stage de M1 / Lancer le script et analyser premier résultat sur metaeuk en attendant run de miniprot / Réorganisation de certains fichier et dossier (Aurélio) - 1h
 
 
-Commandes : gunzip -k /data/projet2/Syntenie_des_decapodes/genomes/ncbi_dataset/data/GCA_965208005.1/GCA_965208005.1_qmJaePrae1.hap1.1_genomic.fna.gz
+(Tsiambaka) Commandes : gunzip -k /data/projet2/Syntenie_des_decapodes/genomes/ncbi_dataset/data/GCA_965208005.1/GCA_965208005.1_qmJaePrae1.hap1.1_genomic.fna.gz
 pour dézipepr le genome puis FNA=$(find /data/projet2/Syntenie_des_decapodes/genomes/ncbi_dataset/data/GCA_965208005.1 -name "*_genomic.fna")
 echo "$FNA" pour lancer l'analyse BUSCO ~ 1h
 
