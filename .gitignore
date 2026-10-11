@@ -2,11 +2,14 @@
 *.zip
 .gff
 .fna
-
+envs/
 genomes/
-busco_output/
+precomputed_crustacea_odb12
 *.zip
 *.tar.gz
+busco_downloads/
+busco_metaeuk/
+busco_miniprot/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

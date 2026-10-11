@@ -1,0 +1,469 @@
+screen -r -> pour lancer le script sur une fenêtre en fond
+(/data/projet2/conda/env_busco) vitale@ptu:/data/projet2/Syntenie_des_decapodes/scripts$ ./script_busc
+o.sh
+--------------------------------------------------------
+Démarrage de BUSCO pour : GCF_015104395.2
+2026-09-25 09:53:40 INFO:       ***** Start a BUSCO v6.1.0 analysis, current time: 09/25/2026 09:53:39
+ *****
+2026-09-25 09:53:40 INFO:       Configuring BUSCO with local environment
+2026-09-25 09:53:40 INFO:       Running genome mode
+2026-09-25 09:53:40 INFO:       Downloading information on latest versions of BUSCO data...
+2026-09-25 09:53:44 INFO:       Input file is /data/projet2/Syntenie_des_decapodes/genomes/ncbi_datase
+t/data/GCF_015104395.2/GCF_015104395.2_ASM1510439v2_genomic.fna
+2026-09-25 09:53:45 INFO:       The local file or folder /data/projet2/Syntenie_des_decapodes/scripts/
+busco_downloads/lineages/arthropoda_odb10 is the last available version.
+2026-09-25 10:05:04 INFO:       Running BUSCO using lineage dataset arthropoda_odb10 (eukaryota, 2024-
+01-08)
+2026-09-25 10:05:04 INFO:       Running 1 job(s) on bbtools, starting at 09/25/2026 10:05:04
+2026-09-25 10:05:23 INFO:       [bbtools]       1 of 1 task(s) completed
+2026-09-25 10:05:33 INFO:       Running 1 job(s) on metaeuk, starting at 09/25/2026 10:05:33
+2026-09-25 17:08:38 ERROR:      The following job failed with the error code 1:
+metaeuk easy-predict --threads 4 /data/projet2/Syntenie_des_decapodes/genomes/ncbi_dataset/data/GCF_01
+5104395.2/GCF_015104395.2_ASM1510439v2_genomic.fna ../resultats_busco_GCF_015104395.2/tmp/refseq_db.fa
+a ../resultats_busco_GCF_015104395.2/run_arthropoda_odb10/metaeuk_output/initial_results/GCF_015104395
+.2_ASM1510439v2_genomic.fna ../resultats_busco_GCF_015104395.2/run_arthropoda_odb10/metaeuk_output/tmp
+ --max-intron 130000 --max-seq-len 160000 --min-exon-aa 15 --max-overlap 15 --min-intron 5 --overlap 1
+ -s 4.5
+2026-09-25 17:08:39 ERROR:      Error message: Killed
+
+2026-09-25 17:25:20 ERROR:      Job failed with error code 1
+2026-09-25 17:25:21 ERROR:      BUSCO analysis failed!
+2026-09-25 17:25:21 ERROR:      Check the logs, read the user guide (https://busco.ezlab.org/busco_use
+rguide.html), and check the BUSCO issue board on https://gitlab.com/ezlab/busco/issues
+
+2026-09-25 17:25:21 INFO:       Thank you for using BUSCO! Anonymous usage data is gathered to improve
+ the tool. You may opt out with --opt-out-run-stats.
+Terminé pour : GCF_015104395.2
+--------------------------------------------------------
+Démarrage de BUSCO pour : GCF_042767895.1
+2026-09-25 17:26:54 INFO:       ***** Start a BUSCO v6.1.0 analysis, current time: 09/25/2026 17:26:53
+ *****
+2026-09-25 17:26:54 INFO:       Configuring BUSCO with local environment
+2026-09-25 17:26:54 INFO:       Running genome mode
+2026-09-25 17:26:54 INFO:       Downloading information on latest versions of BUSCO data...
+2026-09-25 17:26:56 INFO:       Input file is /data/projet2/Syntenie_des_decapodes/genomes/ncbi_datase
+t/data/GCF_042767895.1/GCF_042767895.1_ASM4276789v1_genomic.fna
+2026-09-25 17:26:56 INFO:       The local file or folder /data/projet2/Syntenie_des_decapodes/scripts/
+busco_downloads/lineages/arthropoda_odb10 is the last available version.
+2026-09-25 17:35:38 INFO:       Running BUSCO using lineage dataset arthropoda_odb10 (eukaryota, 2024-
+01-08)
+2026-09-25 17:35:38 INFO:       Running 1 job(s) on bbtools, starting at 09/25/2026 17:35:38
+2026-09-25 17:35:48 INFO:       [bbtools]       1 of 1 task(s) completed
+2026-09-25 17:35:55 INFO:       Running 1 job(s) on metaeuk, starting at 09/25/2026 17:35:55
+2026-09-25 21:50:04 INFO:       [metaeuk]       1 of 1 task(s) completed
+2026-09-25 21:50:05 INFO:       ***** Run HMMER on gene sequences *****
+2026-09-25 21:50:06 INFO:       Running 1013 job(s) on hmmsearch, starting at 09/25/2026 21:50:06
+2026-09-25 21:50:28 INFO:       [hmmsearch]     102 of 1013 task(s) completed
+2026-09-25 21:50:43 INFO:       [hmmsearch]     203 of 1013 task(s) completed
+2026-09-25 21:51:00 INFO:       [hmmsearch]     304 of 1013 task(s) completed
+2026-09-25 21:51:15 INFO:       [hmmsearch]     406 of 1013 task(s) completed
+2026-09-25 21:51:41 INFO:       [hmmsearch]     608 of 1013 task(s) completed
+2026-09-25 21:51:59 INFO:       [hmmsearch]     710 of 1013 task(s) completed
+2026-09-25 21:52:15 INFO:       [hmmsearch]     811 of 1013 task(s) completed
+2026-09-25 21:52:26 INFO:       [hmmsearch]     912 of 1013 task(s) completed
+2026-09-25 21:52:38 INFO:       [hmmsearch]     1013 of 1013 task(s) completed
+2026-09-25 21:52:39 INFO:       6260 exons in total
+2026-09-25 21:52:39 INFO:       Extracting missing and fragmented buscos from the file refseq_db.faa..
+.
+2026-09-25 21:52:54 INFO:       Running 1 job(s) on metaeuk, starting at 09/25/2026 21:52:54
+2026-09-26 03:12:41 INFO:       [metaeuk]       1 of 1 task(s) completed
+2026-09-26 03:12:46 INFO:       ***** Run HMMER on gene sequences *****
+2026-09-26 03:12:46 INFO:       Running 185 job(s) on hmmsearch, starting at 09/26/2026 03:12:46
+2026-09-26 03:14:47 INFO:       [hmmsearch]     19 of 185 task(s) completed
+2026-09-26 03:14:52 INFO:       [hmmsearch]     56 of 185 task(s) completed
+2026-09-26 03:14:52 INFO:       [hmmsearch]     56 of 185 task(s) completed
+2026-09-26 03:14:56 INFO:       [hmmsearch]     74 of 185 task(s) completed
+2026-09-26 03:14:57 INFO:       [hmmsearch]     93 of 185 task(s) completed
+2026-09-26 03:15:00 INFO:       [hmmsearch]     111 of 185 task(s) completed
+2026-09-26 03:15:00 INFO:       [hmmsearch]     111 of 185 task(s) completed
+2026-09-26 03:15:06 INFO:       [hmmsearch]     148 of 185 task(s) completed
+2026-09-26 03:15:08 INFO:       [hmmsearch]     167 of 185 task(s) completed
+2026-09-26 03:15:11 INFO:       [hmmsearch]     185 of 185 task(s) completed
+2026-09-26 03:15:11 INFO:       134 candidate overlapping regions found
+2026-09-26 03:15:11 INFO:       6179 exons in total
+2026-09-26 03:15:13 INFO:       Results:        C:84.9%[S:83.3%,D:1.6%],F:5.4%,M:9.7%,n:1013
+
+2026-09-26 03:15:39 INFO:
+
+    ---------------------------------------------------
+    |Results from dataset arthropoda_odb10             |
+    ---------------------------------------------------
+    |C:84.9%[S:83.3%,D:1.6%],F:5.4%,M:9.7%,n:1013      |
+    |860    Complete BUSCOs (C)                        |
+    |844    Complete and single-copy BUSCOs (S)        |
+    |16    Complete and duplicated BUSCOs (D)          |
+    |55    Fragmented BUSCOs (F)                       |
+    |98    Missing BUSCOs (M)                          |
+    |1013    Total BUSCO groups searched               |
+    ---------------------------------------------------
+2026-09-26 03:15:39 INFO:       BUSCO analysis done. Total running time: 35323 seconds
+2026-09-26 03:15:39 INFO:       Results written in ../resultats_busco_GCF_042767895.1
+2026-09-26 03:15:39 INFO:       For assistance with interpreting the results, please consult the userg
+uide: https://busco.ezlab.org/busco_userguide.html
+
+2026-09-26 03:15:39 INFO:       Visit this page https://gitlab.com/ezlab/busco#how-to-cite-busco to se
+e how to cite BUSCO
+2026-09-26 03:25:22 INFO:       Thank you for using BUSCO! Anonymous usage data is gathered to improve
+ the tool. You may opt out with --opt-out-run-stats.
+Terminé pour : GCF_042767895.1
+--------------------------------------------------------
+Démarrage de BUSCO pour : GCF_024679095.1
+2026-09-26 03:25:41 INFO:       ***** Start a BUSCO v6.1.0 analysis, current time: 09/26/2026 03:25:41
+ *****
+2026-09-26 03:25:41 INFO:       Configuring BUSCO with local environment
+2026-09-26 03:25:41 INFO:       Running genome mode
+2026-09-26 03:25:41 INFO:       Downloading information on latest versions of BUSCO data...
+2026-09-26 03:25:43 INFO:       Input file is /data/projet2/Syntenie_des_decapodes/genomes/ncbi_datase
+t/data/GCF_024679095.1/GCF_024679095.1_ASM2467909v1_genomic.fna
+2026-09-26 03:25:43 INFO:       The local file or folder /data/projet2/Syntenie_des_decapodes/scripts/
+busco_downloads/lineages/arthropoda_odb10 is the last available version.
+2026-09-26 03:34:57 INFO:       Running BUSCO using lineage dataset arthropoda_odb10 (eukaryota, 2024-
+01-08)
+2026-09-26 03:34:57 INFO:       Running 1 job(s) on bbtools, starting at 09/26/2026 03:34:57
+2026-09-26 03:35:10 INFO:       [bbtools]       1 of 1 task(s) completed
+2026-09-26 03:35:21 INFO:       Running 1 job(s) on metaeuk, starting at 09/26/2026 03:35:21
+2026-09-26 08:34:23 INFO:       [metaeuk]       1 of 1 task(s) completed
+2026-09-26 08:34:29 INFO:       ***** Run HMMER on gene sequences *****
+2026-09-26 08:34:29 INFO:       Running 1013 job(s) on hmmsearch, starting at 09/26/2026 08:34:29
+2026-09-26 08:34:50 INFO:       [hmmsearch]     102 of 1013 task(s) completed
+2026-09-26 08:35:04 INFO:       [hmmsearch]     203 of 1013 task(s) completed
+2026-09-26 08:35:22 INFO:       [hmmsearch]     304 of 1013 task(s) completed
+2026-09-26 08:35:40 INFO:       [hmmsearch]     406 of 1013 task(s) completed
+2026-09-26 08:36:02 INFO:       [hmmsearch]     507 of 1013 task(s) completed
+2026-09-26 08:36:22 INFO:       [hmmsearch]     608 of 1013 task(s) completed
+2026-09-26 08:36:44 INFO:       [hmmsearch]     710 of 1013 task(s) completed
+2026-09-26 08:37:00 INFO:       [hmmsearch]     811 of 1013 task(s) completed
+2026-09-26 08:37:14 INFO:       [hmmsearch]     912 of 1013 task(s) completed
+2026-09-26 08:37:33 INFO:       [hmmsearch]     1013 of 1013 task(s) completed
+2026-09-26 08:37:34 INFO:       7174 exons in total
+2026-09-26 08:37:34 INFO:       Extracting missing and fragmented buscos from the file refseq_db.faa..
+.
+2026-09-26 08:38:07 INFO:       Running 1 job(s) on metaeuk, starting at 09/26/2026 08:38:07
+2026-09-26 14:44:09 INFO:       [metaeuk]       1 of 1 task(s) completed
+2026-09-26 14:44:16 INFO:       ***** Run HMMER on gene sequences *****
+2026-09-26 14:44:16 INFO:       Running 95 job(s) on hmmsearch, starting at 09/26/2026 14:44:16
+2026-09-26 14:45:12 INFO:       [hmmsearch]     10 of 95 task(s) completed
+2026-09-26 14:45:12 INFO:       [hmmsearch]     10 of 95 task(s) completed
+2026-09-26 14:45:14 INFO:       [hmmsearch]     19 of 95 task(s) completed
+2026-09-26 14:45:15 INFO:       [hmmsearch]     29 of 95 task(s) completed
+2026-09-26 14:45:16 INFO:       [hmmsearch]     38 of 95 task(s) completed
+2026-09-26 14:45:17 INFO:       [hmmsearch]     48 of 95 task(s) completed
+2026-09-26 14:45:18 INFO:       [hmmsearch]     57 of 95 task(s) completed
+2026-09-26 14:45:19 INFO:       [hmmsearch]     67 of 95 task(s) completed
+2026-09-26 14:45:20 INFO:       [hmmsearch]     76 of 95 task(s) completed
+2026-09-26 14:45:21 INFO:       [hmmsearch]     86 of 95 task(s) completed
+2026-09-26 14:45:23 INFO:       [hmmsearch]     95 of 95 task(s) completed
+2026-09-26 14:45:24 INFO:       124 candidate overlapping regions found
+2026-09-26 14:45:24 INFO:       7015 exons in total
+2026-09-26 14:45:25 INFO:       Results:        C:94.9%[S:89.2%,D:5.6%],F:2.9%,M:2.3%,n:1013
+
+2026-09-26 14:45:46 INFO:
+
+    ---------------------------------------------------
+    |Results from dataset arthropoda_odb10             |
+    ---------------------------------------------------
+    |C:94.9%[S:89.2%,D:5.6%],F:2.9%,M:2.3%,n:1013      |
+    |961    Complete BUSCOs (C)                        |
+    |904    Complete and single-copy BUSCOs (S)        |
+    |57    Complete and duplicated BUSCOs (D)          |
+    |29    Fragmented BUSCOs (F)                       |
+    |23    Missing BUSCOs (M)                          |
+    |1013    Total BUSCO groups searched               |
+    ---------------------------------------------------
+2026-09-26 14:45:46 INFO:       BUSCO analysis done. Total running time: 40803 seconds
+2026-09-26 14:45:46 INFO:       Results written in ../resultats_busco_GCF_024679095.1
+2026-09-26 14:45:46 INFO:       For assistance with interpreting the results, please consult the userguide: https://busco.ezlab.org/busco_userguide.html
+
+2026-09-26 14:45:46 INFO:       Visit this page https://gitlab.com/ezlab/busco#how-to-cite-busco to see how to cite BUSCO
+2026-09-26 14:51:39 INFO:       Thank you for using BUSCO! Anonymous usage data is gathered to improve the tool. You may opt out with --opt-out-run-stats.
+Terminé pour : GCF_024679095.1
+--------------------------------------------------------
+Démarrage de BUSCO pour : GCF_040412425.1
+2026-09-26 14:51:58 INFO:       ***** Start a BUSCO v6.1.0 analysis, current time: 09/26/2026 14:51:58 *****
+2026-09-26 14:51:58 INFO:       Configuring BUSCO with local environment
+2026-09-26 14:51:58 INFO:       Running genome mode
+2026-09-26 14:51:58 INFO:       Downloading information on latest versions of BUSCO data...
+2026-09-26 14:52:03 INFO:       Input file is /data/projet2/Syntenie_des_decapodes/genomes/ncbi_dataset/data/GCF_040412425.1/GCF_040412425.1_ASM4041242v1_genomic.fna
+2026-09-26 14:52:03 INFO:       The local file or folder /data/projet2/Syntenie_des_decapodes/scripts/busco_downloads/lineages/arthropoda_odb10 is the last available version.
+2026-09-26 15:08:26 INFO:       Running BUSCO using lineage dataset arthropoda_odb10 (eukaryota, 2024-01-08)
+2026-09-26 15:08:26 INFO:       Running 1 job(s) on bbtools, starting at 09/26/2026 15:08:26
+2026-09-26 15:08:46 INFO:       [bbtools]       1 of 1 task(s) completed
+2026-09-26 15:09:04 INFO:       Running 1 job(s) on metaeuk, starting at 09/26/2026 15:09:04
+2026-09-27 02:40:14 INFO:       [metaeuk]       1 of 1 task(s) completed
+2026-09-27 02:40:22 INFO:       ***** Run HMMER on gene sequences *****
+2026-09-27 02:40:24 INFO:       Running 1013 job(s) on hmmsearch, starting at 09/27/2026 02:40:24
+2026-09-27 02:41:52 INFO:       [hmmsearch]     102 of 1013 task(s) completed
+2026-09-27 02:42:08 INFO:       [hmmsearch]     203 of 1013 task(s) completed
+2026-09-27 02:42:19 INFO:       [hmmsearch]     304 of 1013 task(s) completed
+2026-09-27 02:42:35 INFO:       [hmmsearch]     406 of 1013 task(s) completed
+2026-09-27 02:42:51 INFO:       [hmmsearch]     507 of 1013 task(s) completed
+2026-09-27 02:43:07 INFO:       [hmmsearch]     608 of 1013 task(s) completed
+2026-09-27 02:43:23 INFO:       [hmmsearch]     710 of 1013 task(s) completed
+2026-09-27 02:43:38 INFO:       [hmmsearch]     811 of 1013 task(s) completed
+2026-09-27 02:43:51 INFO:       [hmmsearch]     912 of 1013 task(s) completed
+2026-09-27 02:44:07 INFO:       [hmmsearch]     1013 of 1013 task(s) completed
+2026-09-27 02:44:08 INFO:       6840 exons in total
+2026-09-27 02:44:08 INFO:       Extracting missing and fragmented buscos from the file refseq_db.faa...
+2026-09-27 02:44:29 INFO:       Running 1 job(s) on metaeuk, starting at 09/27/2026 02:44:29
+2026-09-27 10:49:14 ERROR:      The following job failed with the error code 1:
+metaeuk easy-predict --threads 4 /data/projet2/Syntenie_des_decapodes/genomes/ncbi_dataset/data/GCF_04
+0412425.1/GCF_040412425.1_ASM4041242v1_genomic.fna ../resultats_busco_GCF_040412425.1/run_arthropoda_o
+db10/metaeuk_output/refseq_db_rerun.faa ../resultats_busco_GCF_040412425.1/run_arthropoda_odb10/metaeuk_output/rerun_results/GCF_040412425.1_ASM4041242v1_genomic.fna ../resultats_busco_GCF_040412425.1/run_arthropoda_odb10/metaeuk_output/tmp --max-intron 130000 --max-seq-len 160000 --min-exon-aa 5 --max-overlap 5 --min-intron 1 --overlap 1 -s 6
+2026-09-27 10:49:14 ERROR:      Error message: Killed
+2026-09-27 14:23:57 ERROR:      Job failed with error code 1
+2026-09-27 14:23:58 ERROR:      BUSCO analysis failed!
+2026-09-27 14:23:58 ERROR:      Check the logs, read the user guide (https://busco.ezlab.org/busco_use
+rguide.html), and check the BUSCO issue board on https://gitlab.com/ezlab/busco/issues
+
+2026-09-27 14:23:58 INFO:       Thank you for using BUSCO! Anonymous usage data is gathered to improve
+ the tool. You may opt out with --opt-out-run-stats.
+Terminé pour : GCF_040958095.1
+--------------------------------------------------------
+Démarrage de BUSCO pour : GCF_035594125.1
+2026-09-27 14:26:07 INFO:       ***** Start a BUSCO v6.1.0 analysis, current time: 09/27/2026 14:26:07
+ *****
+2026-09-27 14:26:07 INFO:       Configuring BUSCO with local environment
+2026-09-27 14:26:07 INFO:       Running genome mode
+2026-09-27 14:26:07 INFO:       Downloading information on latest versions of BUSCO data...
+2026-09-27 14:26:09 INFO:       Input file is /data/projet2/Syntenie_des_decapodes/genomes/ncbi_datase
+t/data/GCF_035594125.1/GCF_035594125.1_ASM3559412v1_genomic.fna
+2026-09-27 14:26:10 INFO:       The local file or folder /data/projet2/Syntenie_des_decapodes/scripts/
+busco_downloads/lineages/arthropoda_odb10 is the last available version.
+2026-09-27 14:32:50 INFO:       Running BUSCO using lineage dataset arthropoda_odb10 (eukaryota, 2024-
+01-08)
+2026-09-27 14:32:50 INFO:       Running 1 job(s) on bbtools, starting at 09/27/2026 14:32:50
+2026-09-27 14:33:06 INFO:       [bbtools]       1 of 1 task(s) completed
+2026-09-27 14:33:41 INFO:       Running 1 job(s) on metaeuk, starting at 09/27/2026 14:33:41
+2026-09-27 17:42:00 INFO:       [metaeuk]       1 of 1 task(s) completed
+2026-09-27 17:42:10 INFO:       ***** Run HMMER on gene sequences *****
+2026-09-27 17:42:12 INFO:       Running 1013 job(s) on hmmsearch, starting at 09/27/2026 17:42:12
+2026-09-27 17:43:51 INFO:       [hmmsearch]     102 of 1013 task(s) completed
+2026-09-27 17:44:01 INFO:       [hmmsearch]     203 of 1013 task(s) completed
+2026-09-27 17:44:09 INFO:       [hmmsearch]     304 of 1013 task(s) completed
+2026-09-27 17:44:17 INFO:       [hmmsearch]     406 of 1013 task(s) completed
+2026-09-27 17:44:24 INFO:       [hmmsearch]     507 of 1013 task(s) completed
+2026-09-27 17:44:38 INFO:       [hmmsearch]     608 of 1013 task(s) completed
+2026-09-27 17:44:51 INFO:       [hmmsearch]     710 of 1013 task(s) completed
+2026-09-27 17:45:04 INFO:       [hmmsearch]     811 of 1013 task(s) completed
+2026-09-27 17:45:04 INFO:       [hmmsearch]     811 of 1013 task(s) completed
+2026-09-27 17:45:13 INFO:       [hmmsearch]     912 of 1013 task(s) completed
+2026-09-27 17:45:26 INFO:       [hmmsearch]     1013 of 1013 task(s) completed
+2026-09-27 17:45:27 INFO:       7240 exons in total
+2026-09-27 17:45:27 INFO:       Extracting missing and fragmented buscos from the file refseq_db.faa...
+2026-09-27 17:45:44 INFO:       Running 1 job(s) on metaeuk, starting at 09/27/2026 17:45:44
+2026-09-27 21:51:16 INFO:       [metaeuk]       1 of 1 task(s) completed
+2026-09-27 21:51:17 INFO:       ***** Run HMMER on gene sequences *****
+2026-09-27 21:51:17 INFO:       Running 90 job(s) on hmmsearch, starting at 09/27/2026 21:51:17
+2026-09-27 21:52:08 INFO:       [hmmsearch]     9 of 90 task(s) completed
+2026-09-27 21:52:09 INFO:       [hmmsearch]     18 of 90 task(s) completed
+2026-09-27 21:52:11 INFO:       [hmmsearch]     27 of 90 task(s) completed
+2026-09-27 21:52:14 INFO:       [hmmsearch]     36 of 90 task(s) completed
+2026-09-27 21:52:17 INFO:       [hmmsearch]     45 of 90 task(s) completed
+2026-09-27 21:52:18 INFO:       [hmmsearch]     54 of 90 task(s) completed
+2026-09-27 21:52:18 INFO:       [hmmsearch]     54 of 90 task(s) completed
+2026-09-27 21:52:21 INFO:       [hmmsearch]     72 of 90 task(s) completed
+2026-09-27 21:52:23 INFO:       [hmmsearch]     81 of 90 task(s) completed
+2026-09-27 21:52:24 INFO:       [hmmsearch]     90 of 90 task(s) completed
+2026-09-27 21:52:25 INFO:       93 candidate overlapping regions found
+2026-09-27 21:52:25 INFO:       6933 exons in total
+2026-09-27 21:52:26 INFO:       Results:        C:95.7%[S:94.5%,D:1.2%],F:2.7%,M:1.7%,n:1013
+
+2026-09-27 21:52:46 INFO:
+
+    ---------------------------------------------------
+    |Results from dataset arthropoda_odb10             |
+    ---------------------------------------------------
+    |C:95.7%[S:94.5%,D:1.2%],F:2.7%,M:1.7%,n:1013      |
+    |969    Complete BUSCOs (C)                        |
+    |957    Complete and single-copy BUSCOs (S)        |
+    |12    Complete and duplicated BUSCOs (D)          |
+    |27    Fragmented BUSCOs (F)                       |
+    |17    Missing BUSCOs (M)                          |
+    |1013    Total BUSCO groups searched               |
+    ---------------------------------------------------
+2026-09-27 21:52:46 INFO:       BUSCO analysis done. Total running time: 26797 seconds
+2026-09-27 21:52:46 INFO:       Results written in ../resultats_busco_GCF_035594125.1
+2026-09-27 21:52:46 INFO:       For assistance with interpreting the results, please consult the userg
+uide: https://busco.ezlab.org/busco_userguide.html
+
+2026-09-27 21:52:46 INFO:       Visit this page https://gitlab.com/ezlab/busco#how-to-cite-busco to se
+e how to cite BUSCO
+2026-09-27 21:57:56 INFO:       Thank you for using BUSCO! Anonymous usage data is gathered to improve
+ the tool. You may opt out with --opt-out-run-stats.
+Terminé pour : GCF_035594125.1
+--------------------------------------------------------
+Démarrage de BUSCO pour : GCF_017591435.1
+2026-09-27 21:58:11 INFO:       ***** Start a BUSCO v6.1.0 analysis, current time: 09/27/2026 21:58:11
+ *****
+2026-09-27 21:58:11 INFO:       Configuring BUSCO with local environment
+2026-09-27 21:58:11 INFO:       Running genome mode
+2026-09-27 21:58:12 INFO:       Downloading information on latest versions of BUSCO data...
+2026-09-27 21:58:14 INFO:       Input file is /data/projet2/Syntenie_des_decapodes/genomes/ncbi_dataset/data/GCF_017591435.1/GCF_017591435.1_ASM1759143v1_genomic.fna
+2026-09-27 21:58:14 INFO:       The local file or folder /data/projet2/Syntenie_des_decapodes/scripts/busco_downloads/lineages/arthropoda_odb10 is the last available version.
+2026-09-27 22:02:22 INFO:       Running BUSCO using lineage dataset arthropoda_odb10 (eukaryota, 2024-01-08)
+2026-09-27 22:02:22 INFO:       Running 1 job(s) on bbtools, starting at 09/27/2026 22:02:22
+2026-09-27 22:02:30 INFO:       [bbtools]       1 of 1 task(s) completed
+2026-09-27 22:02:39 INFO:       Running 1 job(s) on metaeuk, starting at 09/27/2026 22:02:39
+2026-09-27 23:08:33 INFO:       [metaeuk]       1 of 1 task(s) completed
+2026-09-27 23:08:33 INFO:       ***** Run HMMER on gene sequences *****
+2026-09-27 23:08:34 INFO:       Running 1013 job(s) on hmmsearch, starting at 09/27/2026 23:08:34
+2026-09-27 23:08:45 INFO:       [hmmsearch]     102 of 1013 task(s) completed
+2026-09-27 23:09:02 INFO:       [hmmsearch]     203 of 1013 task(s) completed
+2026-09-27 23:09:16 INFO:       [hmmsearch]     304 of 1013 task(s) completed
+2026-09-27 23:09:29 INFO:       [hmmsearch]     406 of 1013 task(s) completed
+2026-09-27 23:09:37 INFO:       [hmmsearch]     507 of 1013 task(s) completed
+2026-09-27 23:09:54 INFO:       [hmmsearch]     608 of 1013 task(s) completed
+2026-09-27 23:10:11 INFO:       [hmmsearch]     710 of 1013 task(s) completed
+2026-09-27 23:10:26 INFO:       [hmmsearch]     811 of 1013 task(s) completed
+2026-09-27 23:10:36 INFO:       [hmmsearch]     912 of 1013 task(s) completed
+2026-09-27 23:10:48 INFO:       [hmmsearch]     1013 of 1013 task(s) completed
+2026-09-27 23:10:48 INFO:       6486 exons in total
+2026-09-27 23:10:48 INFO:       Extracting missing and fragmented buscos from the file refseq_db.faa...
+2026-09-27 23:11:08 INFO:       Running 1 job(s) on metaeuk, starting at 09/27/2026 23:11:08
+2026-09-28 01:59:22 INFO:       [metaeuk]       1 of 1 task(s) completed
+2026-09-28 01:59:22 INFO:       ***** Run HMMER on gene sequences *****
+2026-09-28 01:59:22 INFO:       Running 114 job(s) on hmmsearch, starting at 09/28/2026 01:59:22
+2026-09-28 01:59:24 INFO:       [hmmsearch]     12 of 114 task(s) completed
+2026-09-28 01:59:25 INFO:       [hmmsearch]     23 of 114 task(s) completed
+2026-09-28 01:59:28 INFO:       [hmmsearch]     46 of 114 task(s) completed
+2026-09-28 01:59:30 INFO:       [hmmsearch]     58 of 114 task(s) completed
+2026-09-28 01:59:31 INFO:       [hmmsearch]     69 of 114 task(s) completed
+2026-09-28 01:59:32 INFO:       [hmmsearch]     80 of 114 task(s) completed
+2026-09-28 01:59:33 INFO:       [hmmsearch]     92 of 114 task(s) completed
+2026-09-28 01:59:34 INFO:       [hmmsearch]     103 of 114 task(s) completed
+2026-09-28 01:59:36 INFO:       [hmmsearch]     114 of 114 task(s) completed
+2026-09-28 01:59:37 INFO:       141 candidate overlapping regions found
+2026-09-28 01:59:37 INFO:       6668 exons in total
+2026-09-28 01:59:38 INFO:       Results:        C:93.7%[S:93.1%,D:0.6%],F:3.4%,M:3.0%,n:1013
+
+2026-09-28 01:59:44 INFO:
+
+    ---------------------------------------------------
+    |Results from dataset arthropoda_odb10             |
+    ---------------------------------------------------
+    |C:93.7%[S:93.1%,D:0.6%],F:3.4%,M:3.0%,n:1013      |
+    |949    Complete BUSCOs (C)                        |
+    |943    Complete and single-copy BUSCOs (S)        |
+    |6    Complete and duplicated BUSCOs (D)           |
+    |34    Fragmented BUSCOs (F)                       |
+    |30    Missing BUSCOs (M)                          |
+    |1013    Total BUSCO groups searched               |
+    ---------------------------------------------------
+2026-09-28 01:59:44 INFO:       BUSCO analysis done. Total running time: 14490 seconds
+2026-09-28 01:59:44 INFO:       Results written in ../resultats_busco_GCF_017591435.1
+2026-09-28 01:59:44 INFO:       For assistance with interpreting the results, please consult the userguide: https://busco.ezlab.org/busco_userguide.html
+
+2026-09-28 01:59:44 INFO:       Visit this page https://gitlab.com/ezlab/busco#how-to-cite-busco to see how to cite BUSCO
+2026-09-28 01:59:45 INFO:       Thank you for using BUSCO! Anonymous usage data is gathered to improve the tool. You may opt out with --opt-out-run-stats.
+Terminé pour : GCF_017591435.1
+--------------------------------------------------------
+Démarrage de BUSCO pour : GCF_038502225.1
+2026-09-28 01:59:59 INFO:       ***** Start a BUSCO v6.1.0 analysis, current time: 09/28/2026 01:59:59 *****
+2026-09-28 01:59:59 INFO:       Configuring BUSCO with local environment
+2026-09-28 01:59:59 INFO:       Running genome mode
+2026-09-28 01:59:59 INFO:       Downloading information on latest versions of BUSCO data...
+2026-09-28 02:00:00 INFO:       Input file is /data/projet2/Syntenie_des_decapodes/genomes/ncbi_dataset/data/GCF_038502225.1/GCF_038502225.1_ASM3850222v1_genomic.fna
+2026-09-28 02:00:00 INFO:       The local file or folder /data/projet2/Syntenie_des_decapodes/scripts/busco_downloads/lineages/arthropoda_odb10 is the last available version.
+2026-09-28 02:13:13 INFO:       Running BUSCO using lineage dataset arthropoda_odb10 (eukaryota, 2024-01-08)
+2026-09-28 02:13:13 INFO:       Running 1 job(s) on bbtools, starting at 09/28/2026 02:13:13
+2026-09-28 02:13:28 INFO:       [bbtools]       1 of 1 task(s) completed
+2026-09-28 02:13:37 INFO:       Running 1 job(s) on metaeuk, starting at 09/28/2026 02:13:37
+2026-09-28 10:17:46 ERROR:      The following job failed with the error code 1:
+metaeuk easy-predict --threads 4 /data/projet2/Syntenie_des_decapodes/genomes/ncbi_dataset/data/GCF_038502225.1/GCF_038502225.1_ASM3850222v1_genomic.fna ../resultats_busco_GCF_038502225.1/tmp/refseq_db.faa ../resultats_busco_GCF_038502225.1/run_arthropoda_odb10/metaeuk_output/initial_results/GCF_038502225.1_ASM3850222v1_genomic.fna ../resultats_busco_GCF_038502225.1/run_arthropoda_odb10/metaeuk_output/tmp --max-intron 130000 --max-seq-len 160000 --min-exon-aa 15 --max-overlap 15 --min-intron 5 --overlap 1 -s 4.5
+2026-09-28 10:17:46 ERROR:      Error message: Killed
+
+2026-09-28 10:37:31 ERROR:      Job failed with error code 1
+2026-09-28 10:37:31 ERROR:      BUSCO analysis failed!
+2026-09-28 10:37:31 ERROR:      Check the logs, read the user guide (https://busco.ezlab.org/busco_userguide.html), and check the BUSCO issue board on https://gitlab.com/ezlab/busco/issues
+
+2026-09-28 10:37:31 INFO:       Thank you for using BUSCO! Anonymous usage data is gathered to improve the tool. You may opt out with --opt-out-run-stats.
+Terminé pour : GCF_038502225.1
+--------------------------------------------------------
+Démarrage de BUSCO pour : GCF_019202785.1
+2026-09-28 10:40:44 INFO:       ***** Start a BUSCO v6.1.0 analysis, current time: 09/28/2026 10:40:43 *****
+2026-09-28 10:40:44 INFO:       Configuring BUSCO with local environment
+2026-09-28 10:40:44 INFO:       Running genome mode
+2026-09-28 10:40:44 INFO:       Downloading information on latest versions of BUSCO data...
+2026-09-28 10:40:47 INFO:       Input file is /data/projet2/Syntenie_des_decapodes/genomes/ncbi_dataset/data/GCF_019202785.1/GCF_019202785.1_ASM1920278v2_genomic.fna
+2026-09-28 10:40:49 INFO:       The local file or folder /data/projet2/Syntenie_des_decapodes/scripts/busco_downloads/lineages/arthropoda_odb10 is the last available version.
+2026-09-28 10:47:30 INFO:       Running BUSCO using lineage dataset arthropoda_odb10 (eukaryota, 2024-01-08)
+2026-09-28 10:47:30 INFO:       Running 1 job(s) on bbtools, starting at 09/28/2026 10:47:30
+2026-09-28 10:47:40 INFO:       [bbtools]       1 of 1 task(s) completed
+2026-09-28 10:47:48 INFO:       Running 1 job(s) on metaeuk, starting at 09/28/2026 10:47:48
+2026-09-28 15:04:57 INFO:       [metaeuk]       1 of 1 task(s) completed
+2026-09-28 15:05:07 INFO:       ***** Run HMMER on gene sequences *****
+2026-09-28 15:05:08 INFO:       Running 1013 job(s) on hmmsearch, starting at 09/28/2026 15:05:08
+2026-09-28 15:07:42 INFO:       [hmmsearch]     102 of 1013 task(s) completed
+2026-09-28 15:08:03 INFO:       [hmmsearch]     203 of 1013 task(s) completed
+2026-09-28 15:08:22 INFO:       [hmmsearch]     304 of 1013 task(s) completed
+2026-09-28 15:08:52 INFO:       [hmmsearch]     406 of 1013 task(s) completed
+2026-09-28 15:08:52 INFO:       [hmmsearch]     406 of 1013 task(s) completed
+2026-09-28 15:09:12 INFO:       [hmmsearch]     507 of 1013 task(s) completed
+2026-09-28 15:09:34 INFO:       [hmmsearch]     608 of 1013 task(s) completed
+2026-09-28 15:09:58 INFO:       [hmmsearch]     710 of 1013 task(s) completed
+2026-09-28 15:10:22 INFO:       [hmmsearch]     811 of 1013 task(s) completed
+2026-09-28 15:10:41 INFO:       [hmmsearch]     912 of 1013 task(s) completed
+2026-09-28 15:11:09 INFO:       [hmmsearch]     1013 of 1013 task(s) completed
+2026-09-28 15:11:11 INFO:       6510 exons in total
+2026-09-28 15:11:11 INFO:       Extracting missing and fragmented buscos from the file refseq_db.faa...
+2026-09-28 15:11:35 INFO:       Running 1 job(s) on metaeuk, starting at 09/28/2026 15:11:35
+2026-09-28 20:25:58 INFO:       [metaeuk]       1 of 1 task(s) completed
+2026-09-28 20:26:03 INFO:       ***** Run HMMER on gene sequences *****
+2026-09-28 20:26:03 INFO:       Running 127 job(s) on hmmsearch, starting at 09/28/2026 20:26:03
+2026-09-28 20:27:41 INFO:       [hmmsearch]     13 of 127 task(s) completed
+2026-09-28 20:27:43 INFO:       [hmmsearch]     39 of 127 task(s) completed
+2026-09-28 20:27:45 INFO:       [hmmsearch]     51 of 127 task(s) completed
+2026-09-28 20:27:47 INFO:       [hmmsearch]     64 of 127 task(s) completed
+2026-09-28 20:27:49 INFO:       [hmmsearch]     77 of 127 task(s) completed
+2026-09-28 20:27:50 INFO:       [hmmsearch]     89 of 127 task(s) completed
+2026-09-28 20:27:50 INFO:       [hmmsearch]     89 of 127 task(s) completed
+2026-09-28 20:27:51 INFO:       [hmmsearch]     102 of 127 task(s) completed
+2026-09-28 20:27:53 INFO:       [hmmsearch]     115 of 127 task(s) completed
+2026-09-28 20:27:55 INFO:       [hmmsearch]     127 of 127 task(s) completed
+2026-09-28 20:27:55 INFO:       125 candidate overlapping regions found
+2026-09-28 20:27:55 INFO:       6503 exons in total
+2026-09-28 20:27:57 INFO:       Results:        C:91.1%[S:90.2%,D:0.9%],F:3.8%,M:5.1%,n:1013
+
+2026-09-28 20:28:21 INFO:
+
+    ---------------------------------------------------
+    |Results from dataset arthropoda_odb10             |
+    ---------------------------------------------------
+    |C:91.1%[S:90.2%,D:0.9%],F:3.8%,M:5.1%,n:1013      |
+    |923    Complete BUSCOs (C)                        |
+    |914    Complete and single-copy BUSCOs (S)        |
+    |9    Complete and duplicated BUSCOs (D)           |
+    |38    Fragmented BUSCOs (F)                       |
+    |52    Missing BUSCOs (M)                          |
+    |1013    Total BUSCO groups searched               |
+    ---------------------------------------------------
+2026-09-28 20:28:21 INFO:       BUSCO analysis done. Total running time: 35254 seconds
+2026-09-28 20:28:21 INFO:       Results written in ../resultats_busco_GCF_019202785.1
+2026-09-28 20:28:21 INFO:       For assistance with interpreting the results, please consult the userguide: https://busco.ezlab.org/busco_userguide.html
+2026-09-28 20:28:21 INFO:       Visit this page https://gitlab.com/ezlab/busco#how-to-cite-busco to see how to cite BUSCO
+2026-09-28 20:34:08 INFO:       Thank you for using BUSCO! Anonymous usage data is gathered to improve the tool. You may opt out with --opt-out-run-stats.
+Terminé pour : GCF_019202785.1
+--------------------------------------------------------
+Démarrage de BUSCO pour : GCF_036320965.1
+2026-09-28 20:34:23 INFO:       ***** Start a BUSCO v6.1.0 analysis, current time: 09/28/2026 20:34:23 *****
+2026-09-28 20:34:23 INFO:       Configuring BUSCO with local environment
+2026-09-28 20:34:23 INFO:       Running genome mode
+2026-09-28 20:34:23 INFO:       Downloading information on latest versions of BUSCO data...
+2026-09-28 20:34:26 INFO:       Input file is /data/projet2/Syntenie_des_decapodes/genomes/ncbi_dataset/data/GCF_036320965.1/GCF_036320965.1_ASM3632096v1_genomic.fna
+2026-09-28 20:34:26 INFO:       The local file or folder /data/projet2/Syntenie_des_decapodes/scripts/busco_downloads/lineages/arthropoda_odb10 is the last available version.
+2026-09-28 20:43:28 INFO:       Running BUSCO using lineage dataset arthropoda_odb10 (eukaryota, 2024-01-08)
+2026-09-28 20:43:28 INFO:       Running 1 job(s) on bbtools, starting at 09/28/2026 20:43:28
+2026-09-28 20:43:42 INFO:       [bbtools]       1 of 1 task(s) completed
+2026-09-28 20:43:53 INFO:       Running 1 job(s) on metaeuk, starting at 09/28/2026 20:43:53
+
+crash au moment du deuxième passage -s 4.5 à -s 6 il faudrait soit augmenter la ram dispo prendre des génomes moins gros ou modifier code source python de busco (pas l'idéal)
+processus metaeuk toujours en cours utilise les 4 coeurs et continue sur le génome 5
+top -u $USER -> pour voir les processus que j'ai lancer
+top - 19:48:01 up 21 days,  2:58, 11 users,  load average: 4.09, 4.09, 4.08
+Tasks: 225 total,   2 running, 220 sleeping,   3 stopped,   0 zombie
+%Cpu(s): 41.1 us,  0.1 sy,  0.0 ni, 50.0 id,  8.8 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :  15990.8 total,    215.5 free,   4387.8 used,  11727.1 buff/cache
+MiB Swap:      0.0 total,      0.0 free,      0.0 used.  11603.1 avail Mem
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+ 431975 vitale    20   0 6406332   3.5g 123720 R 400.0  25.9 194:27.44 metaeuk

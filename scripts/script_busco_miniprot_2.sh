@@ -4,7 +4,7 @@
 # Vesion 2 with less cores to avoid RAM shortage + -f option to force rewrite failed genomes (as a naive premature trial, to be changed in later versions)
 set -euo pipefail
 
-LINEAGE="crustacea_odb12.2"
+LINEAGE="crustacea_odb12"
 OUTDIR="$PWD"
 
 while getopts "l:o:" opt; do
@@ -32,7 +32,7 @@ for dir in "$GENOME_DIR"/GC*; do
 
     echo "=== $acc $(date '+%F %T') ==="
     busco -f -i "$fna" -o "resultats_busco_${acc}" --out_path "$OUT_BASE" \
-          -m genome -l "$LINEAGE" -c 1 --miniprot
+          -m genome -l "$LINEAGE" -c 4  --miniprot
 done
 
 echo "Done. Results in $OUT_BASE/"

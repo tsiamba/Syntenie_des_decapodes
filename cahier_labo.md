@@ -48,6 +48,7 @@ Les génomes ont été choisis selon plusieurs critères qui, dans l'ordre d'imp
 - Modification du `.gitignore`
 - Nouvel environnement pour BUSCO
 - Lancement de l'analyse BUSCO
+- screen -r -> pour lancer le script sur une fenêtre en fond
 
 **Tsiambaka** · 1 h
 
@@ -91,7 +92,7 @@ echo "$FNA"
 **Aurélio** · 1 h
 
 - Problème avec certains génomes qui saturent le serveur.
-- Création d'un fichier log où j'ai affiché tout ce que BUSCO m'a renvoyé.
+- Création d'un fichier log où j'ai affiché tout ce que BUSCO m'a renvoyé : log_analyse_busco_metaeuk.txt
 
 **Tsiambaka**
 
@@ -156,3 +157,58 @@ Commande pour vérifier la taille des dossiers/sous dossiers
 du -h --max-depth=1 dossier/
 ```
 
+Commande pour voir l'arborésence des dossiers
+
+```bash
+tree -d
+```
+
+## Difficultés rencontrées et adaptations du travail
+
+**Période :** septembre–octobre 2026 ; dates précises à compléter.  
+**Personnes concernées :** à préciser pour chaque intervention.
+
+### Saturation de la mémoire lors des analyses BUSCO
+
+Les analyses BUSCO de certains génomes ont saturé la mémoire vive (RAM) du serveur, empêchant leur achèvement. Une partie des problèmes et des messages associés est conservée dans les fichiers suivants, à la racine du projet :
+
+- `git_status.txt` ;
+- `busco_693521.log` ;
+- `busco_771368.log` ;
+- `log_analyse_busco_metaeuk.txt`:
+
+Nous avons essayé le pipeline MetaEuk dans l’objectif de réduire l’utilisation de RAM. Cet essai n’a pas résolu le problème pour les génomes concernés.
+
+En attendant de disposer des résultats des analyses avec Miniprot, nous avons développé et adapté les scripts de traitement et de visualisation aux sorties MetaEuk disponibles. Cela nous a permis d’avancer sur les étapes en aval malgré les difficultés de calcul. Les adaptations nécessaires aux sorties Miniprot doivent être décrites dans les sessions correspondantes.
+
+**À compléter :** accessions des génomes concernés, commandes de lancement, versions des programmes, paramètres de ressources, messages d’erreur et état final de chaque analyse.
+
+### Changements de base de référence BUSCO
+
+Les premières analyses avec MetaEuk ont été lancées avec `arthropoda_odb10`. Elles ont ensuite été relancées avec `crustacea_odb12.2`.
+
+Certains génomes ne pouvant pas être analysés jusqu’au bout avec les ressources disponibles, nous avons récupéré des résultats précalculés par l’enseignant avec `crustacea_odb12`. Pour travailler avec une base de référence commune, une nouvelle relance de nos analyses avec `crustacea_odb12` est donc nécessaire. Son état d’avancement doit être indiqué pour chaque génome.
+
+Les résultats précalculés ont été extraits le **9 octobre 2026 par Tsiambaka** depuis :
+
+`/data/data_tutor/precomputed_busco.tar.gz`
+
+vers :
+
+`/data/projet2/Syntenie_des_decapodes/precomputed_crustacea_odb12/`
+
+Les résultats des différentes bases doivent rester identifiés séparément. Pour chaque figure, nous devons préciser les fichiers utilisés, le pipeline et la base de référence correspondante.
+
+### Difficultés de synchronisation avec GitHub
+
+Lors d’une tentative de `git push` vers GitHub, nous avons rencontré un problème lié à des fichiers d’environnement précédemment suivis par Git. Ces fichiers avaient été supprimés à la suite d’une mauvaise installation, et leur suppression a compliqué la synchronisation du dépôt.
+
+Cette description devra être complétée avec le message d’erreur exact et l’état du dépôt consigné dans `git_status.txt`, afin de préciser la cause technique du blocage.
+
+**À compléter :** date, personne ayant effectué la tentative, fichiers concernés, commandes exécutées pour corriger le problème et confirmation de la réussite du `push`.
+
+### Conséquences sur la progression du projet
+
+Les difficultés de mémoire ont conduit à avancer sur les scripts à partir des sorties disponibles, puis à récupérer des résultats précalculés pour certains génomes. Le changement de base de référence impose maintenant d’harmoniser les analyses retenues avant de produire les comparaisons finales.
+
+Les sessions suivantes devront relier chaque relance ou correction à ses commandes, à ses logs et aux résultats effectivement utilisés.
