@@ -37,7 +37,23 @@ Les génomes ont été choisis selon plusieurs critères qui, dans l'ordre d'imp
 **Aurélio** · 2 h
 
 - Modification du README
-- Mise en place du `.gitignore`
+- Mise en place du `.gitignore` 
+
+```bash
+#Enlever Dossier et Fichier non nécessaire ou trop gros:
+*.zip
+.gff
+.fna
+envs/
+genomes/
+precomputed_crustacea_odb12
+*.zip
+*.tar.gz
+busco_downloads/
+busco_metaeuk/
+busco_miniprot/
+```
+
 - Copie du repository
 - Mise en place de `git pull` / `git push`
 
@@ -151,6 +167,14 @@ tar -xvf /data/data_tutor/precomputed_busco.tar.gz \
 
 ---
 
+## Samedi 11 octobre
+
+**Aurélio** · 45 min
+
+- Modification du .gitignore pour inclure les fichiers trop gros (output busco)
+- Mise à jour du cahier de labo
+- Modification de l'arborésence
+
 Commande pour vérifier la taille des dossiers/sous dossiers
 
 ```bash
@@ -165,8 +189,8 @@ tree -d
 
 ## Difficultés rencontrées et adaptations du travail
 
-**Période :** septembre–octobre 2026 ; dates précises à compléter.  
-**Personnes concernées :** à préciser pour chaque intervention.
+Septembre - Octobre
+Tsiambaka, Aurélio, Jade
 
 ### Saturation de la mémoire lors des analyses BUSCO
 
