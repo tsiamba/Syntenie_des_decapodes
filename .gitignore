@@ -2,7 +2,8 @@
 *.zip
 .gff
 .fna
-envs/
+envs/*
+!envs/env_busco.yml
 genomes/
 precomputed_crustacea_odb12
 *.zip
@@ -229,4 +230,4 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
-envs/
+
