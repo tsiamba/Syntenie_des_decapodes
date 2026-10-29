@@ -19,3 +19,7 @@
 | GCF_019202785.1 | Penaeus chinensis (Chinese white shrimp) | 43 | 91.1 | 90.2 | 0.9 | 3.8 | 5.1 | arthropoda_odb10 | 1,061 | 9,043 | 1,466,079,641 | 0.054 | 36 Mbp | 470 kbp |
 | GCF_036320965.1 | Panulirus ornatus (Ornate rock lobster) | 73 | en attente | | | | | arthropoda_odb10 | | | | | | |
 | GCA_965208005.1 (GenBank) | Jaera praehirsuta (outgroup, Isopoda) | 11 | 92.1 | 90.5 | 1.6 | 4.3 | 3.6 | arthropoda_odb10 | 94 | 286 | 881,869,794 | 0.004 | 86 Mbp | 9 Mbp |
+
+Environnement Conda:
+Python v3.10
+BUSCO v6.1.0
