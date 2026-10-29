@@ -3,7 +3,12 @@
 .gff
 .fna
 envs/*
+!envs/
 !envs/env_busco.yml
+!envs/env_mcscanx.yml
+!envs/env_orthofinder.yml
+!envs/versions.txt
+
 genomes/
 precomputed_crustacea_odb12
 *.zip
