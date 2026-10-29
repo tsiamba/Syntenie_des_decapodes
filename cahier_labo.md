@@ -758,3 +758,171 @@ Les scores C, S, D, F, M et E sont en pourcentage. L'effectif S est le nombre de
 - [ ] Lire les tables avec le séparateur tabulation ; gérer les lignes `Missing` sans coordonnées et les groupes `Duplicated` à plusieurs lignes.
 - [ ] Pour les gènes du brin négatif dont les bornes sont décroissantes, conserver les coordonnées originales et le brin, puis dériver les bornes minimale et maximale pour l'analyse.
 - [ ] Sélectionner les marqueurs complets à copie unique communs aux génomes comparés, avec des positions exploitables, et consigner les exclusions.
+
+### Création et contrôle du tableau maître des positions BUSCO
+
+Regrouper les positions des marqueurs BUSCO complets à copie unique des onze génomes dans un fichier CSV commun, à partir des résultats existants en `crustacea_odb12`. Cette étape ne relance pas BUSCO : elle prépare les données pour les comparaisons de synténie.
+
+### Environnement et fichiers utilisés
+
+Le traitement et le contrôle utilisent Python et Pandas dans l'environnement Conda `/data/projet2/conda/env_busco`. Plotly n'est pas nécessaire pour cette extraction.
+
+| Élément | Emplacement ou rôle |
+|---|---|
+| Script de création | `/data/projet2/Syntenie_des_decapodes/scripts/master_csv_odb12.py` |
+| Dossier des onze résultats | `/data/projet2/Syntenie_des_decapodes/Busco/precomputed_crustacea_odb12/BUSCO/` |
+| Fichier d'entrée par génome | `<dossier_du_génome>/run_crustacea_odb12/full_table.tsv` |
+| Fichier produit | `/data/projet2/Syntenie_des_decapodes/Analyses/Diagramme_Sankey/Miniprot/output/master_positions_busco.csv` |
+
+Les entrées comprennent les six résultats locaux et les cinq résultats du professeur, tous en `crustacea_odb12`. Les différences de versions BUSCO et Miniprot décrites précédemment restent associées à ces résultats.
+
+### Adaptation du script de création
+
+Le script a été adapté pour :
+
+- utiliser le chemin actuel sous `Busco/precomputed_crustacea_odb12/BUSCO/` ;
+- corriger le nom de la référence en `run_crustacea_odb12` ;
+- reconnaître les deux préfixes de dossiers présents : `BUSCO_` et `resultats_busco_`, en ignorant notamment `busco_downloads/` ; le motif littéral `startswith("*.fna")` ne convenait pas à cette recherche ;
+- extraire l'accession complète avec sa version, sans conserver tout le nom du fichier FASTA dans `Organisme` ;
+- lire les dix colonnes tabulées des tables BUSCO ;
+- retenir les lignes `Complete` et exclure les identifiants apparaissant plusieurs fois dans une même table, sans choisir arbitrairement une copie ;
+- vérifier les coordonnées numériques et le brin, puis calculer `Start = min(bornes)` et `End = max(bornes)`, sans décalage de position ;
+- conserver les identifiants de séquences au lieu de les renommer artificiellement `Chr 1`, `Chr 2`, etc. ;
+- concaténer les données dans un CSV unique et les trier par génome, séquence, position et identifiant BUSCO.
+
+La version proposée utilise `to_csv(..., mode="x")` : elle refuse de remplacer un CSV déjà existant. Aucun tableau individuel ni aucune figure n'est produit par cette version du script.
+
+### Problème rencontré au lancement et solution
+
+Depuis le dossier `scripts/`, une première tentative a utilisé :
+
+```bash
+./master_csv_odb12.py
+```
+
+L'invite indiquait alors `(base)`. Les messages obtenus étaient notamment :
+
+```text
+./master_csv_odb12.py: line 1: import: command not found
+./master_csv_odb12.py: line 2: import: command not found
+./master_csv_odb12.py: line 3: import: command not found
+./master_csv_odb12.py: line 8: PROJECT_DIR: command not found
+./master_csv_odb12.py: line 10: syntax error near unexpected token `('
+```
+
+Le fichier Python avait été interprété par le shell. Il s'agissait d'un problème de lancement du script d'extraction, sans nouveau calcul BUSCO.
+
+La commande de lancement corrigée retenue est :
+
+```bash
+cd /data/projet2/Syntenie_des_decapodes/scripts
+conda activate /data/projet2/conda/env_busco
+python master_csv_odb12.py
+```
+
+L'ajout d'une ligne `#!/usr/bin/env python3` et l'utilisation de `chmod +x` avaient également été proposés pour permettre le lancement direct ; leur réalisation n'est pas confirmée dans les sorties transmises. La sortie de création du CSV n'a pas été transmise, mais le fichier a ensuite été lu et contrôlé avec succès dans `env_busco`.
+
+### Description du fichier de sortie
+
+`master_positions_busco.csv` est un fichier texte séparé par des virgules, avec un en-tête et sans colonne d'index Pandas. Il contient une ligne par couple `(Organisme, Busco_id)` retenu.
+
+| Colonne | Description |
+|---|---|
+| `Organisme` | Accession versionnée de l'assemblage, par exemple `GCF_035594125.1` |
+| `Chromosome` | Copie provisoire de `Sequence` ; l'identité d'un chromosome réel n'est pas encore validée |
+| `Sequence` | Identifiant original de la séquence sur laquelle BUSCO localise le marqueur |
+| `Busco_id` | Identifiant du groupe BUSCO complet à copie unique |
+| `Start` | Minimum des deux bornes BUSCO natives |
+| `End` | Maximum des deux bornes BUSCO natives |
+| `Strand` | Brin d'origine, `+` ou `-` |
+
+Le script ne crée pas de colonnes `raw_start` ou `raw_end`. Les bornes initiales restent consultables dans les `full_table.tsv` sources, qui ne sont pas modifiés. Aucune conversion BED ou convention de décalage 0-based/1-based n'est appliquée.
+
+### Contrôle du CSV effectué dans le terminal
+
+Commande exécutée et sortie transmises depuis l'environnement `env_busco` :
+
+```bash
+conda activate /data/projet2/conda/env_busco
+
+python - <<'PY'
+import pandas as pd
+
+path = (
+    "/data/projet2/Syntenie_des_decapodes/"
+    "Analyses/Diagramme_Sankey/Miniprot/output/"
+    "master_positions_busco.csv"
+)
+
+df = pd.read_csv(path)
+
+print("BUSCO à copie unique par génome :")
+print(df.groupby("Organisme").size().to_string())
+
+print("\nNombre de génomes :", df["Organisme"].nunique())
+print("Nombre de positions :", len(df))
+print(
+    "Doublons marqueur/génome :",
+    df.duplicated(["Organisme", "Busco_id"]).sum(),
+)
+print(
+    "Coordonnées manquantes :",
+    df[["Start", "End"]].isna().sum().sum(),
+)
+print("Bornes inversées :", (df["Start"] > df["End"]).sum())
+PY
+```
+
+Résultats par génome :
+
+| Identifiant du génome | Espèce | Positions à copie unique |
+|---|---|---:|
+| GCA_965208005.1 | *Jaera praehirsuta* | 1 453 |
+| GCF_015104395.2 | *Macrobrachium nipponense* | 1 341 |
+| GCF_017591435.1 | *Portunus trituberculatus* | 1 505 |
+| GCF_019202785.1 | *Penaeus chinensis* | 1 474 |
+| GCF_024679095.1 | *Eriocheir sinensis* | 1 460 |
+| GCF_035594125.1 | *Scylla paramamosain* | 1 523 |
+| GCF_036320965.1 | *Panulirus ornatus* | 1 488 |
+| GCF_038502225.1 | *Cherax quadricarinatus* | 1 344 |
+| GCF_040412425.1 | *Macrobrachium rosenbergii* | 1 486 |
+| GCF_040958095.1 | *Procambarus clarkii* | 1 411 |
+| GCF_042767895.1 | *Penaeus vannamei* | 1 310 |
+| **Total** | **11 génomes** | **15 795** |
+
+Bilan du contrôle :
+
+```text
+Nombre de génomes : 11
+Nombre de positions : 15795
+Doublons marqueur/génome : 0
+Coordonnées manquantes : 0
+Bornes inversées : 0
+```
+
+Le contrôle a seulement affiché son résultat dans le terminal ; il n'a créé ni `qc_genomes.tsv`, ni `exclusions.tsv`, ni nouveau CSV.
+
+### Recul sur les résultats et état du workflow
+
+Les onze effectifs correspondent exactement aux nombres de BUSCO complets à copie unique S indiqués dans les résumés. Le total de 15 795 positions est donc cohérent avec les résultats de départ. Le contrôle confirme l'unicité des couples marqueur/génome, l'absence de coordonnées manquantes et la remise en ordre des bornes.
+
+Ces 15 795 lignes représentent des occurrences de marqueurs réparties entre les génomes, et non 15 795 groupes BUSCO distincts ou communs aux onze espèces. Les ensembles communs restent à déterminer. Ce contrôle ne remplace pas un comptage séparé des groupes D/F/M dans les tables intégrales.
+
+La colonne `Chromosome` reste provisoire : une séquence BUSCO peut correspondre à un chromosome, un scaffold ou une séquence mitochondriale. Il faut l'associer aux métadonnées NCBI avant de sélectionner les marqueurs chromosomiques et de calculer les similarités. Aucun résultat de macrosynténie, de colinéarité ou de réarrangement n'est encore établi par ce seul CSV.
+
+La recherche suivante sous `genomes/` n'a retourné aucune sortie :
+
+```bash
+find /data/projet2/Syntenie_des_decapodes/genomes \
+  -type f \
+  \( -name '*assembly_report.txt' -o -name '*sequence_report.jsonl' \) \
+  -print
+```
+
+Il faut donc récupérer les rapports par séquence nécessaires à l'enrichissement du CSV. Leur téléchargement sur le cluster n'est pas encore confirmé dans cette entrée.
+
+- [x] Créer le CSV commun des marqueurs complets à copie unique.
+- [x] Vérifier les onze effectifs et les contrôles de structure du CSV.
+- [ ] Associer les séquences aux chromosomes réels, longueurs et catégories NCBI.
+- [ ] Sélectionner les marqueurs chromosomiques communs pour chaque paire.
+- [ ] Calculer les similarités de contenu et d'adjacence, puis produire les figures.

@@ -6,8 +6,8 @@ import plotly.express as px
 # ==========================================
 # 1. GESTION DES DOSSIERS
 # ==========================================
-BUSCO_BASE_DIR = "../busco_metaeuk/busco_output"
-LINEAGE_DIR = "run_arthropoda_odb10"
+BUSCO_BASE_DIR = "../Busco"
+LINEAGE_DIR = "run_crustacae_odb12"
 
 SANKEY_BASE_DIR = "../Diagramme_Sankey/Metaeuk"
 DIR_OUTPUT = os.path.join(SANKEY_BASE_DIR, "output")
@@ -28,7 +28,7 @@ all_genomes_data = []
 
 print("Extraction et assignation des chromosomes...")
 for folder in sorted(os.listdir(BUSCO_BASE_DIR)):
-    if not folder.startswith("resultats_busco_"):
+    if not folder.startswith("*.fna"):
         continue
         
     genome_name = folder.replace("resultats_busco_", "")
