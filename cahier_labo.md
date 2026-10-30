@@ -551,8 +551,8 @@ Le nettoyage du cache avec `conda clean --all -y` avait été envisagé en cas d
 - OrthoFinder: phylogenetic orthology inference for comparative genomics
 - MCScanX: a toolkit for detection and evolutionary analysis of gene synteny and collinearity
 
-## Jeudi 29 octobre 2026 — Aurélio : organisation et vérification des résultats BUSCO
-
+## Jeudi 29 octobre 2026 : organisation et vérification des résultats BUSCO
+**Aurélio**: 2h
 ### Objectif
 
 Organiser les fichiers du projet, identifier les résultats BUSCO disponibles
@@ -926,3 +926,55 @@ Il faut donc récupérer les rapports par séquence nécessaires à l'enrichisse
 - [ ] Associer les séquences aux chromosomes réels, longueurs et catégories NCBI.
 - [ ] Sélectionner les marqueurs chromosomiques communs pour chaque paire.
 - [ ] Calculer les similarités de contenu et d'adjacence, puis produire les figures.
+
+## Mercredi 28 octobre
+
+**Jade** · [1h]
+
+- Lecture des sources bibliographiques pour le choix de la méthode de quantification de la synténie
+- Pistes envisagées : distance personnalisée à partir des BUSCO (ordre des gènes, distance de points de rupture, DCJ), puis arbre NJ/UPGMA à partir de la matrice de distances
+
+Sources vues
+
+- Walden N., Schranz M. E. (2023). Synteny identifies reliable orthologs for phylogenomics and comparative genomics of the Brassicaceae. *Genome Biol. Evol.* 15(3), evad034. https://doi.org/10.1093/gbe/evad034 : BUSCO mono-copie comme base pour la macro-synténie
+- Rubert D. P., Stoye J., Martinez F. H. V. (2020). Distance and similarity measures in comparative genomics. *CTD-SBC 2020*, 7–12. https://doi.org/10.5753/ctd.2020.11361 : mesures de conservation (ACI, distance de points de rupture)
+- Bergeron A., Swenson K. M. (2024). A century of genomic rearrangements. In *Models and Methods for Biological Evolution*, 117–139, Wiley. https://doi.org/10.1002/9781394284252.ch5 : modèles DCJ et distances d'édition
+- Paradis E., Schliep K. (2018). ape 5.0: An environment for modern phylogenetics and evolutionary analyses in R. *Bioinformatics* 35(3), 526–528. https://doi.org/10.1093/bioinformatics/bty633 : arbres NJ/UPGMA à partir de matrices de distances
+- *Nature Ecology & Evolution* (2024), 8, 513–527. https://doi.org/10.1038/s41559-024-02329-4 : "gene painting" des BUSCO et groupes de liaison ancestraux (ALG)
+
+## Jeudi 29 octobre
+
+**Jade** · [40 mins]
+
+- Suite de la lecture des sources
+- Discussion avec **Tsiambaka** et **Aurelio** et choix de **syngraph** pour l'analyse de synténie
+- Raisons du choix :
+  - évite une grande partie du travail manuel nécessaire pour construire des matrices de distances personnalisées
+  - accepte en entrée des sorties BUSCO modifiées
+  - permet l'inférence des réarrangements (fissions, fusions, translocations) et des états ancestraux à partir des tables BUSCO
+
+Sources lues
+
+- bioRxiv (2023). Inferring inter-chromosomal rearrangements and ancestral linkage groups from synteny. https://doi.org/10.1101/2023.09.17.558111 : inférence des réarrangements inter-chromosomiques et ALG
+- bioRxiv (2026). 338 coleopteran genomes reveal exceptional rearrangement variation… https://doi.org/10.64898/2026.07.17.739156 : hétérogénéité des taux de réarrangement chez les arthropodes [titre complet à compléter]
+- Mackintosh A. J. F. *syngraph: toolkit for evolutionary analyses of linkage groups*. https://github.com/A-J-F-Mackintosh/syngraph : graphe de synténie, inférence des réarrangements, états ancestraux à partir de tables BUSCO
+
+## Vendredi 30 octobre
+
+**Jade** · [20 mins]
+
+- Création de l'environnement conda pour syngraph
+
+Commandes utilisées
+#Dans projet2/conda
+```
+conda create -n env_syngraph python=3.8 -y
+conda activate env_syngraph
+conda config --env --add channels conda-forge 
+conda install -c conda-forge networkx=2.4 pandas docopt tqdm ete3 pygraphviz matplotlib -y
+```
+#Dans scripts/
+```
+git clone https://github.com/A-J-F-Mackintosh/syngraph.git
+```
+[syngraph doit etre run depuis son propre dossier syngraph, pour atteindre ses python dependencies (sinon il faudrait update votre _$PYTHONPATH_ )]

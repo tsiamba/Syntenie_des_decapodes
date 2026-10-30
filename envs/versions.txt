@@ -6,12 +6,3 @@ Environnement BUSCO
 Emplacement : /data/projet2/conda/env_busco
 BUSCO : BUSCO 6.1.0
 
-Environnement OrthoFinder
--------------------------
-Emplacement : /data/projet2/conda/env_orthofinder
-OrthoFinder : OrthoFinder 3.2
-
-Environnement MCScanX
----------------------
-Emplacement : /data/projet2/conda/env_mcscanx
-MCScanX : 1.0.0
