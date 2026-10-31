@@ -1,0 +1,66 @@
+assembly	species	sequence_id	role_in_fasta_header	chromosome_mentioned	fasta_header
+GCA_965208005.1	Jaera praehirsuta	OZ242385.1	non_precise		OZ242385.1 Jaera praehirsuta genome assembly, chromosome: 1
+GCA_965208005.1	Jaera praehirsuta	OZ242386.1	non_precise		OZ242386.1 Jaera praehirsuta genome assembly, chromosome: 2
+GCA_965208005.1	Jaera praehirsuta	OZ242387.1	non_precise		OZ242387.1 Jaera praehirsuta genome assembly, chromosome: 3
+GCA_965208005.1	Jaera praehirsuta	OZ242388.1	non_precise		OZ242388.1 Jaera praehirsuta genome assembly, chromosome: 4
+GCA_965208005.1	Jaera praehirsuta	OZ242389.1	non_precise		OZ242389.1 Jaera praehirsuta genome assembly, chromosome: 5
+GCA_965208005.1	Jaera praehirsuta	OZ242390.1	non_precise		OZ242390.1 Jaera praehirsuta genome assembly, chromosome: 6
+GCA_965208005.1	Jaera praehirsuta	OZ242391.1	non_precise		OZ242391.1 Jaera praehirsuta genome assembly, chromosome: 7
+GCA_965208005.1	Jaera praehirsuta	OZ242392.1	non_precise		OZ242392.1 Jaera praehirsuta genome assembly, chromosome: 8
+GCA_965208005.1	Jaera praehirsuta	OZ242393.1	non_precise		OZ242393.1 Jaera praehirsuta genome assembly, chromosome: 9
+GCA_965208005.1	Jaera praehirsuta	OZ242394.1	non_precise		OZ242394.1 Jaera praehirsuta genome assembly, chromosome: 10
+GCA_965208005.1	Jaera praehirsuta	OZ242395.1	non_precise		OZ242395.1 Jaera praehirsuta genome assembly, chromosome: 11
+GCF_035594125.1	Scylla paramamosain	NC_087151.1	chromosome	1	NC_087151.1 Scylla paramamosain isolate STU-SP2022 chromosome 1, ASM3559412v1, whole genome shotgun sequence
+GCF_035594125.1	Scylla paramamosain	NC_087152.1	chromosome	2	NC_087152.1 Scylla paramamosain isolate STU-SP2022 chromosome 2, ASM3559412v1, whole genome shotgun sequence
+GCF_035594125.1	Scylla paramamosain	NC_087153.1	chromosome	3	NC_087153.1 Scylla paramamosain isolate STU-SP2022 chromosome 3, ASM3559412v1, whole genome shotgun sequence
+GCF_035594125.1	Scylla paramamosain	NC_087154.1	chromosome	4	NC_087154.1 Scylla paramamosain isolate STU-SP2022 chromosome 4, ASM3559412v1, whole genome shotgun sequence
+GCF_035594125.1	Scylla paramamosain	NC_087155.1	chromosome	5	NC_087155.1 Scylla paramamosain isolate STU-SP2022 chromosome 5, ASM3559412v1, whole genome shotgun sequence
+GCF_035594125.1	Scylla paramamosain	NC_087156.1	chromosome	6	NC_087156.1 Scylla paramamosain isolate STU-SP2022 chromosome 6, ASM3559412v1, whole genome shotgun sequence
+GCF_035594125.1	Scylla paramamosain	NC_087157.1	chromosome	7	NC_087157.1 Scylla paramamosain isolate STU-SP2022 chromosome 7, ASM3559412v1, whole genome shotgun sequence
+GCF_035594125.1	Scylla paramamosain	NC_087158.1	chromosome	8	NC_087158.1 Scylla paramamosain isolate STU-SP2022 chromosome 8, ASM3559412v1, whole genome shotgun sequence
+GCF_035594125.1	Scylla paramamosain	NC_087159.1	chromosome	9	NC_087159.1 Scylla paramamosain isolate STU-SP2022 chromosome 9, ASM3559412v1, whole genome shotgun sequence
+GCF_035594125.1	Scylla paramamosain	NC_087160.1	chromosome	10	NC_087160.1 Scylla paramamosain isolate STU-SP2022 chromosome 10, ASM3559412v1, whole genome shotgun sequence
+GCF_035594125.1	Scylla paramamosain	NC_087161.1	chromosome	11	NC_087161.1 Scylla paramamosain isolate STU-SP2022 chromosome 11, ASM3559412v1, whole genome shotgun sequence
+GCF_035594125.1	Scylla paramamosain	NC_087162.1	chromosome	12	NC_087162.1 Scylla paramamosain isolate STU-SP2022 chromosome 12, ASM3559412v1, whole genome shotgun sequence
+GCF_035594125.1	Scylla paramamosain	NC_087163.1	chromosome	13	NC_087163.1 Scylla paramamosain isolate STU-SP2022 chromosome 13, ASM3559412v1, whole genome shotgun sequence
+GCF_035594125.1	Scylla paramamosain	NC_087164.1	chromosome	14	NC_087164.1 Scylla paramamosain isolate STU-SP2022 chromosome 14, ASM3559412v1, whole genome shotgun sequence
+GCF_035594125.1	Scylla paramamosain	NC_087165.1	chromosome	15	NC_087165.1 Scylla paramamosain isolate STU-SP2022 chromosome 15, ASM3559412v1, whole genome shotgun sequence
+GCF_035594125.1	Scylla paramamosain	NC_087166.1	chromosome	16	NC_087166.1 Scylla paramamosain isolate STU-SP2022 chromosome 16, ASM3559412v1, whole genome shotgun sequence
+GCF_035594125.1	Scylla paramamosain	NC_087167.1	chromosome	17	NC_087167.1 Scylla paramamosain isolate STU-SP2022 chromosome 17, ASM3559412v1, whole genome shotgun sequence
+GCF_035594125.1	Scylla paramamosain	NC_087168.1	chromosome	18	NC_087168.1 Scylla paramamosain isolate STU-SP2022 chromosome 18, ASM3559412v1, whole genome shotgun sequence
+GCF_035594125.1	Scylla paramamosain	NC_087169.1	chromosome	19	NC_087169.1 Scylla paramamosain isolate STU-SP2022 chromosome 19, ASM3559412v1, whole genome shotgun sequence
+GCF_035594125.1	Scylla paramamosain	NC_087170.1	chromosome	20	NC_087170.1 Scylla paramamosain isolate STU-SP2022 chromosome 20, ASM3559412v1, whole genome shotgun sequence
+GCF_035594125.1	Scylla paramamosain	NC_087171.1	chromosome	21	NC_087171.1 Scylla paramamosain isolate STU-SP2022 chromosome 21, ASM3559412v1, whole genome shotgun sequence
+GCF_035594125.1	Scylla paramamosain	NC_087172.1	chromosome	22	NC_087172.1 Scylla paramamosain isolate STU-SP2022 chromosome 22, ASM3559412v1, whole genome shotgun sequence
+GCF_035594125.1	Scylla paramamosain	NC_087173.1	chromosome	23	NC_087173.1 Scylla paramamosain isolate STU-SP2022 chromosome 23, ASM3559412v1, whole genome shotgun sequence
+GCF_035594125.1	Scylla paramamosain	NC_087174.1	chromosome	24	NC_087174.1 Scylla paramamosain isolate STU-SP2022 chromosome 24, ASM3559412v1, whole genome shotgun sequence
+GCF_035594125.1	Scylla paramamosain	NC_087175.1	chromosome	25	NC_087175.1 Scylla paramamosain isolate STU-SP2022 chromosome 25, ASM3559412v1, whole genome shotgun sequence
+GCF_035594125.1	Scylla paramamosain	NC_087176.1	chromosome	26	NC_087176.1 Scylla paramamosain isolate STU-SP2022 chromosome 26, ASM3559412v1, whole genome shotgun sequence
+GCF_035594125.1	Scylla paramamosain	NC_087177.1	chromosome	27	NC_087177.1 Scylla paramamosain isolate STU-SP2022 chromosome 27, ASM3559412v1, whole genome shotgun sequence
+GCF_035594125.1	Scylla paramamosain	NC_087178.1	chromosome	28	NC_087178.1 Scylla paramamosain isolate STU-SP2022 chromosome 28, ASM3559412v1, whole genome shotgun sequence
+GCF_035594125.1	Scylla paramamosain	NC_087179.1	chromosome	29	NC_087179.1 Scylla paramamosain isolate STU-SP2022 chromosome 29, ASM3559412v1, whole genome shotgun sequence
+GCF_035594125.1	Scylla paramamosain	NC_087180.1	chromosome	30	NC_087180.1 Scylla paramamosain isolate STU-SP2022 chromosome 30, ASM3559412v1, whole genome shotgun sequence
+GCF_035594125.1	Scylla paramamosain	NC_087181.1	chromosome	31	NC_087181.1 Scylla paramamosain isolate STU-SP2022 chromosome 31, ASM3559412v1, whole genome shotgun sequence
+GCF_035594125.1	Scylla paramamosain	NC_087182.1	chromosome	32	NC_087182.1 Scylla paramamosain isolate STU-SP2022 chromosome 32, ASM3559412v1, whole genome shotgun sequence
+GCF_035594125.1	Scylla paramamosain	NC_087183.1	chromosome	33	NC_087183.1 Scylla paramamosain isolate STU-SP2022 chromosome 33, ASM3559412v1, whole genome shotgun sequence
+GCF_035594125.1	Scylla paramamosain	NC_087184.1	chromosome	34	NC_087184.1 Scylla paramamosain isolate STU-SP2022 chromosome 34, ASM3559412v1, whole genome shotgun sequence
+GCF_035594125.1	Scylla paramamosain	NC_087185.1	chromosome	35	NC_087185.1 Scylla paramamosain isolate STU-SP2022 chromosome 35, ASM3559412v1, whole genome shotgun sequence
+GCF_035594125.1	Scylla paramamosain	NC_087186.1	chromosome	36	NC_087186.1 Scylla paramamosain isolate STU-SP2022 chromosome 36, ASM3559412v1, whole genome shotgun sequence
+GCF_035594125.1	Scylla paramamosain	NC_087187.1	chromosome	37	NC_087187.1 Scylla paramamosain isolate STU-SP2022 chromosome 37, ASM3559412v1, whole genome shotgun sequence
+GCF_035594125.1	Scylla paramamosain	NC_087188.1	chromosome	38	NC_087188.1 Scylla paramamosain isolate STU-SP2022 chromosome 38, ASM3559412v1, whole genome shotgun sequence
+GCF_035594125.1	Scylla paramamosain	NC_087189.1	chromosome	39	NC_087189.1 Scylla paramamosain isolate STU-SP2022 chromosome 39, ASM3559412v1, whole genome shotgun sequence
+GCF_035594125.1	Scylla paramamosain	NC_087190.1	chromosome	40	NC_087190.1 Scylla paramamosain isolate STU-SP2022 chromosome 40, ASM3559412v1, whole genome shotgun sequence
+GCF_035594125.1	Scylla paramamosain	NC_087191.1	chromosome	41	NC_087191.1 Scylla paramamosain isolate STU-SP2022 chromosome 41, ASM3559412v1, whole genome shotgun sequence
+GCF_035594125.1	Scylla paramamosain	NC_087192.1	chromosome	42	NC_087192.1 Scylla paramamosain isolate STU-SP2022 chromosome 42, ASM3559412v1, whole genome shotgun sequence
+GCF_035594125.1	Scylla paramamosain	NC_087193.1	chromosome	43	NC_087193.1 Scylla paramamosain isolate STU-SP2022 chromosome 43, ASM3559412v1, whole genome shotgun sequence
+GCF_035594125.1	Scylla paramamosain	NC_087194.1	chromosome	44	NC_087194.1 Scylla paramamosain isolate STU-SP2022 chromosome 44, ASM3559412v1, whole genome shotgun sequence
+GCF_035594125.1	Scylla paramamosain	NC_087195.1	chromosome	45	NC_087195.1 Scylla paramamosain isolate STU-SP2022 chromosome 45, ASM3559412v1, whole genome shotgun sequence
+GCF_035594125.1	Scylla paramamosain	NC_087196.1	chromosome	46	NC_087196.1 Scylla paramamosain isolate STU-SP2022 chromosome 46, ASM3559412v1, whole genome shotgun sequence
+GCF_035594125.1	Scylla paramamosain	NC_087197.1	chromosome	47	NC_087197.1 Scylla paramamosain isolate STU-SP2022 chromosome 47, ASM3559412v1, whole genome shotgun sequence
+GCF_035594125.1	Scylla paramamosain	NC_087199.1	chromosome	49	NC_087199.1 Scylla paramamosain isolate STU-SP2022 chromosome 49, ASM3559412v1, whole genome shotgun sequence
+GCF_035594125.1	Scylla paramamosain	NW_026973666.1	scaffold		NW_026973666.1 Scylla paramamosain isolate STU-SP2022 unplaced genomic scaffold, ASM3559412v1 Contig1, whole genome shotgun sequence
+GCF_035594125.1	Scylla paramamosain	NW_026973667.1	scaffold		NW_026973667.1 Scylla paramamosain isolate STU-SP2022 unplaced genomic scaffold, ASM3559412v1 Contig2, whole genome shotgun sequence
+GCF_035594125.1	Scylla paramamosain	NW_026973668.1	scaffold		NW_026973668.1 Scylla paramamosain isolate STU-SP2022 unplaced genomic scaffold, ASM3559412v1 Contig3, whole genome shotgun sequence
+GCF_035594125.1	Scylla paramamosain	NW_026973669.1	scaffold		NW_026973669.1 Scylla paramamosain isolate STU-SP2022 unplaced genomic scaffold, ASM3559412v1 Contig4, whole genome shotgun sequence
+GCF_035594125.1	Scylla paramamosain	NW_026973670.1	scaffold		NW_026973670.1 Scylla paramamosain isolate STU-SP2022 unplaced genomic scaffold, ASM3559412v1 Contig5, whole genome shotgun sequence
+GCF_035594125.1	Scylla paramamosain	NW_026973696.1	scaffold		NW_026973696.1 Scylla paramamosain isolate STU-SP2022 unplaced genomic scaffold, ASM3559412v1 Contig31, whole genome shotgun sequence

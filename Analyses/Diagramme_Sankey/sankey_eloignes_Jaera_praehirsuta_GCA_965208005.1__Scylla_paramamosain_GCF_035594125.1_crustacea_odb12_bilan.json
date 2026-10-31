@@ -1,0 +1,69 @@
+{
+  "comparison": "eloignes",
+  "species": [
+    "Jaera praehirsuta",
+    "Scylla paramamosain"
+  ],
+  "assemblies": [
+    "GCA_965208005.1",
+    "GCF_035594125.1"
+  ],
+  "common_single_copy_buscos": 1440,
+  "sum_link_weights": 1440,
+  "number_links": 433,
+  "plotly_version": "6.9.0",
+  "svg": "non_demande",
+  "sequence_labels": "identifiants originaux; noms et roles explicites des en-tetes FASTA si fournis",
+  "fasta_sources": {
+    "GCA_965208005.1": "/data/projet2/Syntenie_des_decapodes/genomes/ncbi_dataset/data/GCA_965208005.1/GCA_965208005.1_qmJaePrae1.hap1.1_genomic.fna",
+    "GCF_035594125.1": "/data/projet2/Syntenie_des_decapodes/genomes/ncbi_dataset/data/GCF_035594125.1/GCF_035594125.1_ASM3559412v1_genomic.fna"
+  },
+  "inputs": [
+    {
+      "path": "/data/projet2/Syntenie_des_decapodes/Busco/precomputed_crustacea_odb12/BUSCO/resultats_busco_GCA_965208005.1_qmJaePrae1.hap1.1_genomic.fna/run_crustacea_odb12/full_table.tsv",
+      "sha256": "e513513cbd961f2cdb5635f720ebdc5afb87a78888c03f33733e79b6d7e221f6",
+      "metadata": {
+        "lineage": "crustacea_odb12",
+        "creation_date": "2026-05-22"
+      },
+      "stats": {
+        "rows_by_status": {
+          "Complete": 1453,
+          "Fragmented": 15,
+          "Duplicated": 81,
+          "Missing": 29
+        },
+        "unique_busco_ids": 1536,
+        "single_copy_retained": 1453,
+        "excluded_by_reason": {
+          "Fragmented": 15,
+          "identifiant_repete": 39,
+          "Missing": 29
+        }
+      }
+    },
+    {
+      "path": "/data/projet2/Syntenie_des_decapodes/Busco/precomputed_crustacea_odb12/BUSCO/resultats_busco_GCF_035594125.1_ASM3559412v1_genomic.fna/run_crustacea_odb12/full_table.tsv",
+      "sha256": "311a68392184240048c8ac2f94cc60bbafab4e15e6ccadd56caeeef4651993da",
+      "metadata": {
+        "lineage": "crustacea_odb12",
+        "creation_date": "2026-05-22"
+      },
+      "stats": {
+        "rows_by_status": {
+          "Complete": 1523,
+          "Fragmented": 1,
+          "Duplicated": 44,
+          "Missing": 1
+        },
+        "unique_busco_ids": 1536,
+        "single_copy_retained": 1523,
+        "excluded_by_reason": {
+          "Fragmented": 1,
+          "identifiant_repete": 11,
+          "Missing": 1
+        }
+      }
+    }
+  ]
+}

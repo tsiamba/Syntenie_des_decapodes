@@ -978,3 +978,225 @@ conda install -c conda-forge networkx=2.4 pandas docopt tqdm ete3 pygraphviz mat
 git clone https://github.com/A-J-F-Mackintosh/syngraph.git
 ```
 [syngraph doit etre run depuis son propre dossier syngraph, pour atteindre ses python dependencies (sinon il faudrait update votre _$PYTHONPATH_ )]
+
+**Tsiamba** ~2h
+## Création d'un environnement dans /data/projet2/conda/env_dotplot
+- commande: conda create \
+    -p /data/projet2/conda/env_dotplot \
+    -c conda-forge \
+    python=3.8 numpy pandas matplotlib scipy plotly \
+    -y
+
+J'ai essayé les outils Orthofinder et MCscanX mais qui n'ont pas marché, j'ai enlevé les environnements des outils ainsi que leurs fichiers.yml que j'ai push dans le repository sur Github.
+Ensuite j'ai fais 2 scripts : 
+- dotplot_all_pairs.py
+- dotplot_all_pairs_V2.py
+
+Le premier a donné de bons résultats mais sans échelles et avec des couleurs pas très belles mais le deuxième semble plutôt meilleur.
+
+Ce script va permettre de voir explicitement les gènes conservés entre toutes les combinaisons possibles des 11 génomes, donc 55 en total.
+On a en input les 11 fichiers.tsv et en output 55 fichiers.png des graphes, + 2 fichiers : best one et worst one.
+
+=> Tâches à faire : je dois git push l'environnement, le script de dotplot et faire un README de dotplot.
+
+## Samedi 31 octobre 2026: diagrammes Sankey par paire à partir de BUSCO crustacea_odb12
+**Aurélio**: ~2h
+### Objectif et place dans le projet
+
+Produire deux diagrammes Sankey à partir des résultats BUSCO existants : une comparaison entre deux espèces du même genre, *Macrobrachium nipponense* et *Macrobrachium rosenbergii*, et une comparaison entre l'isopode externe *Jaera praehirsuta* et le décapode *Scylla paramamosain*.
+
+Cette étape ne relance pas BUSCO. Le script lit directement les `full_table.tsv` et les en-têtes des FASTA génomiques. Le fichier `master_positions_busco.csv`, construit précédemment, n'est pas une entrée de ce traitement.
+
+Les mentions `proches` et `eloignes` correspondent aux paires choisies pour cette analyse ; elles ne résultent pas d'un calcul de distance ou d'un classement exhaustif des onze espèces. La comparaison optionnelle interne aux décapodes, *Penaeus vannamei* contre *Scylla paramamosain*, est disponible dans le script mais aucun HTML de cette troisième paire n'a été fourni pour cette entrée.
+
+### Script et environnement
+
+| Élément | Emplacement ou version |
+|---|---|
+| Script utilisé sur le cluster | `/data/projet2/Syntenie_des_decapodes/scripts/sankey_syntenie.py` |
+| Environnement Conda | `/data/projet2/conda/env_sankey` |
+| Définition de l'environnement | `/data/projet2/Syntenie_des_decapodes/envs/env_sankey.yml` |
+| Python demandé dans le YAML | `3.12` |
+| Plotly demandé dans le YAML | `6.9.0` |
+| Référence BUSCO utilisée | `crustacea_odb12`, sans mélange avec `crustacea_odb12.2` ou `arthropoda_odb10` |
+
+Le script a été fourni initialement sous le nom `sankey_pair_odb12.py`, puis enregistré sur le cluster sous le nom `sankey_syntenie.py`. Les commandes de cette entrée utilisent ce dernier nom. La version développée ici comporte des contrôles de format, une gestion explicite des fichiers FASTA et des sorties portant les deux noms d'espèces, les accessions et l'étiquette de comparaison.
+
+L'environnement contient Python, pip et Plotly. Kaleido et Chrome/Chromium ne sont nécessaires que pour l'export SVG optionnel. La commande retenue ci-dessous utilise `--no-svg` et produit des HTML autonomes consultables hors ligne.
+
+### Entrées BUSCO
+
+Le script connaît les onze chemins fournis, mais seules les quatre tables des deux paires sélectionnées sont nécessaires à cette exécution. Le dossier parent est :
+
+```text
+/data/projet2/Syntenie_des_decapodes/Busco/precomputed_crustacea_odb12/BUSCO/
+```
+
+Les quatre chemins relatifs à ce dossier sont :
+
+```text
+BUSCO_GCF_015104395.2_ASM1510439v2_genomic.fna/run_crustacea_odb12/full_table.tsv
+BUSCO_GCF_040412425.1_ASM4041242v1_genomic.fna/run_crustacea_odb12/full_table.tsv
+resultats_busco_GCA_965208005.1_qmJaePrae1.hap1.1_genomic.fna/run_crustacea_odb12/full_table.tsv
+resultats_busco_GCF_035594125.1_ASM3559412v1_genomic.fna/run_crustacea_odb12/full_table.tsv
+```
+
+| Assemblage | Espèce | Paire |
+|---|---|---|
+| `GCF_015104395.2` | *Macrobrachium nipponense* | `proches` |
+| `GCF_040412425.1` | *Macrobrachium rosenbergii* | `proches` |
+| `GCA_965208005.1` | *Jaera praehirsuta* | `eloignes` |
+| `GCF_035594125.1` | *Scylla paramamosain* | `eloignes` |
+
+### Entrées FASTA et identification des séquences
+
+Les FASTA sont recherchés sous :
+
+```text
+/data/projet2/Syntenie_des_decapodes/genomes/ncbi_dataset/data/<accession>/
+```
+
+Les noms des quatre FASTA décompressés recherchés sont :
+
+```text
+GCF_015104395.2_ASM1510439v2_genomic.fna
+GCF_040412425.1_ASM4041242v1_genomic.fna
+GCA_965208005.1_qmJaePrae1.hap1.1_genomic.fna
+GCF_035594125.1_ASM3559412v1_genomic.fna
+```
+
+La colonne `Sequence` de BUSCO est associée exactement au premier identifiant de l'en-tête FASTA, version comprise. Les mentions explicites de chromosome sont utilisées pour enrichir les étiquettes sans perdre l'identifiant d'origine. Les termes scaffold, contig et mitochondrie sont distingués ; les préfixes RefSeq `NW_` et `NT_` ne sont pas requalifiés en chromosomes.
+
+Une vérification par `grep '^>'` sur le FASTA d'*Eriocheir sinensis* a montré des en-têtes `NC_…` portant les mentions `chromosome 1`, `chromosome 2`, etc. Cela a motivé l'utilisation des en-têtes, mais cette observation sur une espèce ne valide pas à elle seule les chromosomes des autres assemblages.
+
+Pour *Jaera*, le dossier contient à la fois le `.fna` de 852 Mo et son `.fna.gz` de 256 Mo. La première version du script s'arrêtait avec `attendu exactement un ... trouve 2`. La sélection a été adaptée pour tous les génomes : lorsqu'un `.fna` et son `.fna.gz` de même nom coexistent, le `.fna` est choisi ; si seul le `.gz` existe, il est lu directement. Plusieurs noms différents restent ambigus et nécessitent une sélection explicite par `--fasta-file ACCESSION=CHEMIN`. Aucun fichier génomique n'a besoin d'être déplacé ou supprimé.
+
+Cette règle de priorité ne constitue pas une vérification de l'égalité des contenus des deux fichiers. Les identifiants du fichier choisi restent contrôlés contre les séquences BUSCO.
+
+### Filtrage et construction des liens
+
+1. Lire les tables avec le séparateur tabulation et identifier les colonnes par leur nom. Les colonnes `Sequence`, `Start`/`Gene Start` et `End`/`Gene End` sont nécessaires pour des résultats génomiques.
+2. Vérifier les statuts, les coordonnées et la référence déclarée. Les ensembles complets d'identifiants BUSCO doivent être identiques entre les deux tables ; des dates de création du lineage différentes, lorsqu'elles sont renseignées, sont refusées.
+3. Ne retenir que les identifiants associés à une seule ligne de statut `Complete` dans chaque table. Tous les identifiants répétés sont exclus, même si les lignes sont identiques. Les statuts `Duplicated`, `Fragmented` et `Missing` ne contribuent pas aux liens.
+4. Calculer l'intersection des marqueurs retenus dans les deux génomes de la paire.
+5. Pour chaque marqueur commun, relever sa séquence dans l'espèce A et sa séquence dans l'espèce B. Compter les marqueurs pour chaque couple de séquences.
+6. Tracer deux colonnes de nœuds, une par espèce. La largeur d'un lien représente son nombre de BUSCO ; un BUSCO contribue exactement 1 à un lien. Les coordonnées originales et le brin sont conservés dans la table des marqueurs, sans conversion de convention ni réorganisation de leur ordre.
+
+Il n'y a pas de filtre limitant les marqueurs aux chromosomes, de suppression des petits liens ou de regroupement artificiel des scaffolds.
+
+### Commandes retenues pour reproduire le traitement
+
+```bash
+conda activate /data/projet2/conda/env_sankey
+cd /data/projet2/Syntenie_des_decapodes/scripts
+
+mkdir -p /data/projet2/Syntenie_des_decapodes/envs/tmp_pip
+export TMPDIR=/data/projet2/Syntenie_des_decapodes/envs/tmp_pip
+
+# Autotests sans données biologiques
+python sankey_syntenie.py --self-test
+
+# Contrôle des tables et lecture des en-têtes FASTA, sans écrire les résultats
+python sankey_syntenie.py --fasta-root --dry-run
+
+# Génération des deux figures HTML et des tableaux
+python sankey_syntenie.py --fasta-root --no-svg
+```
+
+Ces commandes constituent la procédure de reproduction retenue. Les éléments directement attestés dans l'échange sont la réussite initiale de neuf autotests, les sorties de validation des tables, la lecture de trois FASTA avant l'erreur d'ambiguïté pour *Jaera*, puis la fourniture des deux HTML finaux. La version corrigée a ensuite passé douze autotests synthétiques locaux ; leur réexécution sur le cluster n'a pas été documentée par une nouvelle sortie de terminal.
+
+Le parcours des FASTA est séquentiel et peut prendre plusieurs minutes sans nouveau message pendant la lecture d'un fichier. Cette étape est effectuée également en mode `--dry-run`.
+
+### Incident d'installation et correction retenue
+
+La création Conda s'est terminée, puis l'installation pip a échoué avec :
+
+```text
+OSError: [Errno 28] No space left on device
+```
+
+Les contrôles transmis indiquaient 49 Go libres sur `/data`, mais seulement 8,8 Mo sur `/`, qui contient `/tmp` et `/home/vitale`. Les inodes n'étaient pas saturés et le cache pip occupait environ 10,7 Mo. La correction proposée a donc été de placer les fichiers temporaires sur `/data` et de désactiver le cache pip pour terminer l'installation dans l'environnement déjà créé :
+
+```bash
+TMPDIR=/data/projet2/Syntenie_des_decapodes/envs/tmp_pip \
+python -m pip install --no-cache-dir 'plotly==6.9.0'
+```
+
+La sortie de cette réinstallation n'a pas été fournie. Les HTML obtenus attestent toutefois qu'une génération Plotly a ensuite abouti ; ils ne constituent pas un inventaire complet des versions Python installées sur le cluster.
+
+### Sorties et vérifications disponibles
+
+Le dossier de sortie configuré est :
+
+```text
+/data/projet2/Syntenie_des_decapodes/Analyses/Diagramme_Sankey/
+```
+
+Les deux fichiers fournis et examinés sont :
+
+```text
+sankey_proches_Macrobrachium_nipponense_GCF_015104395.2__Macrobrachium_rosenbergii_GCF_040412425.1_crustacea_odb12.html
+sankey_eloignes_Jaera_praehirsuta_GCA_965208005.1__Scylla_paramamosain_GCF_035594125.1_crustacea_odb12.html
+```
+
+Pour chaque préfixe de comparaison, le script prévoit aussi :
+
+| Suffixe | Contenu |
+|---|---|
+| `_liens.tsv` | Identifiants des séquences source et cible, nombre de BUSCO par lien |
+| `_busco_communs.tsv` | Identifiant de chaque BUSCO retenu, séquences, coordonnées et brins dans les deux génomes |
+| `_exclusions.tsv` | Marqueurs non retenus et motifs de chaque côté |
+| `_sequences.tsv` | Correspondance entre identifiants, rôles, chromosomes mentionnés et en-têtes FASTA |
+| `_bilan.json` | Chemins, empreintes des tables BUSCO, paramètres de comparaison, décomptes, version Plotly et état SVG |
+| `.svg` | Export optionnel si demandé et si Kaleido et son navigateur fonctionnent |
+
+Seuls les HTML ont été transmis pour examen. La présence et le contenu des TSV et bilans JSON restent à contrôler sur le cluster ; aucun SVG de ces résultats biologiques n'a été fourni. Les décomptes ci-dessous ont été recalculés à partir des données de nœuds et de liens embarquées dans les HTML, sans dépendre de leur apparence à l'écran.
+
+### Résultats vérifiés
+
+| Indicateur | Paire `proches` | Paire `eloignes` |
+|---|---:|---:|
+| BUSCO complets à copie unique communs | 1 309 | 1 440 |
+| Couples de séquences reliés par au moins un BUSCO | 79 | 433 |
+| Séquences représentées dans l'espèce A | 49 chez *M. nipponense* | 11 chez *J. praehirsuta* |
+| Séquences représentées dans l'espèce B | 59 chez *M. rosenbergii* | 54 chez *S. paramamosain* |
+| Somme des poids des liens | 1 309 | 1 440 |
+
+La somme des poids correspond exactement au nombre de BUSCO annoncé dans chaque titre et dans les sorties de validation du terminal. Les deux diagrammes portent sur des intersections propres à chaque paire ; ils n'utilisent pas nécessairement les mêmes marqueurs.
+
+**Nature des séquences représentées, d'après les étiquettes des figures :**
+
+| Espèce | Étiquettes des séquences | Répartition des BUSCO communs |
+|---|---|---|
+| *M. nipponense* | 49 chromosomes annoncés dans les en-têtes | 1 309 sur ces séquences |
+| *M. rosenbergii* | 58 chromosomes et 1 scaffold | 1 308 sur les chromosomes, 1 sur le scaffold |
+| *J. praehirsuta* | 11 identifiants `OZ…`, sans nom de chromosome affiché | 1 440 sur ces séquences ; rôle chromosomique non établi par le HTML |
+| *S. paramamosain* | 48 chromosomes et 6 scaffolds | 1 371 sur les chromosomes, 69 sur les scaffolds |
+
+Il s'agit uniquement des séquences portant au moins un marqueur commun retenu. Ces nombres ne sont ni un inventaire complet de l'assemblage ni une détermination du caryotype. En particulier, les 11 séquences de *Jaera* ne doivent pas être appelées « 11 chromosomes » sans consulter les métadonnées correspondantes.
+
+### Interprétation de la paire proche
+
+Les 1 309 marqueurs communs se répartissent entre 79 couples de séquences. Les liens majeurs révèlent une concentration des marqueurs entre certaines paires de chromosomes, par exemple :
+
+| *M. nipponense* | *M. rosenbergii* | BUSCO communs dans ce lien |
+|---|---|---:|
+| Chromosome 21 — `NC_087212.1` | Chromosome 5 — `NC_089745.1` | 45 |
+| Chromosome 20 — `NC_061089.1` | Chromosome 6 — `NC_089746.1` | 43 |
+| Chromosome 35 — `NC_061096.1` | Chromosome 14 — `NC_089754.1` | 42 |
+
+À titre descriptif, en conservant le lien de plus grand poids pour chacune des 49 séquences sources, leur somme est de 1 185 marqueurs sur 1 309, soit 90,5 %. Cela indique une forte concentration du contenu BUSCO vers une séquence cible principale par séquence source. Ce calcul est directionnel et ne démontre pas une correspondance réciproque un-à-un.
+
+Cette organisation est compatible avec une conservation importante du contenu chromosomique des marqueurs étudiés entre les deux *Macrobrachium*. Les numéros des chromosomes sont propres à chaque assemblage : le chromosome 21 d'une espèce peut correspondre principalement au chromosome 5 de l'autre sans que la différence de numéro représente à elle seule un réarrangement.
+
+Le Sankey ne montre pas l'ordre des marqueurs. Il ne suffit donc pas à conclure à une colinéarité, à dater un événement ou à identifier formellement une inversion, une fusion ou une fission.
+
+### Interprétation de la paire éloignée
+
+Les 1 440 marqueurs communs se répartissent entre 433 couples de séquences. Les plus grands liens ne contiennent que 18 BUSCO, par exemple `OZ242389.1` de *Jaera* vers le chromosome 1 de *Scylla* (`NC_087151.1`), et `OZ242393.1` vers le chromosome 2 de *Scylla* (`NC_087152.1`). Les marqueurs d'une séquence de *Jaera* sont donc plus dispersés entre les séquences cibles que dans la comparaison proche.
+
+Cette dispersion est compatible avec une correspondance moins concentrée du contenu génomique à cette échelle taxonomique. Elle dépend aussi du découpage des assemblages : 11 séquences sources sont représentées chez *Jaera*, contre 54 séquences cibles chez *Scylla*, dont 6 scaffolds. Les 69 marqueurs portés par ces scaffolds sont conservés dans le diagramme et ne sont pas attribués artificiellement à des chromosomes.
+
+Le nombre de liens, 433 contre 79, ne mesure ni une distance phylogénétique ni un nombre de réarrangements. Une étude des coordonnées, de l'ordre des marqueurs et des métadonnées d'assemblage est nécessaire pour tester ces hypothèses.
+
+La paire éloignée possède davantage de BUSCO communs que la paire proche, 1 440 contre 1 309. Cela n'est pas contradictoire : cet effectif dépend de la présence, de la détection et du statut single-copy des marqueurs dans chacun des génomes. Un nombre plus élevé de marqueurs retenus ne signifie pas une plus grande proximité évolutive. Les marqueurs exclus du Sankey ne sont pas nécessairement des gènes perdus : ils peuvent être dupliqués, fragmentés, non détectés ou exclus pour ambiguïté.

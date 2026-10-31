@@ -1,0 +1,69 @@
+{
+  "comparison": "proches",
+  "species": [
+    "Macrobrachium nipponense",
+    "Macrobrachium rosenbergii"
+  ],
+  "assemblies": [
+    "GCF_015104395.2",
+    "GCF_040412425.1"
+  ],
+  "common_single_copy_buscos": 1309,
+  "sum_link_weights": 1309,
+  "number_links": 79,
+  "plotly_version": "6.9.0",
+  "svg": "non_demande",
+  "sequence_labels": "identifiants originaux; noms et roles explicites des en-tetes FASTA si fournis",
+  "fasta_sources": {
+    "GCF_015104395.2": "/data/projet2/Syntenie_des_decapodes/genomes/ncbi_dataset/data/GCF_015104395.2/GCF_015104395.2_ASM1510439v2_genomic.fna",
+    "GCF_040412425.1": "/data/projet2/Syntenie_des_decapodes/genomes/ncbi_dataset/data/GCF_040412425.1/GCF_040412425.1_ASM4041242v1_genomic.fna"
+  },
+  "inputs": [
+    {
+      "path": "/data/projet2/Syntenie_des_decapodes/Busco/precomputed_crustacea_odb12/BUSCO/BUSCO_GCF_015104395.2_ASM1510439v2_genomic.fna/run_crustacea_odb12/full_table.tsv",
+      "sha256": "4e6894e9d160b66bc4d5060edb64531a9682ad11ab7e75f0d9176638014cb44f",
+      "metadata": {
+        "lineage": "crustacea_odb12",
+        "creation_date": "2026-05-22"
+      },
+      "stats": {
+        "rows_by_status": {
+          "Complete": 1341,
+          "Fragmented": 108,
+          "Duplicated": 98,
+          "Missing": 38
+        },
+        "unique_busco_ids": 1536,
+        "single_copy_retained": 1341,
+        "excluded_by_reason": {
+          "Fragmented": 108,
+          "identifiant_repete": 49,
+          "Missing": 38
+        }
+      }
+    },
+    {
+      "path": "/data/projet2/Syntenie_des_decapodes/Busco/precomputed_crustacea_odb12/BUSCO/BUSCO_GCF_040412425.1_ASM4041242v1_genomic.fna/run_crustacea_odb12/full_table.tsv",
+      "sha256": "d9b9b45227064d2abfa1af0d4b23c60efa89a86479f36290f25c0fa5f24d7972",
+      "metadata": {
+        "lineage": "crustacea_odb12",
+        "creation_date": "2026-05-22"
+      },
+      "stats": {
+        "rows_by_status": {
+          "Complete": 1486,
+          "Fragmented": 35,
+          "Missing": 7,
+          "Duplicated": 16
+        },
+        "unique_busco_ids": 1536,
+        "single_copy_retained": 1486,
+        "excluded_by_reason": {
+          "Fragmented": 35,
+          "Missing": 7,
+          "identifiant_repete": 8
+        }
+      }
+    }
+  ]
+}
