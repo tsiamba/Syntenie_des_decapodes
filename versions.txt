@@ -1,0 +1,25 @@
+Projet : Synténie des décapodes
+Date : Sun Nov  1 16:17:37 UTC 2026
+
+Environnement BUSCO
+-------------------
+Emplacement : /data/projet2/conda/env_busco
+Python 3.10.21
+BUSCO 6.1.0
+Miniprot 0.18-r281
+
+Environnement dotplot
+---------------------
+Emplacement : /data/projet2/conda/env_dotplot
+Python 3.8.20
+numpy 1.24.4
+pandas 2.0.3
+matplotlib 3.7.3
+scipy 1.10.1
+plotly 5.24.1
+
+Environnement diagramme Sankey
+------------------------------
+Emplacement : /data/projet2/conda/env_sankey
+Python 3.12.16
+plotly 6.9.0

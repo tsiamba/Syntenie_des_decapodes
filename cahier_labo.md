@@ -1200,3 +1200,183 @@ Cette dispersion est compatible avec une correspondance moins concentrée du con
 Le nombre de liens, 433 contre 79, ne mesure ni une distance phylogénétique ni un nombre de réarrangements. Une étude des coordonnées, de l'ordre des marqueurs et des métadonnées d'assemblage est nécessaire pour tester ces hypothèses.
 
 La paire éloignée possède davantage de BUSCO communs que la paire proche, 1 440 contre 1 309. Cela n'est pas contradictoire : cet effectif dépend de la présence, de la détection et du statut single-copy des marqueurs dans chacun des génomes. Un nombre plus élevé de marqueurs retenus ne signifie pas une plus grande proximité évolutive. Les marqueurs exclus du Sankey ne sont pas nécessairement des gènes perdus : ils peuvent être dupliqués, fragmentés, non détectés ou exclus pour ambiguïté.
+
+
+### Dimanche 01 Novembre 2026
+**Tsiamba**
+Le script dotplot_all_pairs_V2.py a été renommé en dotplot_all_pairs.py. Les différents outputs ont été mis dans /data/projet2/Syntenie_des_decapodes/Analyses/dotplots_all_pairs.
+Le dossier contient un README.md qui explique brièvement comment marche le script et les différents résultats.
+
+### Analyses et interprétation des outputs de dotplot_all_pairs.py:
+
+`dotplot_all_pairs.py` identifie les BUSCO présents dans les deux génomes, compare leurs positions et calcule un score de
+conservation de leur ordre.
+
+Les résultats sont enregistrés dans :
+
+```text
+Analyses/dotplots_all_pairs/synteny_scores.csv
+```
+
+Chaque ligne du fichier contient :
+
+- `genome_1` : premier génome comparé ;
+- `genome_2` : second génome comparé ;
+- `synteny_score` : score de conservation de l'ordre des BUSCO ;
+- `busco_partages` : nombre de BUSCO communs ;
+- `paires_sequences` : nombre de paires de séquences utilisées pour le calcul.
+
+Le score de synténie est compris approximativement entre 0 et 1. Un score élevé
+indique que les BUSCO communs suivent une organisation relativement régulière
+dans les deux génomes. Dans le dot plot, cela se traduit généralement par une
+diagonale nette ou par plusieurs blocs proches d'une diagonale. Un score faible
+correspond à une organisation plus dispersée des marqueurs et à une conservation
+moins nette de leur ordre.
+
+### Paire la mieux conservée — BEST_CONSERVED
+
+La paire ayant obtenu le score le plus élevé est :
+
+```text
+GCF_019202785.1_ASM1920278v2
+vs
+GCF_042767895.1_ASM4276789v1
+```
+
+Cette comparaison correspond à :
+
+```text
+Penaeus chinensis
+vs
+Penaeus vannamei
+```
+
+Résultats enregistrés dans `synteny_scores.csv` :
+
+```text
+Score de synténie   : 0.5365
+BUSCO partagés      : 1267
+Paires de séquences : 43
+```
+
+Le fichier associé est :
+
+```text
+BEST_CONSERVED__GCF_019202785.1_ASM1920278v2__vs__GCF_042767895.1_ASM4276789v1__score_0.5365.png
+```
+
+Le dot plot présente une diagonale principale très nette et une succession
+régulière de blocs colorés. Les BUSCO communs sont donc principalement
+positionnés dans un ordre similaire entre les deux génomes.
+
+Cette organisation indique une conservation relativement importante de l'ordre
+des marqueurs BUSCO. Les quelques points éloignés de la diagonale peuvent
+correspondre à des marqueurs déplacés, à de petites réorganisations, à des
+différences d'assemblage ou à des séquences qui ne sont pas directement
+comparables.
+
+Cette paire possède le score le plus élevé des 55 comparaisons, mais le score
+0.5365 ne signifie pas que 53,65 % des génomes sont identiques. Il s'agit d'un
+indicateur de conservation de l'ordre des BUSCO utilisés dans l'analyse.
+
+### Paire la moins conservée — WORST_CONSERVED
+
+La paire ayant obtenu le score le plus faible est :
+
+```text
+GCF_017591435.1_ASM1759143v1
+vs
+GCF_036320965.1_ASM3632096v1
+```
+
+Cette comparaison correspond à :
+
+```text
+Portunus trituberculatus
+vs
+Panulirus ornatus
+```
+
+Résultats enregistrés dans `synteny_scores.csv` :
+
+```text
+Score de synténie   : 0.1729
+BUSCO partagés      : 1458
+Paires de séquences : 49
+```
+
+Le fichier associé est :
+
+```text
+WORST_CONSERVED__GCF_017591435.1_ASM1759143v1__vs__GCF_036320965.1_ASM3632096v1__score_0.1729.png
+```
+
+Le dot plot montre une organisation beaucoup plus dispersée. Une diagonale
+reste visible dans certaines régions, mais elle est fragmentée et accompagnée
+de nombreux points éloignés. Les BUSCO communs sont donc moins souvent
+regroupés selon une relation positionnelle régulière entre les deux génomes.
+
+Cette dispersion est compatible avec une conservation plus faible de l'ordre
+des marqueurs. Elle peut être liée à une divergence évolutive plus importante,
+à des réarrangements chromosomiques possibles, à des différences entre les
+assemblages ou à la présence de séquences fragmentées en scaffolds et en
+contigs.
+
+### Comparaison des deux paires
+
+| Élément | Paire BEST_CONSERVED | Paire WORST_CONSERVED |
+|---|---:|---:|
+| Génome 1 | GCF_019202785.1_ASM1920278v2 | GCF_017591435.1_ASM1759143v1 |
+| Génome 2 | GCF_042767895.1_ASM4276789v1 | GCF_036320965.1_ASM3632096v1 |
+| Score de synténie | 0.5365 | 0.1729 |
+| BUSCO partagés dans le CSV | 1 267 | 1 458 |
+| Paires de séquences | 43 | 49 |
+| Aspect du dot plot | Diagonale nette et blocs réguliers | Organisation fragmentée et dispersée |
+
+La paire WORST_CONSERVED possède davantage de BUSCO partagés que la paire
+BEST_CONSERVED. Cela montre que le nombre de marqueurs communs ne suffit pas à
+mesurer la conservation de la synténie. Deux génomes peuvent partager beaucoup
+de BUSCO, tout en présentant une organisation différente de ces marqueurs sur
+leurs séquences.
+
+Les nombres affichés dans les titres des images peuvent être différents des
+valeurs du fichier `synteny_scores.csv`, car le script applique des filtres
+supplémentaires lors de la construction des blocs conservés et du dot plot.
+Les valeurs de référence pour le classement des paires sont celles du fichier
+`synteny_scores.csv`.
+
+### Interprétation générale
+
+La paire *Penaeus chinensis* - *Penaeus vannamei* présente la relation
+positionnelle la plus régulière entre les BUSCO parmi les 55 comparaisons.
+Cette organisation est compatible avec une conservation importante de certains
+blocs génomiques.
+
+La paire *Portunus trituberculatus* - *Panulirus ornatus* présente la relation
+la plus dispersée selon la métrique utilisée. Les BUSCO restent nombreux et
+partagés, mais leur ordre et leur répartition entre les séquences sont moins
+conservés.
+
+Ces résultats ne permettent pas de conclure directement à un nombre précis
+d'inversions, de fusions, de fissions ou de translocations. Un score faible
+peut être causé à la fois par une divergence biologique réelle et par des
+facteurs techniques, comme la fragmentation d'un assemblage ou la présence de
+scaffolds et de contigs.
+
+Une analyse complémentaire est donc nécessaire pour :
+
+- vérifier quelles séquences correspondent à de vrais chromosomes ;
+- distinguer les chromosomes, les scaffolds et les contigs ;
+- examiner l'ordre exact des BUSCO dans chaque bloc ;
+- identifier les inversions et les ruptures de colinéarité ;
+- rechercher d'éventuelles fusions, fissions ou translocations ;
+- tenir compte des différences de versions de BUSCO et de Miniprot entre les
+  résultats locaux et ceux fournis par l'enseignant.
+
+Les dot plots constituent ainsi une première analyse comparative de la synténie.
+Ils permettent de classer les paires selon la régularité de l'organisation des
+marqueurs BUSCO, mais ne constituent pas à eux seuls une preuve définitive de
+réarrangements chromosomiques.
+
+
+Je vais créer le fichier envs/env_dotplot.yml afin de le mettre sur github et mettre à jour le versions.txt qui contient les versions des outils utilisés.
