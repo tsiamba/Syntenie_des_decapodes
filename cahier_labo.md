@@ -1203,7 +1203,7 @@ La paire éloignée possède davantage de BUSCO communs que la paire proche, 1 4
 
 
 ### Dimanche 01 Novembre 2026
-**Tsiamba**
+**Tsiamba** ~2h15
 Le script dotplot_all_pairs_V2.py a été renommé en dotplot_all_pairs.py. Les différents outputs ont été mis dans /data/projet2/Syntenie_des_decapodes/Analyses/dotplots_all_pairs.
 Le dossier contient un README.md qui explique brièvement comment marche le script et les différents résultats.
 
@@ -1380,3 +1380,220 @@ réarrangements chromosomiques.
 
 
 Je vais créer le fichier envs/env_dotplot.yml afin de le mettre sur github et mettre à jour le versions.txt qui contient les versions des outils utilisés.
+
+## Mise à jour du projet et synchronisation avec GitHub
+Je viens de:
+ git add .gitignore cahier_labo.md versions.txt scripts/dotplot_all_pairs.py
+et push sur github.
+
+## 4 novembre 2026 — Comparaison du contenu chromosomique par Jaccard
+**Aurélio** : 1h
+
+### Objectif et méthode
+
+Après les Sankey en `crustacea_odb12`, nous avons quantifié la conservation du contenu en BUSCO des chromosomes des deux *Macrobrachium* et comparé la répartition des marqueurs entre les séquences de *Jaera praehirsuta* et les chromosomes de *Scylla paramamosain*.
+
+Le script `scripts/comparaison_contenu_chr.py` utilise Python 3 et lit les deux tableaux `*_liens.tsv` et `*_sequences.tsv` produits par `sankey_syntenie.py` pour chaque paire. Le premier donne le nombre de BUSCO complets à copie unique communs par couple de séquences. Le second identifie les séquences et leur rôle d'après les en-têtes FASTA.
+
+- **Paire proche.** Retenir les BUSCO situés sur des chromosomes dans les deux assemblages.
+- **Paire éloignée.** Garder les séquences `OZ…` de *Jaera* sous leurs identifiants d’origine et retenir uniquement les chromosomes du côté de *Scylla*. Le statut des séquences de *Jaera* reste à vérifier dans le rapport d’assemblage.
+
+Pour chaque couple de séquences, on calcule **Jaccard = BUSCO partagés / (BUSCO côté A + BUSCO côté B − BUSCO partagés)**. Les deux effectifs par séquence sont recalculés après filtrage, dans le même ensemble de marqueurs pour la paire. Le tableau détaillé donne également la fraction partagée de chaque côté.
+
+### Commandes de reproduction et sorties
+
+```bash
+cd /data/projet2/Syntenie_des_decapodes
+python3 scripts/comparaison_contenu_chr.py --pair proches
+python3 scripts/comparaison_contenu_chr.py --pair eloignes
+```
+
+Les entrées sont lues dans `Analyses/Diagramme_Sankey/`. Les résultats sont écrits dans `Analyses/Diagramme_Sankey/Contenu_chromosomes/`, avec le préfixe `macrobrachium_` ou `jaera_scylla_` selon la paire.
+
+| Suffixe | Contenu |
+|---|---|
+| `_carte_jaccard.html` | Carte à ouvrir dans un navigateur. Un clic sur une case affiche le couple, le score et les effectifs. |
+| `_matrice_jaccard.tsv` | Matrice des scores, avec les séquences du premier génome en lignes. |
+| `_contenu_chromosomes.tsv` | Détail des scores, effectifs et fractions partagées par couple de séquences. |
+
+### Résultats et interprétation
+
+Les chiffres ont été vérifiés sur les tableaux reconstruits à partir des deux HTML du Sankey. Les commandes ci-dessus documentent la reproduction sur le cluster.
+
+| Paire | BUSCO du Sankey | Retenus après filtre | Couples avec au moins un BUSCO partagé | Dimensions de la matrice |
+|---|---:|---:|---:|---|
+| *M. nipponense* × *M. rosenbergii* | 1 309 | 1 308 | 78 | 49 × 58 chromosomes |
+| *J. praehirsuta* × *S. paramamosain* | 1 440 | 1 371 | 405 | 11 séquences × 48 chromosomes |
+
+Chez les *Macrobrachium*, le chromosome 21 de *M. nipponense* et le chromosome 5 de *M. rosenbergii* partagent leurs **45 BUSCO retenus**, soit un **Jaccard de 1**. La case se situe hors de la diagonale, car les axes suivent la numérotation propre à chaque assemblage. Le bloc 21 × 5 du dotplot permet d’examiner l’ordre des marqueurs dont la carte résume le contenu.
+
+Pour *Jaera–Scylla*, le score maximal observé est **0,102** entre `OZ242390.1` et le chromosome 7 de *Scylla*. Ce couple partage **9 BUSCO** sur les 62 et 35 marqueurs retenus de chaque côté. Les marqueurs sont davantage répartis entre les séquences cibles dans cette comparaison. Les paires reposent sur des ensembles de BUSCO, des filtres et des assemblages différents, ce qui limite l’interprétation directe de l’écart entre leurs scores.
+
+
+---
+
+## Jeudi 5 novembre 2026 — Extension aux 55 paires et reconstruction du master chromosomique
+**Aurélio**: 1h30
+### But général
+
+Étendre les analyses de contenu BUSCO aux **55 paires distinctes des 11 génomes**, soit 11 × 10 / 2. Chaque paire utilise ses propres BUSCO complets à copie unique communs aux deux assemblages. Les analyses portent sur la répartition des marqueurs entre séquences, puis sur la similarité du contenu des chromosomes identifiés.
+
+Le travail a aussi consisté à réorganiser les entrées et les sorties après un nettoyage destiné à libérer de l’espace sur le cluster.
+
+### Difficultés rencontrées après le nettoyage
+
+Le dossier des génomes téléchargés avec NCBI Datasets et d’anciens dossiers BUSCO ont été supprimés pour libérer de la place. Le master conservé dans l’ancienne arborescence Miniprot avait également été supprimé. Cette situation a révélé deux dépendances des premières versions des scripts.
+
+- Les positions BUSCO étaient obtenues à partir des `full_table.tsv` ou du master de positions. Les TSV BUSCO encore disponibles permettaient de reconstruire ce dernier.
+- L’option `--fasta-root` parcourait les FASTA génomiques pour obtenir les noms des chromosomes et distinguer chromosomes, scaffolds et séquences mitochondriales. Après la suppression de `genomes/ncbi_dataset`, ce chemin ne permettait plus de récupérer ces informations.
+
+La première relance de `master_csv_odb12.py` dans `env_sankey` a rencontré l’erreur `ModuleNotFoundError: No module named 'pandas'`. Le retour à l’environnement `env_busco`, utilisé pour l’extraction initiale, a été proposé. Un extrait du CSV régénéré a ensuite été transmis.
+
+Cet extrait montrait que **`Chromosome` était une copie de `Sequence`**, par exemple `OZ242385.1` dans les deux colonnes. Le CSV retrouvait donc les positions des marqueurs et les identifiants des séquences, mais la correspondance biologique avec les chromosomes restait à reconstruire.
+
+Le nettoyage de Conda a aussi conduit à vérifier les emplacements des environnements et du cache. La configuration contrôlée place les environnements de travail sous `/data/projet2/conda` et le cache Conda dans `/data/projet2/conda/pkgs`. L’environnement utilisé pour les nouvelles analyses est `/data/projet2/conda/env_sankey`.
+
+### Récupération ciblée des correspondances NCBI
+
+Les fichiers `assembly_report.txt` des **versions exactes des 11 assemblages** ont été récupérés depuis NCBI. Ils donnent les accessions GenBank et RefSeq des séquences, leur rôle, la molécule associée et son type. Leur contenu a permis de reconstruire la table `identifiant_chr_scaffold.tsv`, d’environ **7,8 Mo**.
+
+Cette table remplace l’information auparavant extraite des en-têtes FASTA. La jointure utilise le couple **accession d’assemblage versionnée + identifiant de séquence versionné**. Les accessions d’origine sont conservées. Chaque correspondance possède une URL permettant de retrouver le rapport source.
+
+Le rôle de la séquence est établi à partir du rapport d’assemblage. Une séquence de rôle `assembled-molecule` et de type `Chromosome` reçoit le nom du chromosome déclaré. Les scaffolds et les séquences mitochondriales conservent leurs catégories respectives.
+
+La vérification a notamment résolu le cas de *Jaera praehirsuta*.
+
+| Identifiant | Affectation dans le rapport GCA_965208005.1 |
+|---|---|
+| `OZ242385.1` | Chromosome 1 |
+| `OZ242386.1` à `OZ242394.1` | Chromosomes 2 à 10 |
+| `OZ242395.1` | Chromosome 11 |
+| `OZ242396.1` | Mitochondrie |
+
+Le préfixe `OZ` doit donc être interprété avec les métadonnées de cet assemblage. Cette correspondance permet désormais d’appliquer le filtre chromosomique à *Jaera*, comme aux décapodes. [Rapport NCBI de Jaera praehirsuta](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/965/208/005/GCA_965208005.1_qmJaePrae1.hap1.1/GCA_965208005.1_qmJaePrae1.hap1.1_assembly_report.txt).
+
+Les nombres de chromosomes obtenus dans les rapports correspondent au tableau de sélection des génomes.
+
+| Assemblage | Espèce | Chromosomes identifiés dans le rapport |
+|---|---|---:|
+| `GCF_015104395.2` | *Macrobrachium nipponense* | 49 |
+| `GCF_036320965.1` | *Panulirus ornatus* | 73 |
+| `GCF_038502225.1` | *Cherax quadricarinatus* | 100 |
+| `GCF_040412425.1` | *Macrobrachium rosenbergii* | 59 |
+| `GCF_040958095.1` | *Procambarus clarkii* | 94 |
+| `GCA_965208005.1` | *Jaera praehirsuta* | 11 |
+| `GCF_017591435.1` | *Portunus trituberculatus* | 50 |
+| `GCF_019202785.1` | *Penaeus chinensis* | 43 |
+| `GCF_024679095.1` | *Eriocheir sinensis* | 70 |
+| `GCF_035594125.1` | *Scylla paramamosain* | 49 |
+| `GCF_042767895.1` | *Penaeus vannamei* | 44 |
+
+Ces nombres décrivent les assemblages. Le nombre de chromosomes représentés dans une comparaison dépend des BUSCO communs retenus sur chacun d’eux.
+
+### Organisation retenue pour les fichiers
+
+Tous les chemins ci-dessous sont relatifs à `/data/projet2/Syntenie_des_decapodes/`.
+
+| Élément | Emplacement retenu |
+|---|---|
+| Trois scripts de la chaîne | `scripts/` |
+| Résultats BUSCO sources | `Busco/precomputed_crustacea_odb12/BUSCO/<dossier_du_genome>/run_crustacea_odb12/full_table.tsv` |
+| Correspondances des séquences | `genomes/identifiant_chr_scaffold.tsv` |
+| Master TSV enrichi | `genomes/master_positions_busco.tsv` |
+| Sorties Sankey regroupées | `Analyses/Diagramme_Sankey/` |
+| Sorties Jaccard | `Analyses/Jaccard/` |
+
+Le dossier `Miniprot/` qui était sous `Analyses/Diagramme_Sankey/` a été déplacé vers `Busco/busco_miniprot/`. Les sorties Sankey ont ensuite été regroupées directement dans `Analyses/Diagramme_Sankey/`, et les anciens dossiers de runs ont été supprimés. Les commandes ci-dessous utilisent cette organisation.
+
+### Étape 1 — But → script → sortie du master TSV
+
+**But.** Réunir les positions BUSCO des 11 génomes et leur ajouter les identifiants chromosomiques vérifiés, pour disposer d’une entrée commune aux deux analyses.
+
+**Script.** `scripts/generer_master_tsv.py`, placé à côté de `sankey_syntenie.py` dont il réutilise les fonctions de lecture. Le traitement repose sur la bibliothèque standard de Python.
+
+Par défaut, le générateur lit les 11 `full_table.tsv` déjà disponibles et la table `genomes/identifiant_chr_scaffold.tsv`. Il vérifie la référence `crustacea_odb12`, les ensembles de groupes BUSCO et les dates de création du lineage lorsqu’elles sont présentes. Il retient les marqueurs `Complete` dont l’identifiant apparaît une seule fois dans la table du génome. Les identifiants répétés sont exclus intégralement. Chaque séquence retenue doit posséder une correspondance dans les métadonnées.
+
+```bash
+cd /data/projet2/Syntenie_des_decapodes
+conda activate /data/projet2/conda/env_sankey
+python scripts/generer_master_tsv.py
+```
+
+**Sortie.** `genomes/master_positions_busco.tsv`, avec une ligne par couple génome–BUSCO retenu.
+
+| Colonne ou groupe de colonnes | Signification |
+|---|---|
+| `Organisme`, `Espece` | Accession versionnée de l’assemblage et espèce |
+| `Sequence` | Identifiant original de la séquence qui porte le BUSCO |
+| `Chromosome` | Nom attribué par le rapport d’assemblage, renseigné pour les chromosomes |
+| `Type_sequence` | Catégorie de la séquence, notamment chromosome, scaffold ou mitochondrie |
+| `Busco_id`, `Start`, `End`, `Strand` | Identifiant du marqueur, coordonnées et brin conservés |
+| `Status`, `Lineage`, `Lineage_date` | Statut retenu et référence BUSCO documentée |
+| `Verification_BUSCO` | Origine du contrôle, `full_table_verifie` ou `CSV_prefiltre_declare` |
+| `Source_BUSCO`, `Source_sequence` | Fichier d’origine des positions et URL du rapport d’assemblage |
+
+L’option `--input-csv` permet aussi d’enrichir un ancien master CSV déjà filtré. Dans ce cas, la sélection single-copy et la référence BUSCO reposent sur le traitement amont et sont signalées par `CSV_prefiltre_declare`. La lecture directe des tables intégrales constitue la procédure par défaut. Le générateur protège le master existant et propose `--overwrite` pour autoriser son remplacement.
+
+### Étape 2 — But → script → sorties Sankey
+
+**But.** Visualiser la répartition des BUSCO complets à copie unique communs pour chacune des 55 paires de génomes.
+
+**Script.** `scripts/sankey_syntenie.py`. L’option `--master-tsv` charge directement les positions et les catégories contenues dans le master. L’option `--all-pairs` génère une comparaison pour chaque paire distincte. Les noms de fichiers contiennent les espèces et les accessions. Les noms historiques `proches` et `eloignes` sont conservés pour les paires correspondantes.
+
+```bash
+python scripts/sankey_syntenie.py \
+  --all-pairs \
+  --master-tsv genomes/master_positions_busco.tsv \
+  --no-svg \
+  --outdir Analyses/Diagramme_Sankey
+```
+
+**Sorties.** Les fichiers de chaque paire sont placés directement dans `Analyses/Diagramme_Sankey/`.
+
+| Sortie | Contenu |
+|---|---|
+| `.html` | Diagramme Sankey autonome consultable dans un navigateur |
+| `_liens.tsv` | Nombre de BUSCO par couple de séquences |
+| `_busco_communs.tsv` | Marqueurs communs, séquences, positions et brins |
+| `_sequences.tsv` | Noms, rôles et sources des séquences représentées |
+| `_exclusions.tsv` | Marqueurs écartés de l’intersection et motifs disponibles |
+| `_bilan.json` | Effectifs, chemins, empreinte du master et provenance des métadonnées |
+| `comparaisons.tsv` | Inventaire des comparaisons terminées et de leurs préfixes de fichiers |
+
+Les Sankey conservent les marqueurs communs portés par les chromosomes et les scaffolds, avec leur catégorie. Les noms de chromosomes viennent désormais du master. Le chargement des données est mutualisé entre les comparaisons. L’option `--no-svg` produit les HTML et tableaux avec Plotly et évite le lancement de Kaleido pour chaque paire.
+
+### Étape 3 — But → script → sorties Jaccard
+
+**But.** Quantifier la similarité du contenu BUSCO des chromosomes identifiés, pour les mêmes 55 paires.
+
+**Script.** `scripts/comparaison_contenu_chr.py`, avec lecture directe du master TSV. Ce mode applique par défaut le filtre `chromosomes` aux deux génomes, y compris *Jaera*. Pour chaque paire, les effectifs et les dénominateurs sont recalculés après ce filtre, sur les BUSCO communs retenus.
+
+```bash
+python scripts/comparaison_contenu_chr.py \
+  --all-pairs \
+  --master-tsv genomes/master_positions_busco.tsv \
+  --out-dir Analyses/Jaccard
+```
+
+**Sorties.** Les fichiers sont écrits dans `Analyses/Jaccard/`.
+
+| Sortie | Contenu |
+|---|---|
+| `_carte_jaccard.html` | Carte interactive des scores par couple de chromosomes |
+| `_matrice_jaccard.tsv` | Matrice des similarités |
+| `_contenu_chromosomes.tsv` | Effectifs partagés, effectifs de chaque côté, Jaccard et fractions partagées |
+| `resume_jaccard_chromosomes.tsv` | Statut, nombres de marqueurs retenus et exclus, dimensions et score maximal par comparaison |
+
+Un clic sur une case de la carte affiche les deux chromosomes, leur score et les effectifs BUSCO. Le score est calculé comme **nombre de BUSCO partagés / nombre de BUSCO présents dans au moins un des deux ensembles**. Les chromosomes restent ordonnés selon leur nom dans chaque assemblage. Une correspondance forte peut donc se situer hors de la diagonale, comme le couple chromosome 21 de *M. nipponense*–chromosome 5 de *M. rosenbergii* examiné précédemment.
+
+La lecture directe du master rend ce calcul indépendant de l’emplacement des sorties Sankey. Le regroupement des anciens fichiers de runs n’impose donc aucune nouvelle lecture des FASTA.
+
+### Contrôles réalisés et état des résultats
+
+La validation locale a porté sur **19 tests**, comprenant 12 autotests de lecture et de filtrage, puis 7 tests du nouveau workflow. Ces derniers ont vérifié la création du master à partir des tables intégrales et d’un ancien CSV, la protection d’une sortie existante, le refus de métadonnées manquantes ou contradictoires et la cohérence du lineage.
+
+Le traitement complet a produit 55 Sankey et 55 cartes Jaccard sur des données synthétiques. Les tableaux de scores obtenus directement depuis le master étaient identiques à ceux obtenus depuis les sorties Sankey. Les correspondances NCBI avaient également été contrôlées sur les identifiants présents dans les deux HTML biologiques déjà fournis.
+
+Le regroupement des fichiers Sankey directement dans leur dossier final a été signalé depuis le cluster. Les nouveaux bilans des 55 paires et le master enrichi complet restent à examiner pour consigner les effectifs biologiques finaux. Les résultats numériques des deux comparaisons initiales figurent dans les entrées précédentes.
+
+Cette étape fournit une chaîne reproductible allant des positions BUSCO conservées à un master enrichi, puis aux Sankey et aux cartes de contenu chromosomique. L’étude de l’ordre des marqueurs et de leurs voisinages constitue une analyse complémentaire à mener avec les coordonnées du master.

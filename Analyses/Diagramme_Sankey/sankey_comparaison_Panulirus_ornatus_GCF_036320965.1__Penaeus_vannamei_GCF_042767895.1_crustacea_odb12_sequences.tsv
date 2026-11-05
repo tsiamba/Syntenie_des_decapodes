@@ -1,0 +1,141 @@
+assembly	species	sequence_id	role_in_fasta_header	chromosome_mentioned	fasta_header	metadata_source
+GCF_036320965.1	Panulirus ornatus	NC_092224.1	chromosome	1		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092225.1	chromosome	2		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092226.1	chromosome	3		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092227.1	chromosome	4		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092228.1	chromosome	5		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092229.1	chromosome	6		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092230.1	chromosome	7		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092231.1	chromosome	8		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092232.1	chromosome	9		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092233.1	chromosome	10		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092234.1	chromosome	11		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092235.1	chromosome	12		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092236.1	chromosome	13		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092237.1	chromosome	14		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092238.1	chromosome	15		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092239.1	chromosome	16		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092240.1	chromosome	17		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092241.1	chromosome	18		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092242.1	chromosome	19		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092243.1	chromosome	20		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092244.1	chromosome	21		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092245.1	chromosome	22		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092246.1	chromosome	23		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092247.1	chromosome	24		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092248.1	chromosome	25		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092249.1	chromosome	26		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092250.1	chromosome	27		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092251.1	chromosome	28		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092252.1	chromosome	29		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092253.1	chromosome	30		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092254.1	chromosome	31		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092255.1	chromosome	32		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092256.1	chromosome	33		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092257.1	chromosome	34		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092258.1	chromosome	35		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092259.1	chromosome	36		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092260.1	chromosome	37		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092261.1	chromosome	38		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092262.1	chromosome	39		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092263.1	chromosome	40		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092264.1	chromosome	41		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092265.1	chromosome	42		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092266.1	chromosome	43		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092267.1	chromosome	44		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092268.1	chromosome	45		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092269.1	chromosome	46		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092270.1	chromosome	47		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092271.1	chromosome	48		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092272.1	chromosome	49		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092273.1	chromosome	50		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092274.1	chromosome	51		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092275.1	chromosome	52		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092276.1	chromosome	53		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092278.1	chromosome	55		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092279.1	chromosome	56		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092280.1	chromosome	57		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092281.1	chromosome	58		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092282.1	chromosome	59		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092284.1	chromosome	61		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092285.1	chromosome	62		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092286.1	chromosome	63		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092287.1	chromosome	64		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092288.1	chromosome	65		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092289.1	chromosome	66		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092290.1	chromosome	67		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092291.1	chromosome	68		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092292.1	chromosome	69		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092294.1	chromosome	71		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092295.1	chromosome	72		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092296.1	chromosome	73		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091549.1	chromosome	1		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091550.1	chromosome	2		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091551.1	chromosome	3		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091552.1	chromosome	4		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091553.1	chromosome	5		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091554.1	chromosome	6		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091555.1	chromosome	7		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091556.1	chromosome	8		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091557.1	chromosome	9		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091558.1	chromosome	10		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091559.1	chromosome	11		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091560.1	chromosome	12		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091561.1	chromosome	13		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091562.1	chromosome	14		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091563.1	chromosome	15		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091564.1	chromosome	16		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091565.1	chromosome	17		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091566.1	chromosome	18		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091567.1	chromosome	19		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091568.1	chromosome	20		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091569.1	chromosome	21		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091570.1	chromosome	22		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091571.1	chromosome	23		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091572.1	chromosome	24		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091573.1	chromosome	25		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091574.1	chromosome	26		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091575.1	chromosome	27		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091576.1	chromosome	28		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091577.1	chromosome	29		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091578.1	chromosome	30		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091579.1	chromosome	31		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091580.1	chromosome	32		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091581.1	chromosome	33		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091582.1	chromosome	34		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091583.1	chromosome	35		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091584.1	chromosome	36		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091585.1	chromosome	37		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091586.1	chromosome	38		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091587.1	chromosome	39		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091588.1	chromosome	40		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091589.1	chromosome	41		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091590.1	chromosome	42		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091591.1	chromosome	43		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NW_027213013.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NW_027213030.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NW_027213033.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NW_027213101.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NW_027213132.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NW_027213187.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NW_027213202.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NW_027213206.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NW_027213226.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NW_027213287.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NW_027213310.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NW_027213363.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NW_027213415.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NW_027213499.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NW_027213549.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NW_027213619.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NW_027213708.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NW_027213721.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NW_027213752.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NW_027213806.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NW_027213906.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NW_027214032.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NW_027217026.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NW_027217090.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NW_027217345.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NW_027217546.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NW_027217698.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt

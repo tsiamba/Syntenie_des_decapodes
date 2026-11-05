@@ -1,0 +1,117 @@
+assembly	species	sequence_id	role_in_fasta_header	chromosome_mentioned	fasta_header	metadata_source
+GCF_015104395.2	Macrobrachium nipponense	NC_061087.1	chromosome	11		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/104/395/GCF_015104395.2_ASM1510439v2/GCF_015104395.2_ASM1510439v2_assembly_report.txt
+GCF_015104395.2	Macrobrachium nipponense	NC_061088.1	chromosome	19		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/104/395/GCF_015104395.2_ASM1510439v2/GCF_015104395.2_ASM1510439v2_assembly_report.txt
+GCF_015104395.2	Macrobrachium nipponense	NC_061089.1	chromosome	20		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/104/395/GCF_015104395.2_ASM1510439v2/GCF_015104395.2_ASM1510439v2_assembly_report.txt
+GCF_015104395.2	Macrobrachium nipponense	NC_061090.1	chromosome	23		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/104/395/GCF_015104395.2_ASM1510439v2/GCF_015104395.2_ASM1510439v2_assembly_report.txt
+GCF_015104395.2	Macrobrachium nipponense	NC_061091.1	chromosome	24		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/104/395/GCF_015104395.2_ASM1510439v2/GCF_015104395.2_ASM1510439v2_assembly_report.txt
+GCF_015104395.2	Macrobrachium nipponense	NC_061092.1	chromosome	29		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/104/395/GCF_015104395.2_ASM1510439v2/GCF_015104395.2_ASM1510439v2_assembly_report.txt
+GCF_015104395.2	Macrobrachium nipponense	NC_061093.1	chromosome	31		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/104/395/GCF_015104395.2_ASM1510439v2/GCF_015104395.2_ASM1510439v2_assembly_report.txt
+GCF_015104395.2	Macrobrachium nipponense	NC_061094.1	chromosome	32		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/104/395/GCF_015104395.2_ASM1510439v2/GCF_015104395.2_ASM1510439v2_assembly_report.txt
+GCF_015104395.2	Macrobrachium nipponense	NC_061095.1	chromosome	34		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/104/395/GCF_015104395.2_ASM1510439v2/GCF_015104395.2_ASM1510439v2_assembly_report.txt
+GCF_015104395.2	Macrobrachium nipponense	NC_061096.1	chromosome	35		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/104/395/GCF_015104395.2_ASM1510439v2/GCF_015104395.2_ASM1510439v2_assembly_report.txt
+GCF_015104395.2	Macrobrachium nipponense	NC_061097.1	chromosome	37		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/104/395/GCF_015104395.2_ASM1510439v2/GCF_015104395.2_ASM1510439v2_assembly_report.txt
+GCF_015104395.2	Macrobrachium nipponense	NC_061098.1	chromosome	38		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/104/395/GCF_015104395.2_ASM1510439v2/GCF_015104395.2_ASM1510439v2_assembly_report.txt
+GCF_015104395.2	Macrobrachium nipponense	NC_061099.1	chromosome	39		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/104/395/GCF_015104395.2_ASM1510439v2/GCF_015104395.2_ASM1510439v2_assembly_report.txt
+GCF_015104395.2	Macrobrachium nipponense	NC_061100.1	chromosome	4		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/104/395/GCF_015104395.2_ASM1510439v2/GCF_015104395.2_ASM1510439v2_assembly_report.txt
+GCF_015104395.2	Macrobrachium nipponense	NC_061101.1	chromosome	40		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/104/395/GCF_015104395.2_ASM1510439v2/GCF_015104395.2_ASM1510439v2_assembly_report.txt
+GCF_015104395.2	Macrobrachium nipponense	NC_061102.1	chromosome	41		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/104/395/GCF_015104395.2_ASM1510439v2/GCF_015104395.2_ASM1510439v2_assembly_report.txt
+GCF_015104395.2	Macrobrachium nipponense	NC_061103.1	chromosome	42		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/104/395/GCF_015104395.2_ASM1510439v2/GCF_015104395.2_ASM1510439v2_assembly_report.txt
+GCF_015104395.2	Macrobrachium nipponense	NC_061104.1	chromosome	43		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/104/395/GCF_015104395.2_ASM1510439v2/GCF_015104395.2_ASM1510439v2_assembly_report.txt
+GCF_015104395.2	Macrobrachium nipponense	NC_061105.1	chromosome	45		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/104/395/GCF_015104395.2_ASM1510439v2/GCF_015104395.2_ASM1510439v2_assembly_report.txt
+GCF_015104395.2	Macrobrachium nipponense	NC_061106.1	chromosome	46		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/104/395/GCF_015104395.2_ASM1510439v2/GCF_015104395.2_ASM1510439v2_assembly_report.txt
+GCF_015104395.2	Macrobrachium nipponense	NC_061107.1	chromosome	5		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/104/395/GCF_015104395.2_ASM1510439v2/GCF_015104395.2_ASM1510439v2_assembly_report.txt
+GCF_015104395.2	Macrobrachium nipponense	NC_061108.1	chromosome	6		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/104/395/GCF_015104395.2_ASM1510439v2/GCF_015104395.2_ASM1510439v2_assembly_report.txt
+GCF_015104395.2	Macrobrachium nipponense	NC_061109.1	chromosome	7		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/104/395/GCF_015104395.2_ASM1510439v2/GCF_015104395.2_ASM1510439v2_assembly_report.txt
+GCF_015104395.2	Macrobrachium nipponense	NC_061110.1	chromosome	9		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/104/395/GCF_015104395.2_ASM1510439v2/GCF_015104395.2_ASM1510439v2_assembly_report.txt
+GCF_015104395.2	Macrobrachium nipponense	NC_087200.1	chromosome	1		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/104/395/GCF_015104395.2_ASM1510439v2/GCF_015104395.2_ASM1510439v2_assembly_report.txt
+GCF_015104395.2	Macrobrachium nipponense	NC_087201.1	chromosome	2		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/104/395/GCF_015104395.2_ASM1510439v2/GCF_015104395.2_ASM1510439v2_assembly_report.txt
+GCF_015104395.2	Macrobrachium nipponense	NC_087202.1	chromosome	3		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/104/395/GCF_015104395.2_ASM1510439v2/GCF_015104395.2_ASM1510439v2_assembly_report.txt
+GCF_015104395.2	Macrobrachium nipponense	NC_087203.1	chromosome	8		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/104/395/GCF_015104395.2_ASM1510439v2/GCF_015104395.2_ASM1510439v2_assembly_report.txt
+GCF_015104395.2	Macrobrachium nipponense	NC_087204.1	chromosome	10		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/104/395/GCF_015104395.2_ASM1510439v2/GCF_015104395.2_ASM1510439v2_assembly_report.txt
+GCF_015104395.2	Macrobrachium nipponense	NC_087205.1	chromosome	12		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/104/395/GCF_015104395.2_ASM1510439v2/GCF_015104395.2_ASM1510439v2_assembly_report.txt
+GCF_015104395.2	Macrobrachium nipponense	NC_087206.1	chromosome	13		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/104/395/GCF_015104395.2_ASM1510439v2/GCF_015104395.2_ASM1510439v2_assembly_report.txt
+GCF_015104395.2	Macrobrachium nipponense	NC_087207.1	chromosome	14		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/104/395/GCF_015104395.2_ASM1510439v2/GCF_015104395.2_ASM1510439v2_assembly_report.txt
+GCF_015104395.2	Macrobrachium nipponense	NC_087208.1	chromosome	15		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/104/395/GCF_015104395.2_ASM1510439v2/GCF_015104395.2_ASM1510439v2_assembly_report.txt
+GCF_015104395.2	Macrobrachium nipponense	NC_087209.1	chromosome	16		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/104/395/GCF_015104395.2_ASM1510439v2/GCF_015104395.2_ASM1510439v2_assembly_report.txt
+GCF_015104395.2	Macrobrachium nipponense	NC_087210.1	chromosome	17		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/104/395/GCF_015104395.2_ASM1510439v2/GCF_015104395.2_ASM1510439v2_assembly_report.txt
+GCF_015104395.2	Macrobrachium nipponense	NC_087211.1	chromosome	18		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/104/395/GCF_015104395.2_ASM1510439v2/GCF_015104395.2_ASM1510439v2_assembly_report.txt
+GCF_015104395.2	Macrobrachium nipponense	NC_087212.1	chromosome	21		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/104/395/GCF_015104395.2_ASM1510439v2/GCF_015104395.2_ASM1510439v2_assembly_report.txt
+GCF_015104395.2	Macrobrachium nipponense	NC_087213.1	chromosome	22		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/104/395/GCF_015104395.2_ASM1510439v2/GCF_015104395.2_ASM1510439v2_assembly_report.txt
+GCF_015104395.2	Macrobrachium nipponense	NC_087214.1	chromosome	25		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/104/395/GCF_015104395.2_ASM1510439v2/GCF_015104395.2_ASM1510439v2_assembly_report.txt
+GCF_015104395.2	Macrobrachium nipponense	NC_087215.1	chromosome	26		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/104/395/GCF_015104395.2_ASM1510439v2/GCF_015104395.2_ASM1510439v2_assembly_report.txt
+GCF_015104395.2	Macrobrachium nipponense	NC_087216.1	chromosome	27		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/104/395/GCF_015104395.2_ASM1510439v2/GCF_015104395.2_ASM1510439v2_assembly_report.txt
+GCF_015104395.2	Macrobrachium nipponense	NC_087217.1	chromosome	28		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/104/395/GCF_015104395.2_ASM1510439v2/GCF_015104395.2_ASM1510439v2_assembly_report.txt
+GCF_015104395.2	Macrobrachium nipponense	NC_087218.1	chromosome	30		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/104/395/GCF_015104395.2_ASM1510439v2/GCF_015104395.2_ASM1510439v2_assembly_report.txt
+GCF_015104395.2	Macrobrachium nipponense	NC_087219.1	chromosome	33		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/104/395/GCF_015104395.2_ASM1510439v2/GCF_015104395.2_ASM1510439v2_assembly_report.txt
+GCF_015104395.2	Macrobrachium nipponense	NC_087220.1	chromosome	36		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/104/395/GCF_015104395.2_ASM1510439v2/GCF_015104395.2_ASM1510439v2_assembly_report.txt
+GCF_015104395.2	Macrobrachium nipponense	NC_087221.1	chromosome	44		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/104/395/GCF_015104395.2_ASM1510439v2/GCF_015104395.2_ASM1510439v2_assembly_report.txt
+GCF_015104395.2	Macrobrachium nipponense	NC_087222.1	chromosome	47		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/104/395/GCF_015104395.2_ASM1510439v2/GCF_015104395.2_ASM1510439v2_assembly_report.txt
+GCF_015104395.2	Macrobrachium nipponense	NC_087223.1	chromosome	48		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/104/395/GCF_015104395.2_ASM1510439v2/GCF_015104395.2_ASM1510439v2_assembly_report.txt
+GCF_015104395.2	Macrobrachium nipponense	NC_087224.1	chromosome	49		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/104/395/GCF_015104395.2_ASM1510439v2/GCF_015104395.2_ASM1510439v2_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091549.1	chromosome	1		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091550.1	chromosome	2		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091551.1	chromosome	3		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091552.1	chromosome	4		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091553.1	chromosome	5		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091554.1	chromosome	6		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091555.1	chromosome	7		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091556.1	chromosome	8		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091557.1	chromosome	9		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091558.1	chromosome	10		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091559.1	chromosome	11		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091560.1	chromosome	12		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091561.1	chromosome	13		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091562.1	chromosome	14		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091563.1	chromosome	15		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091564.1	chromosome	16		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091565.1	chromosome	17		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091566.1	chromosome	18		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091567.1	chromosome	19		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091568.1	chromosome	20		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091569.1	chromosome	21		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091570.1	chromosome	22		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091571.1	chromosome	23		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091572.1	chromosome	24		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091573.1	chromosome	25		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091574.1	chromosome	26		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091575.1	chromosome	27		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091576.1	chromosome	28		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091577.1	chromosome	29		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091578.1	chromosome	30		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091579.1	chromosome	31		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091580.1	chromosome	32		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091581.1	chromosome	33		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091582.1	chromosome	34		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091583.1	chromosome	35		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091584.1	chromosome	36		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091585.1	chromosome	37		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091586.1	chromosome	38		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091587.1	chromosome	39		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091588.1	chromosome	40		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091589.1	chromosome	41		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091590.1	chromosome	42		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NC_091591.1	chromosome	43		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NW_027213013.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NW_027213030.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NW_027213033.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NW_027213101.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NW_027213132.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NW_027213187.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NW_027213202.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NW_027213206.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NW_027213226.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NW_027213287.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NW_027213310.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NW_027213415.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NW_027213499.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NW_027213549.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NW_027213619.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NW_027213708.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NW_027213721.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NW_027213752.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NW_027213806.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NW_027213906.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NW_027214032.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NW_027217026.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NW_027217546.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt
+GCF_042767895.1	Penaeus vannamei	NW_027217698.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/767/895/GCF_042767895.1_ASM4276789v1/GCF_042767895.1_ASM4276789v1_assembly_report.txt

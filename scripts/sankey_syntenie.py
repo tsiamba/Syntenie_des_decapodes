@@ -12,8 +12,9 @@ import html
 import json
 import re
 import sys
+from itertools import combinations
 from collections import Counter, defaultdict
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from pathlib import Path
 
 BASE = Path('/data/projet2/Syntenie_des_decapodes')
@@ -37,8 +38,14 @@ FOLDERS = (
 ACCESSIONS = tuple(re.search(r'GC[AF]_\d+\.\d+', x).group() for x in FOLDERS)
 SPECIES = {
     ACCESSIONS[0]: 'Macrobrachium nipponense',
+    ACCESSIONS[1]: 'Panulirus ornatus',
+    ACCESSIONS[2]: 'Cherax quadricarinatus',
     ACCESSIONS[3]: 'Macrobrachium rosenbergii',
+    ACCESSIONS[4]: 'Procambarus clarkii',
     ACCESSIONS[5]: 'Jaera praehirsuta',
+    ACCESSIONS[6]: 'Portunus trituberculatus',
+    ACCESSIONS[7]: 'Penaeus chinensis',
+    ACCESSIONS[8]: 'Eriocheir sinensis',
     ACCESSIONS[9]: 'Scylla paramamosain',
     ACCESSIONS[10]: 'Penaeus vannamei',
 }
@@ -70,6 +77,8 @@ class Table:
     excluded: dict
     metadata: dict
     stats: dict
+    sha256: str = ''
+    sequence_metadata: dict = field(default_factory=dict)
 
 
 def normalized(value):
@@ -167,11 +176,88 @@ def read_table(path, allow_missing_lineage=False):
         'rows_by_status': dict(statuses), 'unique_busco_ids': len(rows),
         'single_copy_retained': len(single),
         'excluded_by_reason': dict(Counter(excluded.values())),
-    })
+    }, hashlib.sha256(path.read_bytes()).hexdigest())
+
+
+def read_master_csv(path, needed, enriched=False):
+    """Read a legacy CSV or the enriched TSV, once, without changing sequence IDs."""
+    path = Path(path)
+    records = {accession: defaultdict(list) for accession in ACCESSIONS}
+    sequence_metadata = {accession: {} for accession in ACCESSIONS}
+    dates = {accession: set() for accession in ACCESSIONS}
+    verification = {accession: set() for accession in ACCESSIONS}
+    with path.open(encoding='utf-8-sig', newline='') as handle:
+        reader = csv.DictReader(handle, delimiter='\t' if enriched else ',')
+        required = {'Organisme', 'Sequence', 'Busco_id', 'Start', 'End', 'Strand'}
+        if enriched:
+            required |= {'Chromosome', 'Type_sequence', 'Status', 'Lineage'}
+        if not required <= set(reader.fieldnames or []):
+            raise InputError(f'{path}: colonnes CSV requises : {sorted(required)}')
+        for number, row in enumerate(reader, 2):
+            if any(row.get(column) is None for column in required):
+                raise InputError(f'{path}:{number}: ligne CSV incomplete')
+            accession = row['Organisme'].strip()
+            if accession not in records:
+                raise InputError(f'{path}:{number}: accession inconnue : {accession!r}')
+            busco, sequence = row['Busco_id'].strip(), row['Sequence'].strip()
+            try:
+                start, end = int(row['Start']), int(row['End'])
+            except (ValueError, TypeError):
+                raise InputError(f'{path}:{number}: coordonnees entieres requises') from None
+            strand = row['Strand'].strip()
+            if not busco or not sequence or sequence == '-' or min(start, end) < 0 or strand not in {'', '+', '-', '.'}:
+                raise InputError(f'{path}:{number}: identifiant, sequence, coordonnees ou brin invalide')
+            if enriched:
+                if row['Status'] != 'Complete' or row['Lineage'] != 'crustacea_odb12':
+                    raise InputError(f'{path}:{number}: attendu Complete et crustacea_odb12')
+                role, chromosome = row['Type_sequence'].strip(), row['Chromosome'].strip()
+                if not role or (role == 'chromosome' and not chromosome):
+                    raise InputError(f'{path}:{number}: role ou nom de chromosome absent')
+                if role != 'chromosome' and chromosome:
+                    raise InputError(f'{path}:{number}: nom de chromosome associe a une sequence de role {role}')
+                entry = dict(role=role, chromosome=chromosome, header='', source=row.get('Source_sequence', ''))
+                previous = sequence_metadata[accession].get(sequence)
+                if previous is not None and previous != entry:
+                    raise InputError(f'{path}:{number}: metadonnees contradictoires pour {accession}/{sequence}')
+                sequence_metadata[accession][sequence] = entry
+                date = (row.get('Lineage_date') or '').strip()
+                if date:
+                    dates[accession].add(date)
+                verification[accession].add(row.get('Verification_BUSCO') or 'non_renseignee')
+            records[accession][busco].append(Hit(sequence, start, end, strand))
+    digest = hashlib.sha256(path.read_bytes()).hexdigest()
+    tables = {}
+    for accession in needed:
+        groups = records[accession]
+        if not groups:
+            raise InputError(f'{path}: aucune position pour {accession}')
+        single = {busco: hits[0] for busco, hits in groups.items() if len(hits) == 1}
+        excluded = {busco: 'identifiant_repete' for busco, hits in groups.items() if len(hits) > 1}
+        metadata = {'source_format': 'master_tsv' if enriched else 'master_csv', 'assembly': accession,
+                                   'lineage_verification': 'non_stocke_dans_le_CSV',
+                                   'selection': 'master_fourni_deja_filtre_Complete_single_copy'}
+        if enriched:
+            metadata.update(lineage='crustacea_odb12', lineage_verification=sorted(verification[accession]))
+            if len(dates[accession]) > 1:
+                raise InputError(f'{path}: plusieurs dates de lineage pour {accession}')
+            if dates[accession]:
+                metadata['creation_date'] = next(iter(dates[accession]))
+        tables[accession] = Table(path, set(groups), single, excluded, metadata,
+                                  {'rows_in_master': sum(map(len, groups.values())),
+                                   'unique_busco_ids': len(groups), 'single_copy_retained': len(single),
+                                   'excluded_by_reason': dict(Counter(excluded.values()))}, digest,
+                                  sequence_metadata[accession])
+    print(f'Master charge : {len(tables)} genomes. Les statuts BUSCO et le lineage proviennent du filtrage amont.', flush=True)
+    return tables
+
+
+def read_master_tsv(path, needed):
+    return read_master_csv(path, needed, enriched=True)
 
 
 def compare(left, right):
-    if left.universe != right.universe:
+    master_input = all(table.metadata.get('source_format') in {'master_csv', 'master_tsv'} for table in (left, right))
+    if not master_input and left.universe != right.universe:
         raise InputError('Ensembles d\'identifiants BUSCO differents : table incomplete ou references incompatibles '
                          f'(uniquement A={len(left.universe - right.universe)}, '
                          f'uniquement B={len(right.universe - left.universe)}).')
@@ -188,6 +274,13 @@ def compare(left, right):
 def stem_for(label, pair):
     a, b = pair
     return f'sankey_{label}_{SPECIES[a].replace(" ", "_")}_{a}__{SPECIES[b].replace(" ", "_")}_{b}_crustacea_odb12'
+
+
+def all_comparisons():
+    """One comparison per unordered pair; preserve names and directions of old pairs."""
+    named = {frozenset(pair): (label, pair) for label, pair in PAIRS.items()}
+    return [named.get(frozenset(pair), ('comparaison', pair))
+            for pair in combinations(ACCESSIONS, 2)]
 
 
 def read_fasta_labels(root, accession, needed, explicit_path=None):
@@ -248,7 +341,42 @@ def read_fasta_labels(root, accession, needed, explicit_path=None):
     if missing:
         raise InputError(f'{path}: {len(missing)} identifiants BUSCO sans correspondance FASTA exacte, '
                          f'exemples : {sorted(missing)[:5]}. Verifier version et identifiants RefSeq/GenBank.')
-    return dict(path=str(path.resolve()), labels=labels)
+    return dict(path=str(path.resolve()), kind='fasta', labels=labels)
+
+
+def read_sequence_metadata(path, needed):
+    """Load verified sequence roles from a table derived from assembly reports."""
+    path = Path(path)
+    result = {acc: dict(path=str(path.resolve()), kind='assembly_report', labels={}) for acc in needed}
+    seen = set()
+    with path.open(encoding='utf-8-sig', newline='') as handle:
+        reader = csv.DictReader(handle, delimiter='\t')
+        required = {'assembly', 'sequence_id', 'role', 'chromosome'}
+        if not required <= set(reader.fieldnames or []):
+            raise InputError(f'{path}: colonnes TSV requises : {sorted(required)}')
+        for number, row in enumerate(reader, 2):
+            if any(row.get(column) is None for column in required):
+                raise InputError(f'{path}:{number}: ligne incomplete')
+            accession, sequence = row['assembly'].strip(), row['sequence_id'].strip()
+            key = (accession, sequence)
+            if not accession or not sequence or key in seen:
+                raise InputError(f'{path}:{number}: identifiant vide ou repete : {key}')
+            seen.add(key)
+            role, chromosome = row['role'].strip(), row['chromosome'].strip()
+            if not role or (role == 'chromosome' and not chromosome):
+                raise InputError(f'{path}:{number}: role ou nom de chromosome absent')
+            if accession in needed and sequence in needed[accession]:
+                result[accession]['labels'][sequence] = dict(
+                    role=role, chromosome=chromosome, header='', source=row.get('source_url', ''))
+    digest = hashlib.sha256(path.read_bytes()).hexdigest()
+    for accession, sequences in needed.items():
+        missing = sequences - result[accession]['labels'].keys()
+        if missing:
+            raise InputError(f'{path}: {len(missing)} sequences sans correspondance pour {accession}, '
+                             f'exemples : {sorted(missing)[:5]}')
+        result[accession]['sha256'] = digest
+        print(f'Metadonnees {accession}: {len(sequences)} sequences identifiees', flush=True)
+    return result
 
 
 def sequence_label(sequence, metadata):
@@ -350,11 +478,13 @@ def save_pair(go, plotly_version, directory, label, pair, left, right, common, l
                 right.single[b].sequence, right.single[b].start, right.single[b].end, right.single[b].strand)
                for b in common))
     write_tsv(out('_exclusions.tsv'), ['busco_id', 'raison_A', 'raison_B'],
-              ((b, left.excluded.get(b, 'Complete_single_copy'), right.excluded.get(b, 'Complete_single_copy'))
-               for b in sorted(left.universe - set(common))))
+              ((b, left.excluded.get(b, 'Complete_single_copy' if b in left.single else 'absent_du_master'),
+                right.excluded.get(b, 'Complete_single_copy' if b in right.single else 'absent_du_master'))
+               for b in sorted((left.universe | right.universe) - set(common))))
     write_tsv(out('_sequences.tsv'),
-              ['assembly', 'species', 'sequence_id', 'role_in_fasta_header', 'chromosome_mentioned', 'fasta_header'],
-              ((acc, SPECIES[acc], seq, entry.get('role', 'non_verifie'), entry.get('chromosome', ''), entry.get('header', ''))
+              ['assembly', 'species', 'sequence_id', 'role_in_fasta_header', 'chromosome_mentioned', 'fasta_header', 'metadata_source'],
+              ((acc, SPECIES[acc], seq, entry.get('role', 'non_verifie'), entry.get('chromosome', ''),
+                entry.get('header', ''), entry.get('source', fasta.get(acc, {}).get('path', '')))
                for acc, table in zip(pair, (left, right))
                for seq in sorted({table.single[b].sequence for b in common})
                for entry in [fasta.get(acc, {}).get('labels', {}).get(seq, {})]))
@@ -378,9 +508,11 @@ def save_pair(go, plotly_version, directory, label, pair, left, right, common, l
         'comparison': label, 'species': [SPECIES[x] for x in pair], 'assemblies': list(pair),
         'common_single_copy_buscos': len(common), 'sum_link_weights': sum(links.values()),
         'number_links': len(links), 'plotly_version': plotly_version, 'svg': svg_state,
-        'sequence_labels': 'identifiants originaux; noms et roles explicites des en-tetes FASTA si fournis',
-        'fasta_sources': {acc: fasta[acc]['path'] for acc in pair if acc in fasta},
-        'inputs': [dict(path=str(x.path.resolve()), sha256=hashlib.sha256(x.path.read_bytes()).hexdigest(),
+        'sequence_labels': 'identifiants originaux; noms et roles issus de la source de metadonnees disponible',
+        'fasta_sources': {acc: fasta[acc]['path'] for acc in pair if acc in fasta and fasta[acc].get('kind') == 'fasta'},
+        'sequence_metadata_sources': {acc: {key: value for key, value in fasta[acc].items() if key != 'labels'}
+                                      for acc in pair if acc in fasta},
+        'inputs': [dict(path=str(x.path.resolve()), sha256=x.sha256,
                         metadata=x.metadata, stats=x.stats) for x in (left, right)],
     }
     out('_bilan.json').write_text(json.dumps(audit, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
@@ -544,12 +676,18 @@ def self_test():
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument('--busco-root', type=Path, default=BUSCO_ROOT, help='Dossier parent des 11 dossiers BUSCO')
+    parser.add_argument('--master-csv', type=Path,
+                        help='Alternative aux full_table.tsv : master CSV deja filtre Complete single-copy')
+    parser.add_argument('--master-tsv', type=Path, help='Master TSV enrichi genere par generer_master_tsv.py')
+    parser.add_argument('--sequence-metadata', type=Path,
+                        help='TSV sequence_metadata_11_genomes.tsv derive des rapports NCBI, alternative aux FASTA')
     parser.add_argument('--outdir', type=Path, default=OUTPUT)
     parser.add_argument('--fasta-root', type=Path, nargs='?', const=FASTA_ROOT,
                         help='Lit les noms chromosomes/scaffolds des FASTA NCBI; sans valeur : genomes/ncbi_dataset/data du projet')
     parser.add_argument('--fasta-file', action='append', default=[], metavar='ACCESSION=CHEMIN',
                         help='Selection explicite du FASTA pour un assemblage ; repetable, avec --fasta-root')
     parser.add_argument('--pair', choices=['all'] + list(PAIRS), default='all', help='all = proches + eloignes')
+    parser.add_argument('--all-pairs', action='store_true', help='Les 55 paires distinctes des 11 genomes')
     parser.add_argument('--internal-decapods', action='store_true', help='Ajoute Penaeus vannamei vs Scylla a all')
     parser.add_argument('--inventory', action='store_true', help='Liste les 11 chemins et leur presence, sans lecture')
     parser.add_argument('--dry-run', action='store_true', help='Valide les tables selectionnees sans produire de fichiers')
@@ -563,6 +701,14 @@ def main(argv=None):
         parser.error('--svg-timeout doit etre un nombre positif fini')
     if args.self_test:
         return self_test()
+    if args.master_csv is not None and args.master_tsv is not None:
+        parser.error('--master-csv et --master-tsv sont des sources alternatives')
+    if (args.master_csv is not None or args.master_tsv is not None) and args.inventory:
+        parser.error('--inventory liste les full_table.tsv ; utiliser --master-csv avec --dry-run pour le master')
+    if args.master_tsv is not None and (args.sequence_metadata is not None or args.fasta_root is not None):
+        parser.error('--master-tsv contient deja les metadonnees des sequences')
+    if args.sequence_metadata is not None and args.fasta_root is not None:
+        parser.error('--sequence-metadata et --fasta-root sont des sources alternatives')
     fasta_overrides = {}
     for item in args.fasta_file:
         accession, sep, value = item.partition('=')
@@ -579,45 +725,63 @@ def main(argv=None):
         for acc, path in paths.items():
             print(f'{acc}\t{"present" if path.is_file() else "absent"}\t{path}')
         return 0 if all(p.is_file() for p in paths.values()) else 1
+    if args.all_pairs and args.pair != 'all':
+        parser.error('--all-pairs et --pair sont des selections alternatives')
     if args.internal_decapods and args.pair != 'all':
         parser.error('--internal-decapods accompagne --pair all (ou utiliser --pair eloignes_decapodes)')
     selected = ['proches', 'eloignes'] if args.pair == 'all' else [args.pair]
     if args.internal_decapods:
         selected.append('eloignes_decapodes')
-    needed = sorted({acc for label in selected for acc in PAIRS[label]})
+    comparisons = all_comparisons() if args.all_pairs else [(label, PAIRS[label]) for label in selected]
+    needed = sorted({acc for _, pair in comparisons for acc in pair})
     if set(fasta_overrides) - set(needed):
         parser.error('--fasta-file contient une accession absente des paires selectionnees')
     errors, tables = [], {}
-    for acc in needed:
-        try:
-            tables[acc] = read_table(paths[acc], args.allow_missing_lineage)
-        except (InputError, OSError, UnicodeError) as exc:
-            errors.append(f'{acc}: {exc}')
+    if args.master_tsv is not None:
+        tables = read_master_tsv(args.master_tsv, needed)
+    elif args.master_csv is not None:
+        tables = read_master_csv(args.master_csv, needed)
+    else:
+        for acc in needed:
+            try:
+                print(f'Lecture BUSCO {acc}', flush=True)
+                tables[acc] = read_table(paths[acc], args.allow_missing_lineage)
+            except (InputError, OSError, UnicodeError) as exc:
+                errors.append(f'{acc}: {exc}')
     prepared = []
-    for label in selected:
-        a, b = PAIRS[label]
+    for label, (a, b) in comparisons:
         if a in tables and b in tables:
             try:
                 common, links = compare(tables[a], tables[b])
                 prepared.append((label, (a, b), tables[a], tables[b], common, links))
-                print(f'Valide {label}: {len(common)} BUSCO single-copy communs, {len(links)} liens')
+                print(f'Valide {label} {a} / {b}: {len(common)} BUSCO single-copy communs, {len(links)} liens', flush=True)
             except InputError as exc:
-                errors.append(f'{label}: {exc}')
+                errors.append(f'{label} {a} / {b}: {exc}')
     if errors:
         raise InputError('\n'.join(errors))
     fasta = {}
-    if args.fasta_root is not None:
+    if args.master_tsv is not None:
+        fasta = {acc: dict(path=str(args.master_tsv.resolve()), kind='master_tsv',
+                           sha256=tables[acc].sha256, labels=tables[acc].sequence_metadata) for acc in needed}
+    elif args.fasta_root is not None:
         for acc in needed:
             used = {tables[acc].single[b].sequence
                     for _, pair, _, _, common, _ in prepared if acc in pair for b in common}
             try:
+                print(f'Lecture FASTA {acc} ({needed.index(acc) + 1}/{len(needed)})', flush=True)
                 fasta[acc] = read_fasta_labels(args.fasta_root, acc, used, fasta_overrides.get(acc))
                 print(f'FASTA {acc}: {len(fasta[acc]["labels"])} sequences associees aux en-tetes')
             except (InputError, OSError, UnicodeError) as exc:
                 errors.append(str(exc))
         if errors:
             raise InputError('\n'.join(errors))
+    elif args.sequence_metadata is not None:
+        used = {acc: {tables[acc].single[b].sequence
+                      for _, pair, _, _, common, _ in prepared if acc in pair for b in common}
+                for acc in needed}
+        fasta = read_sequence_metadata(args.sequence_metadata, used)
     if args.dry_run:
+        print(f'Validation terminee : {len(prepared)} paires, {len(tables)} tables BUSCO lues.')
         return 0
     try:
         import plotly
@@ -631,10 +795,23 @@ def main(argv=None):
                     if (args.outdir / (stem_for(label, pair) + suffix)).exists()]
         if existing:
             raise InputError('Sorties existantes; choisir un autre --outdir ou --overwrite :\n' + '\n'.join(existing))
+        if (args.outdir / 'comparaisons.tsv').exists():
+            raise InputError('comparaisons.tsv existe deja ; choisir un autre --outdir ou --overwrite')
     args.outdir.mkdir(parents=True, exist_ok=True)
-    for item in prepared:
+    # Remove an old completion manifest only after explicit overwrite approval via CLI.
+    (args.outdir / 'comparaisons.tsv').unlink(missing_ok=True)
+    for index, item in enumerate(prepared, 1):
+        print(f'Generation {index}/{len(prepared)}', flush=True)
         save_pair(go, plotly.__version__, args.outdir, *item, svg=not args.no_svg,
                   fasta=fasta, svg_timeout=args.svg_timeout)
+    temporary = args.outdir / 'comparaisons.tmp.tsv'
+    write_tsv(temporary,
+              ['comparison', 'assembly_A', 'species_A', 'assembly_B', 'species_B', 'prefix', 'n_busco', 'n_links'],
+              ((label, pair[0], SPECIES[pair[0]], pair[1], SPECIES[pair[1]],
+                stem_for(label, pair), len(common), len(links))
+               for label, pair, _, _, common, links in prepared))
+    temporary.replace(args.outdir / 'comparaisons.tsv')
+    print(f'Termine : {len(prepared)} paires. Inventaire : {args.outdir / "comparaisons.tsv"}')
     return 0
 
 

@@ -1,0 +1,158 @@
+assembly	species	sequence_id	role_in_fasta_header	chromosome_mentioned	fasta_header	metadata_source
+GCF_036320965.1	Panulirus ornatus	NC_092224.1	chromosome	1		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092225.1	chromosome	2		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092226.1	chromosome	3		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092227.1	chromosome	4		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092228.1	chromosome	5		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092229.1	chromosome	6		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092230.1	chromosome	7		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092231.1	chromosome	8		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092232.1	chromosome	9		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092233.1	chromosome	10		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092234.1	chromosome	11		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092235.1	chromosome	12		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092236.1	chromosome	13		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092237.1	chromosome	14		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092238.1	chromosome	15		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092239.1	chromosome	16		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092240.1	chromosome	17		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092241.1	chromosome	18		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092242.1	chromosome	19		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092243.1	chromosome	20		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092244.1	chromosome	21		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092245.1	chromosome	22		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092246.1	chromosome	23		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092247.1	chromosome	24		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092248.1	chromosome	25		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092249.1	chromosome	26		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092250.1	chromosome	27		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092251.1	chromosome	28		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092252.1	chromosome	29		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092253.1	chromosome	30		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092254.1	chromosome	31		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092255.1	chromosome	32		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092256.1	chromosome	33		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092257.1	chromosome	34		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092258.1	chromosome	35		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092259.1	chromosome	36		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092260.1	chromosome	37		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092261.1	chromosome	38		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092262.1	chromosome	39		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092263.1	chromosome	40		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092264.1	chromosome	41		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092265.1	chromosome	42		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092266.1	chromosome	43		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092267.1	chromosome	44		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092268.1	chromosome	45		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092269.1	chromosome	46		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092270.1	chromosome	47		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092271.1	chromosome	48		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092272.1	chromosome	49		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092273.1	chromosome	50		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092274.1	chromosome	51		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092275.1	chromosome	52		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092276.1	chromosome	53		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092278.1	chromosome	55		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092279.1	chromosome	56		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092280.1	chromosome	57		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092281.1	chromosome	58		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092282.1	chromosome	59		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092284.1	chromosome	61		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092285.1	chromosome	62		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092286.1	chromosome	63		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092287.1	chromosome	64		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092288.1	chromosome	65		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092289.1	chromosome	66		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092290.1	chromosome	67		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092291.1	chromosome	68		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092292.1	chromosome	69		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092294.1	chromosome	71		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092295.1	chromosome	72		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_036320965.1	Panulirus ornatus	NC_092296.1	chromosome	73		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/320/965/GCF_036320965.1_ASM3632096v1/GCF_036320965.1_ASM3632096v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066509.1	chromosome	1		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066510.1	chromosome	2		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066511.1	chromosome	3		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066512.1	chromosome	4		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066513.1	chromosome	5		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066514.1	chromosome	6		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066515.1	chromosome	7		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066516.1	chromosome	8		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066517.1	chromosome	9		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066518.1	chromosome	10		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066519.1	chromosome	11		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066520.1	chromosome	12		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066521.1	chromosome	13		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066522.1	chromosome	14		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066523.1	chromosome	15		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066524.1	chromosome	16		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066525.1	chromosome	17		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066526.1	chromosome	18		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066527.1	chromosome	19		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066528.1	chromosome	20		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066529.1	chromosome	21		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066530.1	chromosome	22		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066531.1	chromosome	23		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066532.1	chromosome	24		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066533.1	chromosome	25		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066534.1	chromosome	26		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066535.1	chromosome	27		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066536.1	chromosome	28		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066537.1	chromosome	29		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066538.1	chromosome	30		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066539.1	chromosome	31		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066540.1	chromosome	32		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066541.1	chromosome	33		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066542.1	chromosome	34		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066543.1	chromosome	35		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066544.1	chromosome	36		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066545.1	chromosome	37		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066546.1	chromosome	38		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066547.1	chromosome	39		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066548.1	chromosome	40		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066549.1	chromosome	41		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066550.1	chromosome	42		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066551.1	chromosome	43		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066552.1	chromosome	44		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066553.1	chromosome	45		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066554.1	chromosome	46		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066555.1	chromosome	47		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066556.1	chromosome	48		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066557.1	chromosome	49		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066558.1	chromosome	50		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066559.1	chromosome	51		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066560.1	chromosome	52		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066561.1	chromosome	53		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066562.1	chromosome	54		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066563.1	chromosome	55		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066564.1	chromosome	56		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066565.1	chromosome	57		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066566.1	chromosome	58		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066567.1	chromosome	59		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066568.1	chromosome	60		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066569.1	chromosome	61		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066570.1	chromosome	62		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066571.1	chromosome	63		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066572.1	chromosome	64		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066573.1	chromosome	65		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066574.1	chromosome	66		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066575.1	chromosome	67		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066576.1	chromosome	68		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066577.1	chromosome	69		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NC_066578.1	chromosome	70		https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NW_026110330.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NW_026110441.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NW_026110490.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NW_026110817.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NW_026111090.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NW_026111543.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NW_026111557.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NW_026111816.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NW_026111831.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NW_026111832.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NW_026111946.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NW_026111957.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NW_026111962.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NW_026112078.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NW_026112085.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NW_026112129.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
+GCF_024679095.1	Eriocheir sinensis	NW_026112219.1	scaffold			https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/679/095/GCF_024679095.1_ASM2467909v1/GCF_024679095.1_ASM2467909v1_assembly_report.txt
