@@ -2,7 +2,6 @@
 *.zip
 .gff
 .fna
-envs/*
 !envs/
 !envs/env_busco.yml
 !envs/versions.txt

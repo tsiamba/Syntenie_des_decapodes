@@ -1,0 +1,24 @@
+name: env_sankey
+
+channels:
+  - conda-forge
+  - nodefaults
+
+dependencies:
+  - python=3.12
+  - pip
+  # Bibliothèques utilisées par Chrome sur le cluster Linux du projet.
+  - "at-spi2-core>=2.46"
+  - "libcups<3"
+  - xorg-libxcomposite
+  - xorg-libxdamage
+  - xorg-libxfixes
+  - xorg-libxrandr
+  - mesalib
+  - cairo
+  - pango
+  - alsa-lib
+  - pip:
+      - plotly==6.9.0
+      - "kaleido>=1,<2"
+
