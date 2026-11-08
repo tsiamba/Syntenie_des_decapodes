@@ -154,9 +154,7 @@ Syntenie_des_decapodes/
 ├── envs/                      # Environnements et versions
 ├── scripts/                   # Scripts Python et lanceurs shell
 │   └── syngraph/              # Installation et runs exploratoires sur le serveur
-├── log_error_busco/
 ├── cahier_labo.md
-├── architecture_projet.txt
 └── versions.txt
 ```
 
