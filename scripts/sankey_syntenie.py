@@ -10,6 +10,7 @@ import gzip
 import hashlib
 import html
 import json
+import os
 import re
 import sys
 from itertools import combinations
@@ -272,6 +273,13 @@ def compare(left, right):
 
 
 def stem_for(label, pair):
+    """Short, stable file names; comparison labels remain in the manifest/audit."""
+    a, b = pair
+    return f'sankey_{SPECIES[a].replace(" ", "_")}_{SPECIES[b].replace(" ", "_")}'
+
+
+def legacy_stem_for(label, pair):
+    """Previous long prefix, for reading historical outputs when needed."""
     a, b = pair
     return f'sankey_{label}_{SPECIES[a].replace(" ", "_")}_{a}__{SPECIES[b].replace(" ", "_")}_{b}_crustacea_odb12'
 
@@ -391,42 +399,195 @@ def sequence_label(sequence, metadata):
     return f'{role} [{sequence}]' if role != 'non_precise' else sequence
 
 
-def _svg_worker(figure_json, path, queue):
+def _validate_svg(path):
+    """Only a complete, nonempty SVG document can be accepted after rendering."""
+    import xml.etree.ElementTree as ET
+    root = ET.parse(path).getroot()
+    if root.tag.rsplit('}', 1)[-1] != 'svg' or len(root) == 0:
+        raise ValueError('document SVG vide ou racine incorrecte')
+
+
+def _svg_worker(figure_json, path, queue, timeout):
+    """Write before closing Chrome: successful rendering must survive slow cleanup."""
+    import asyncio
+
+    async def render():
+        import kaleido
+        import plotly
+        plotlyjs = Path(plotly.__file__).resolve().parent / 'package_data' / 'plotly.min.js'
+        if not plotlyjs.is_file():
+            raise RuntimeError(f'Plotly.js local absent : {plotlyjs}')
+        # Sankey labels use plain text. No MathJax CDN request is necessary.
+        page = kaleido.PageGenerator(plotly=plotlyjs.as_uri(), mathjax=False)
+        renderer = kaleido.Kaleido(n=1, timeout=timeout, page_generator=page)
+        rendered = False
+
+        async def report_browser():
+            # Report ownership even if Chrome stalls during initialization.
+            while True:
+                browser = getattr(renderer, 'subprocess', None)
+                if browser is not None:
+                    queue.put(('browser_pid', browser.pid))
+                    return
+                await asyncio.sleep(0.05)
+
+        reporter = asyncio.create_task(report_browser())
+        try:
+            await renderer.open()
+            payload = await renderer.calc_fig(json.loads(figure_json), opts={'format': 'svg'})
+            Path(path).write_bytes(payload)
+            _validate_svg(path)
+            rendered = True
+            queue.put(('rendered', None))
+        except Exception as exc:
+            queue.put(('error', f'{type(exc).__name__}: {exc}'[:2000]))
+        finally:
+            reporter.cancel()
+            try:
+                await renderer.close()
+            except Exception as exc:
+                queue.put(('cleanup_error' if rendered else 'error', f'{type(exc).__name__}: {exc}'[:2000]))
+
     try:
-        import plotly.io as pio
-        pio.from_json(figure_json).write_image(path, format='svg')
-        queue.put('')
+        asyncio.run(render())
     except Exception as exc:
-        queue.put(f'{type(exc).__name__}: {exc}'[:2000])
+        queue.put(('error', f'{type(exc).__name__}: {exc}'[:2000]))
 
 
-def export_svg(fig, path, timeout):
-    """Bound the optional browser export so HTML/TSV generation can finish."""
+def _stop_svg_processes(process, browser_pid):
+    """Stop only the browser/session launched by this export and its worker."""
+    notes = []
+    if isinstance(browser_pid, int) and browser_pid > 1 and browser_pid != os.getpid():
+        try:
+            if os.name == 'posix':
+                import signal
+                group = os.getpgid(browser_pid)
+                # Choreographer starts this owned subprocess in a new session.
+                if group == browser_pid and group != os.getpgrp():
+                    os.killpg(group, signal.SIGKILL)
+                else:
+                    os.kill(browser_pid, signal.SIGKILL)
+            elif os.name == 'nt':
+                import subprocess
+                subprocess.run(['taskkill', '/PID', str(browser_pid), '/T', '/F'],
+                               stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+                               timeout=5, check=False, creationflags=subprocess.CREATE_NO_WINDOW)
+        except ProcessLookupError:
+            pass
+        except Exception as exc:
+            notes.append(f'nettoyage navigateur : {type(exc).__name__}: {exc}')
+    if process.is_alive():
+        process.terminate()
+        process.join(2)
+        if process.is_alive():
+            process.kill()
+            process.join(2)
+        if process.is_alive():
+            notes.append('le processus SVG ne s\'est pas termine')
+    return notes
+
+
+def export_svg(fig, path, timeout, cleanup_timeout=10):
+    """Separate the rendering deadline from browser cleanup; preserve valid SVG."""
     import multiprocessing
     import queue as queue_module
+    import time
+    import xml.etree.ElementTree as ET
     context = multiprocessing.get_context('spawn')
     queue = context.Queue()
-    process = context.Process(target=_svg_worker, args=(fig.to_json(), str(path), queue))
+    process = context.Process(target=_svg_worker, args=(fig.to_json(), str(path), queue, timeout))
+    path = Path(path)
+    # A previous successful file must never masquerade as this new rendering.
+    path.unlink(missing_ok=True)
+    browser_pid, cleanup_errors = None, []
+    started = None
+    accepted = False
+
+    def svg_ready():
+        try:
+            _validate_svg(path)
+            return True
+        except (OSError, ValueError, ET.ParseError):
+            return False
+
+    def receive(message):
+        nonlocal browser_pid
+        kind, value = message
+        if kind == 'browser_pid':
+            browser_pid = value
+        elif kind == 'cleanup_error':
+            cleanup_errors.append(value)
+        elif kind == 'error':
+            if svg_ready():
+                cleanup_errors.append(value)
+            else:
+                raise RuntimeError(value)
+        return kind
+
     try:
         process.start()
-        process.join(timeout)
-        if process.is_alive():
-            process.terminate()
-            process.join(5)
-            raise RuntimeError(f'export SVG interrompu apres {timeout:g} secondes')
-        try:
-            error = queue.get(timeout=2)
-        except queue_module.Empty:
-            raise RuntimeError(f'processus SVG termine sans resultat (code {process.exitcode})') from None
-        if error:
-            raise RuntimeError(error)
-        if not path.is_file():
-            raise RuntimeError('export SVG sans fichier de sortie')
+        started = time.monotonic()
+        deadline = started + timeout
+        while True:
+            remaining = deadline - time.monotonic()
+            if remaining <= 0:
+                if svg_ready():
+                    break
+                raise RuntimeError(f'export SVG interrompu apres {timeout:g} secondes (aucun SVG complet)')
+            try:
+                kind = receive(queue.get(timeout=min(0.2, remaining)))
+                if kind == 'rendered':
+                    if not svg_ready():
+                        raise RuntimeError('le processus a annonce un rendu mais le SVG est incomplet ou invalide')
+                    break
+            except queue_module.Empty:
+                # Also recover a committed file if the worker cannot signal it.
+                if svg_ready():
+                    break
+                if not process.is_alive():
+                    raise RuntimeError(f'processus SVG termine sans SVG complet (code {process.exitcode})') from None
+        accepted = True
+        render_seconds = time.monotonic() - started
+        process.join(cleanup_timeout)
+        # Drain the small control messages after rendering, rather than joining
+        # a worker before consuming its queue.
+        while True:
+            try:
+                receive(queue.get_nowait())
+            except queue_module.Empty:
+                break
+        forced = process.is_alive()
+        if forced:
+            cleanup_errors.append(f'fermeture du navigateur limitee a {cleanup_timeout:g} secondes')
+            cleanup_errors.extend(_stop_svg_processes(process, browser_pid))
+        elif process.exitcode or cleanup_errors:
+            if process.exitcode:
+                cleanup_errors.append(f'processus termine avec le code {process.exitcode} apres production du SVG')
+            cleanup_errors.extend(_stop_svg_processes(process, browser_pid))
+        _validate_svg(path)
+        if cleanup_errors:
+            print('AVERTISSEMENT : SVG complet conserve ; ' + ' ; '.join(cleanup_errors), file=sys.stderr)
+        return dict(render_seconds=round(render_seconds, 3), cleanup='forced' if forced else ('warning' if cleanup_errors else 'ok'),
+                    cleanup_warnings=cleanup_errors, mathjax=False, plotlyjs='local')
     finally:
-        if process.is_alive():
-            process.terminate()
-            process.join(5)
+        if process.is_alive() or not accepted:
+            _stop_svg_processes(process, browser_pid)
+        if not accepted:
+            path.unlink(missing_ok=True)
         queue.close()
+
+
+def configure_svg_runtime(directory):
+    """Keep browser profiles, temporary files and XDG caches in the chosen directory."""
+    import tempfile
+    directory = Path(directory).resolve()
+    locations = {'TMPDIR': directory / 'tmp', 'TMP': directory / 'tmp', 'TEMP': directory / 'tmp',
+                 'XDG_CACHE_HOME': directory / 'xdg-cache', 'XDG_CONFIG_HOME': directory / 'xdg-config',
+                 'XDG_DATA_HOME': directory / 'xdg-data', 'XDG_STATE_HOME': directory / 'xdg-state'}
+    for name, path in locations.items():
+        path.mkdir(parents=True, exist_ok=True)
+        os.environ[name] = str(path)
+    tempfile.tempdir = str(locations['TMPDIR'])
 
 
 def write_tsv(path, header, rows):
@@ -436,7 +597,7 @@ def write_tsv(path, header, rows):
         writer.writerows(rows)
 
 
-def make_figure(go, label, pair, links, count, fasta=None):
+def make_figure(go, label, pair, links, count, fasta=None, duplication_data=None):
     fasta = fasta or {}
     a, b = pair
     sources = sorted({s for s, _ in links})
@@ -445,11 +606,25 @@ def make_figure(go, label, pair, links, count, fasta=None):
     si = {s: i for i, s in enumerate(sources)}
     ti = {t: len(sources) + i for i, t in enumerate(targets)}
     edges = sorted(links)
-    labels = [f'{SPECIES[a]} | {sequence_label(s, fasta.get(a, {}))}' for s in sources]
-    labels += [f'{SPECIES[b]} | {sequence_label(t, fasta.get(b, {}))}' for t in targets]
+    labels, tooltips = [], []
+    for accession, sequences in ((a, sources), (b, targets)):
+        for sequence in sequences:
+            text = f'{SPECIES[accession]} | {sequence_label(sequence, fasta.get(accession, {}))}'
+            node_label = html.escape(text)
+            tip = html.escape(text)
+            if duplication_data is not None:
+                from busco_duplications import duplication_text, sequence_stats
+                stat = sequence_stats(duplication_data, accession, sequence)
+                if stat is None:
+                    raise InputError(f'Annotation de duplication absente : {accession}/{sequence}')
+                node_label += '<br>' + html.escape(duplication_text(stat))
+                tip += '<br>' + html.escape(duplication_text(stat, details=True)).replace('\n', '<br>')
+            labels.append(node_label)
+            tooltips.append(tip)
     fig = go.Figure(go.Sankey(
         arrangement='snap',
-        node=dict(label=[html.escape(x) for x in labels], pad=12, thickness=18,
+        node=dict(label=labels, customdata=tooltips, hovertemplate='%{customdata}<extra></extra>',
+                  pad=22 if duplication_data is not None else 12, thickness=18,
                   color=['#2878a8'] * len(sources) + ['#db9250'] * len(targets)),
         link=dict(source=[si[s] for s, t in edges], target=[ti[t] for s, t in edges],
                   value=[links[e] for e in edges], color='rgba(68,126,159,0.25)',
@@ -457,14 +632,20 @@ def make_figure(go, label, pair, links, count, fasta=None):
     fig.update_layout(
         title=dict(text=f'{SPECIES[a]} → {SPECIES[b]} — {label}<br>'
                    f'<sup>crustacea_odb12 · {count} BUSCO Complete single-copy communs · identifiants de sequences originaux</sup>'),
-        font=dict(size=11), width=1700,
-        height=max(750, 22 * max(len(sources), len(targets)) + 180),
-        margin=dict(l=40, r=40, t=110, b=50), paper_bgcolor='white')
+        font=dict(size=11), width=2200 if duplication_data is not None else 1700,
+        height=max(750, (40 if duplication_data is not None else 22) * max(len(sources), len(targets)) + 210),
+        margin=dict(l=40, r=40, t=110, b=100 if duplication_data is not None else 50), paper_bgcolor='white')
+    if duplication_data is not None:
+        fig.add_annotation(x=0, y=0, yshift=-30, xref='paper', yref='paper', xanchor='left', yanchor='top',
+                           showarrow=False, align='left', font=dict(size=12, color='#a95000'),
+                           text='D : familles classées Duplicated / familles complètes présentes sur la séquence ; copies D : loci présents ici.<br>'
+                                'Annotations avant filtrage par paire ; flux = BUSCO single-copy communs. Les familles D peuvent figurer sur plusieurs chromosomes.<br>'
+                                'Seules les séquences portant un flux sont dessinées ; les autres figurent dans le tableau _duplications.tsv.')
     return fig
 
 
 def save_pair(go, plotly_version, directory, label, pair, left, right, common, links, svg,
-              fasta=None, svg_timeout=60):
+              fasta=None, svg_timeout=180, duplication_data=None):
     fasta = fasta or {}
     stem = directory / stem_for(label, pair)
     def out(suffix):
@@ -488,16 +669,32 @@ def save_pair(go, plotly_version, directory, label, pair, left, right, common, l
                for acc, table in zip(pair, (left, right))
                for seq in sorted({table.single[b].sequence for b in common})
                for entry in [fasta.get(acc, {}).get('labels', {}).get(seq, {})]))
-    fig = make_figure(go, label, pair, links, len(common), fasta)
+    duplication_path = out('_duplications.tsv')
+    if duplication_data is not None:
+        represented = {pair[0]: {s for s, _ in links}, pair[1]: {t for _, t in links}}
+        write_tsv(duplication_path,
+                  ['assembly', 'species', 'sequence_id', 'role', 'chromosome', 'represented_in_figure',
+                   'single_families', 'duplicated_families', 'complete_families', 'duplicated_copies',
+                   'duplication_percent', 'duplicated_busco_ids', 'duplicated_loci_json'],
+                  ((accession, SPECIES[accession], sequence, stat['role'], stat['chromosome'],
+                    int(sequence in represented[accession]), stat['single_families'], stat['duplicated_families'],
+                    stat['complete_families'], stat['duplicated_copies'], f"{stat['duplication_percent']:.6f}",
+                    ';'.join(stat['busco_ids']), json.dumps(stat['loci'], ensure_ascii=False))
+                   for accession in pair
+                   for sequence, stat in sorted(duplication_data['assemblies'][accession]['sequences'].items())))
+    else:
+        duplication_path.unlink(missing_ok=True)
+    fig = make_figure(go, label, pair, links, len(common), fasta, duplication_data)
     fig.write_html(str(out('.html')), include_plotlyjs=True, full_html=True, auto_open=False)
     svg_state = 'non_demande'
+    svg_export = None
     # An old SVG must not survive an overwritten analysis as if it were current.
     if out('.svg').exists():
         out('.svg').unlink()
     if svg:
         temporary = out('.tmp.svg')
         try:
-            export_svg(fig, temporary, svg_timeout)
+            svg_export = export_svg(fig, temporary, svg_timeout)
             temporary.replace(out('.svg'))
             svg_state = 'ok'
         except Exception as exc:
@@ -507,16 +704,24 @@ def save_pair(go, plotly_version, directory, label, pair, left, right, common, l
     audit = {
         'comparison': label, 'species': [SPECIES[x] for x in pair], 'assemblies': list(pair),
         'common_single_copy_buscos': len(common), 'sum_link_weights': sum(links.values()),
-        'number_links': len(links), 'plotly_version': plotly_version, 'svg': svg_state,
+        'number_links': len(links), 'plotly_version': plotly_version, 'svg': svg_state, 'svg_export': svg_export,
         'sequence_labels': 'identifiants originaux; noms et roles issus de la source de metadonnees disponible',
         'fasta_sources': {acc: fasta[acc]['path'] for acc in pair if acc in fasta and fasta[acc].get('kind') == 'fasta'},
         'sequence_metadata_sources': {acc: {key: value for key, value in fasta[acc].items() if key != 'labels'}
                                       for acc in pair if acc in fasta},
+        'duplication_annotation': ({
+            'path': duplication_data['path'], 'sha256': duplication_data['sha256'],
+            'lineage': duplication_data['lineage'], 'lineage_date': duplication_data['lineage_date'],
+            'denominator': 'distinct complete BUSCO families present on each sequence, before pair filtering',
+            'scope': 'all complete loci in the duplication master; annotations do not alter single-copy links',
+            'table': duplication_path.name,
+        } if duplication_data is not None else None),
         'inputs': [dict(path=str(x.path.resolve()), sha256=x.sha256,
                         metadata=x.metadata, stats=x.stats) for x in (left, right)],
     }
     out('_bilan.json').write_text(json.dumps(audit, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
     print(f'{label}: {len(common)} BUSCO, {len(links)} liens; {out(".html")}')
+    return svg_state
 
 
 def self_test():
@@ -679,6 +884,8 @@ def main(argv=None):
     parser.add_argument('--master-csv', type=Path,
                         help='Alternative aux full_table.tsv : master CSV deja filtre Complete single-copy')
     parser.add_argument('--master-tsv', type=Path, help='Master TSV enrichi genere par generer_master_tsv.py')
+    parser.add_argument('--duplication-master', type=Path,
+                        help='Master Complete + Duplicated genere par generer_master_duplication_gene.py ; annotations sans changer les flux')
     parser.add_argument('--sequence-metadata', type=Path,
                         help='TSV sequence_metadata_11_genomes.tsv derive des rapports NCBI, alternative aux FASTA')
     parser.add_argument('--outdir', type=Path, default=OUTPUT)
@@ -693,7 +900,10 @@ def main(argv=None):
     parser.add_argument('--dry-run', action='store_true', help='Valide les tables selectionnees sans produire de fichiers')
     parser.add_argument('--allow-missing-lineage', action='store_true', help='Accepte une absence de metadata lineage, jamais un autre lineage')
     parser.add_argument('--no-svg', action='store_true', help='Ne tente pas Kaleido')
-    parser.add_argument('--svg-timeout', type=float, default=60, help='Delai maximal par export SVG en secondes (defaut 60)')
+    parser.add_argument('--require-svg', action='store_true', help='Arrete le traitement si un export SVG echoue')
+    parser.add_argument('--runtime-dir', type=Path, help='Dossier des fichiers temporaires et caches du navigateur, par ex. /data/projet2/conda')
+    parser.add_argument('--browser-path', type=Path, help='Chemin du Chrome/Chromium a utiliser pour Kaleido')
+    parser.add_argument('--svg-timeout', type=float, default=180, help='Delai maximal du rendu SVG, hors nettoyage, en secondes (defaut 180)')
     parser.add_argument('--overwrite', action='store_true', help='Autorise le remplacement des sorties de ces paires')
     parser.add_argument('--self-test', action='store_true', help='Tests synthetiques sans Plotly ni fichiers cluster')
     args = parser.parse_args(argv)
@@ -701,6 +911,14 @@ def main(argv=None):
         parser.error('--svg-timeout doit etre un nombre positif fini')
     if args.self_test:
         return self_test()
+    if args.no_svg and args.require_svg:
+        parser.error('--no-svg et --require-svg sont incompatibles')
+    if args.runtime_dir is not None:
+        configure_svg_runtime(args.runtime_dir)
+    if args.browser_path is not None:
+        if not args.browser_path.is_file():
+            parser.error(f'Navigateur absent : {args.browser_path}')
+        os.environ['BROWSER_PATH'] = str(args.browser_path.resolve())
     if args.master_csv is not None and args.master_tsv is not None:
         parser.error('--master-csv et --master-tsv sont des sources alternatives')
     if (args.master_csv is not None or args.master_tsv is not None) and args.inventory:
@@ -780,6 +998,25 @@ def main(argv=None):
                       for _, pair, _, _, common, _ in prepared if acc in pair for b in common}
                 for acc in needed}
         fasta = read_sequence_metadata(args.sequence_metadata, used)
+    duplication_data = None
+    if args.duplication_master is not None:
+        from busco_duplications import load_duplication_master, sequence_stats, validate_against_tables
+        duplication_data = load_duplication_master(args.duplication_master, needed)
+        validate_against_tables(duplication_data, tables)
+        for accession in needed:
+            used = {tables[accession].single[b].sequence
+                    for _, pair, _, _, common, _ in prepared if accession in pair for b in common}
+            target = fasta.setdefault(accession, dict(path=duplication_data['path'], kind='duplication_master', labels={}))
+            for sequence in used:
+                stat = sequence_stats(duplication_data, accession, sequence)
+                if stat is None:
+                    raise InputError(f'Annotation de duplication absente : {accession}/{sequence}')
+                previous = target['labels'].get(sequence)
+                if previous is not None and (previous['role'], previous['chromosome']) != (stat['role'], stat['chromosome']):
+                    raise InputError(f'Metadonnees chromosome/scaffold contradictoires : {accession}/{sequence}')
+                target['labels'].setdefault(sequence, dict(role=stat['role'], chromosome=stat['chromosome'],
+                                                          header='', source=duplication_data['path']))
+        print(f'Annotations de duplication chargees : {len(needed)} genomes ; valeurs avant filtrage par paire.', flush=True)
     if args.dry_run:
         print(f'Validation terminee : {len(prepared)} paires, {len(tables)} tables BUSCO lues.')
         return 0
@@ -788,7 +1025,7 @@ def main(argv=None):
         import plotly.graph_objects as go
     except ImportError:
         raise InputError('Plotly absent : installer avec python3 -m pip install plotly dans un environnement utilisateur') from None
-    suffixes = ('.html', '.svg', '_liens.tsv', '_busco_communs.tsv', '_exclusions.tsv', '_sequences.tsv', '_bilan.json')
+    suffixes = ('.html', '.svg', '_liens.tsv', '_busco_communs.tsv', '_exclusions.tsv', '_sequences.tsv', '_bilan.json', '_duplications.tsv')
     if not args.overwrite:
         existing = [str(args.outdir / (stem_for(label, pair) + suffix))
                     for label, pair, *_ in prepared for suffix in suffixes
@@ -800,10 +1037,15 @@ def main(argv=None):
     args.outdir.mkdir(parents=True, exist_ok=True)
     # Remove an old completion manifest only after explicit overwrite approval via CLI.
     (args.outdir / 'comparaisons.tsv').unlink(missing_ok=True)
+    svg_count = 0
     for index, item in enumerate(prepared, 1):
         print(f'Generation {index}/{len(prepared)}', flush=True)
-        save_pair(go, plotly.__version__, args.outdir, *item, svg=not args.no_svg,
-                  fasta=fasta, svg_timeout=args.svg_timeout)
+        state = save_pair(go, plotly.__version__, args.outdir, *item, svg=not args.no_svg,
+                          fasta=fasta, svg_timeout=args.svg_timeout, duplication_data=duplication_data)
+        svg_count += state == 'ok'
+        if args.require_svg and state != 'ok':
+            raise InputError(f'Export SVG echoue pour {item[1][0]} / {item[1][1]}. '
+                             'Voir le _bilan.json ; corriger Chrome/Kaleido puis relancer avec --overwrite.')
     temporary = args.outdir / 'comparaisons.tmp.tsv'
     write_tsv(temporary,
               ['comparison', 'assembly_A', 'species_A', 'assembly_B', 'species_B', 'prefix', 'n_busco', 'n_links'],
@@ -812,12 +1054,14 @@ def main(argv=None):
                for label, pair, _, _, common, links in prepared))
     temporary.replace(args.outdir / 'comparaisons.tsv')
     print(f'Termine : {len(prepared)} paires. Inventaire : {args.outdir / "comparaisons.tsv"}')
+    if not args.no_svg:
+        print(f'SVG produits : {svg_count}/{len(prepared)}')
     return 0
 
 
 if __name__ == '__main__':
     try:
         sys.exit(main())
-    except (InputError, OSError, UnicodeError) as exc:
+    except (ValueError, OSError) as exc:
         print(f'ERREUR : {exc}', file=sys.stderr)
         sys.exit(2)

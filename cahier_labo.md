@@ -656,7 +656,113 @@ Les résultats de l’enseignant concernent les accessions suivantes :
 - `GCF_038502225.1`
 - `GCF_040412425.1`
 - `GCF_040958095.1`
+cat >> /data/projet2/Syntenie_des_decapodes/cahier_labo.md <<'EOF_CAHIER_SVG'
 
+## Ajout de l’export SVG aux comparaisons de contenu chromosomique
+**Aurélio** : 30 min
+
+Produire des figures vectorielles pour les comparaisons entre les 11 génomes, soit 55 paires distinctes. Le format SVG permet d’agrandir les figures sans perte de qualité et facilite leur intégration dans le rapport.
+
+Pour les cartes de Jaccard, les valeurs positives sont désormais inscrites directement dans les cases. Les fichiers HTML sont conservés pour consulter les informations détaillées au survol.
+
+### Scripts et fichiers d’entrée
+
+Les deux scripts modifiés sont :
+
+- `scripts/comparaison_contenu_chr.py` : production des cartes de similarité de Jaccard en HTML et SVG, accompagnées des tableaux TSV.
+- `scripts/sankey_syntenie.py` : production des diagrammes Sankey en HTML et SVG, accompagnés des tableaux TSV et des bilans JSON.
+
+Les comparaisons utilisent le master enrichi :
+
+```text
+/data/projet2/Syntenie_des_decapodes/genomes/master_positions_busco.tsv
+```
+
+Ce fichier contient les marqueurs BUSCO retenus, leurs positions et les informations permettant de distinguer chromosomes et scaffolds. L’export SVG ne nécessite pas de télécharger à nouveau les séquences génomiques.
+
+### Environnement et difficultés rencontrées
+
+L’export SVG des cartes de Jaccard utilise directement la bibliothèque standard de Python. L’export des Sankey repose sur Plotly, Kaleido et Chrome.
+
+Lors du premier lancement des Sankey, la validation des données a fonctionné, mais l’export SVG a échoué dès la première comparaison. Les fichiers HTML et TSV de cette comparaison ont été conservés. L’option `--require-svg` a interrompu le traitement pour éviter de répéter cet échec sur les 55 paires.
+
+Le diagnostic avec `ldd` a révélé plusieurs bibliothèques Linux manquantes pour Chrome : ATK/AT-SPI, CUPS, certaines bibliothèques X11, GBM, Cairo, Pango et ALSA.
+
+Les dépendances ont été installées dans l’environnement existant :
+
+```bash
+conda install -y --prefix /data/projet2/conda/env_sankey \
+  --override-channels -c conda-forge \
+  'at-spi2-core>=2.46' 'libcups<3' \
+  xorg-libxcomposite xorg-libxdamage xorg-libxfixes xorg-libxrandr \
+  mesalib cairo pango alsa-lib
+```
+
+Un lanceur a été créé pour permettre à Chrome de trouver les bibliothèques de cet environnement :
+
+```text
+/data/projet2/conda/chrome/chrome-cluster.sh
+```
+
+Ce lanceur configure également les emplacements des caches et fichiers temporaires sous `/data/projet2/`. Les paquets Conda sont stockés dans `/data/projet2/conda/pkgs`, sans installation nécessitant `sudo`.
+
+Après correction, la commande de vérification affiche :
+
+```text
+Google Chrome for Testing 142.0.7444.175
+```
+
+Cette vérification confirme le démarrage de Chrome. La validation complète nécessite ensuite la réussite d’un petit export SVG, puis la génération des figures.
+
+### Commandes de génération
+
+Depuis la racine du projet :
+
+```bash
+conda activate /data/projet2/conda/env_sankey
+cd /data/projet2/Syntenie_des_decapodes
+```
+
+Cartes de Jaccard :
+
+```bash
+python scripts/comparaison_contenu_chr.py \
+  --all-pairs \
+  --master-tsv genomes/master_positions_busco.tsv \
+  --out-dir Analyses/Jaccard
+```
+
+Diagrammes Sankey, après réussite du test d’export :
+
+```bash
+python scripts/sankey_syntenie.py \
+  --all-pairs \
+  --master-tsv genomes/master_positions_busco.tsv \
+  --outdir Analyses/Diagramme_Sankey \
+  --runtime-dir /data/projet2/conda \
+  --browser-path /data/projet2/conda/chrome/chrome-cluster.sh \
+  --require-svg \
+  --overwrite
+```
+
+### Outputs et utilisation
+
+Les sorties sont enregistrées dans :
+
+```text
+/data/projet2/Syntenie_des_decapodes/Analyses/Jaccard/
+/data/projet2/Syntenie_des_decapodes/Analyses/Diagramme_Sankey/
+```
+
+Les SVG servent à la lecture des valeurs et à la préparation des figures du rapport. Les HTML permettent l’exploration interactive, tandis que les TSV conservent les valeurs numériques exactes.
+
+Dans les cartes SVG de Jaccard, les scores positifs sont affichés à trois décimales, avec une indication spécifique pour les valeurs inférieures à 0,001. Les cases sans nombre correspondent à un score nul.
+
+Cette étape améliore la présentation des comparaisons de contenu chromosomique. L’interprétation reste fondée sur les marqueurs partagés et leur répartition entre chromosomes. La conservation de leur ordre doit être examinée séparément avec les dotplots et les analyses de voisinage.
+
+À ce stade, le démarrage de Chrome est confirmé ; la réussite de l’export SVG et la production complète des 55 comparaisons restent à consigner après exécution.
+
+EOF_CAHIER_SVG
 Les effectifs indiqués dans chaque résumé sont cohérents :
 S + D + F + M = 1 536 et C = S + D.
 
@@ -999,7 +1105,59 @@ On a en input les 11 fichiers.tsv et en output 55 fichiers.png des graphes, + 2 
 
 => Tâches à faire : je dois git push l'environnement, le script de dotplot et faire un README de dotplot.
 
+
+## Samedi 31 octobre — Diagnostic et correction du conflit numpy / Pillow dans env_syngraph
+
+**Jade** · [45mins]
+
+### Problème
+
+Premier lancement de `syngraph build` dans `env_syngraph` : échec à l'import de matplotlib, via Pillow.
+
+```
+File ".../PIL/_typing.py", line 10, in <module>
+    NumpyArray = npt.NDArray[Any]
+AttributeError: module 'numpy.typing' has no attribute 'NDArray'
+```
+
+### Diagnostic
+
+- Le README de syngraph impose Python 3.8, networkx 2.4 et numpy 1.20.3 (build `py38h9894fe3_0`), mais n'épingle pas Pillow.
+- Le solveur a installé un Pillow récent  dont `PIL/_typing.py` utilise `numpy.typing.NDArray`, absent de numpy 1.20.3 (ajouté en numpy 1.21 [à vérifier dans la documentation numpy]).
+- Cause : incompatibilité entre le numpy imposé par le README et un Pillow trop récent, pas un défaut de syngraph.
+
+```bash
+python -c "import numpy, PIL; print('numpy', numpy.__version__, '| pillow', PIL.__version__)"
+```
+
+### Correction
+
+- Option retenue : conserver le numpy du README et rétrograder Pillow (pas de montée de numpy, pour ne pas s'écarter des versions indiquées par les auteurs).
+- Commande :
+
+```bash
+conda install -c conda-forge "pillow<10"
+```
+
+- Résultat : Pillow 9.5.0, numpy 1.20.3 inchangé.
+- Problème annexe : le cache conda bloquait le téléchargement des paquets ; correction avec ```conda clean -all```.
+
+### Vérification
+
+```bash
+python -c "import matplotlib; import matplotlib.pyplot; print(matplotlib.__version__)"
+```
+
+- Import OK (matplotlib 3.7.1).
+- `syngraph build -d ../../Analyses/Syngraph/busco_input/ -m -o test` s'exécute et produit `test.pickle`.
+
+### Environnement final
+
+- **Environnement syngraph** (`/data/projet2/conda/env_syngraph`) :
+  - Python 3.8.20, networkx 2.4, numpy 1.20.3, pandas 2.0.0, matplotlib 3.7.1, pillow 9.5.0, ete3 3.1.3, pygraphviz 1.11, docopt 0.6.2, tqdm 4.67.1, more-itertools 10.5.0.
+
 ## Samedi 31 octobre 2026: diagrammes Sankey par paire à partir de BUSCO crustacea_odb12
+
 **Aurélio**: ~2h
 ### Objectif et place dans le projet
 
@@ -1431,6 +1589,31 @@ Pour *Jaera–Scylla*, le score maximal observé est **0,102** entre `OZ242390.1
 
 
 ---
+## 5 novembre 2026 — Balayage paramétrique de *syngraph* (-m et -r) sur les génomes de décapodes
+
+**Jade** · [2h]
+
+### Objectif et méthode
+
+Après la mise en place de l'environnement et l'analyse initiale du graphe de synténie (`decapod_syngraph_run.pickle`), nous avons mené un balayage paramétrique systématique pour évaluer la robustesse des reconstructions caryotypiques ancestrales sur les 11 espèces de décapodes (*Scylla paramamosain* comme référence, *Jaera praehirsuta* en outgroup).
+
+L'analyse teste l'impact combiné de deux paramètres clés de *syngraph* :
+- Le nombre minimal de marqueurs par bloc de synténie locale (`-m` de 1 à 5).
+- Le modèle de réarrangement (`-r 2` : fissions et fusions ; `-r 3` : fissions, fusions et translocations).
+
+### Commandes de reproduction et sorties
+
+Exécution des scripts d'inférence depuis le dossier de travail du cluster :
+
+```bash
+cd /data/projet2/Syntenie_des_decapodes/scripts/syngraph
+
+# Exemple pour r2 et r3 aux seuils m1 à m5
+python syngraph infer -g decapod_syngraph_run.pickle -t ../../Analyses/Syngraph/phylo_tree/phylotree.newick -s Scylla_paramamosain -r 2 -m 1 -o decapod_inferred_r2_m1
+python syngraph infer -g decapod_syngraph_run.pickle -t ../../Analyses/Syngraph/phylo_tree/phylotree.newick -s Scylla_paramamosain -r 3 -m 1 -o decapod_inferred_r3_m1
+# (Répété pour -m 2, 3, 4 et les runs par défaut -m 5 dans Run_r2-m5 / Run_r3-m5)
+
+
 
 ## Jeudi 5 novembre 2026 — Extension aux 55 paires et reconstruction du master chromosomique
 **Aurélio**: 1h30
@@ -1597,3 +1780,195 @@ Le traitement complet a produit 55 Sankey et 55 cartes Jaccard sur des données 
 Le regroupement des fichiers Sankey directement dans leur dossier final a été signalé depuis le cluster. Les nouveaux bilans des 55 paires et le master enrichi complet restent à examiner pour consigner les effectifs biologiques finaux. Les résultats numériques des deux comparaisons initiales figurent dans les entrées précédentes.
 
 Cette étape fournit une chaîne reproductible allant des positions BUSCO conservées à un master enrichi, puis aux Sankey et aux cartes de contenu chromosomique. L’étude de l’ordre des marqueurs et de leurs voisinages constitue une analyse complémentaire à mener avec les coordonnées du master.
+
+## Samedi 07 Novembre - Ajout de l’export SVG aux comparaisons de contenu chromosomique
+**Aurélio** : 2h
+
+Produire des figures vectorielles pour les comparaisons entre les 11 génomes, soit 55 paires distinctes. Le format SVG permet d’agrandir les figures sans perte de qualité et facilite leur intégration dans le rapport.
+
+Pour les cartes de Jaccard, les valeurs positives sont désormais inscrites directement dans les cases. Les fichiers HTML sont conservés pour consulter les informations détaillées au survol.
+
+### Scripts et fichiers d’entrée
+
+Les deux scripts modifiés sont :
+
+- `scripts/comparaison_contenu_chr.py` : production des cartes de similarité de Jaccard en HTML et SVG, accompagnées des tableaux TSV.
+- `scripts/sankey_syntenie.py` : production des diagrammes Sankey en HTML et SVG, accompagnés des tableaux TSV et des bilans JSON.
+
+Les comparaisons utilisent le master enrichi :
+
+```text
+/data/projet2/Syntenie_des_decapodes/genomes/master_positions_busco.tsv
+```
+
+Ce fichier contient les marqueurs BUSCO retenus, leurs positions et les informations permettant de distinguer chromosomes et scaffolds. L’export SVG ne nécessite pas de télécharger à nouveau les séquences génomiques.
+
+### Environnement et difficultés rencontrées
+
+L’export SVG des cartes de Jaccard utilise directement la bibliothèque standard de Python. L’export des Sankey repose sur Plotly, Kaleido et Chrome.
+
+Lors du premier lancement des Sankey, la validation des données a fonctionné, mais l’export SVG a échoué dès la première comparaison. Les fichiers HTML et TSV de cette comparaison ont été conservés. L’option `--require-svg` a interrompu le traitement pour éviter de répéter cet échec sur les 55 paires.
+
+Le diagnostic avec `ldd` a révélé plusieurs bibliothèques Linux manquantes pour Chrome : ATK/AT-SPI, CUPS, certaines bibliothèques X11, GBM, Cairo, Pango et ALSA.
+
+Les dépendances ont été installées dans l’environnement existant :
+
+```bash
+conda install -y --prefix /data/projet2/conda/env_sankey \
+  --override-channels -c conda-forge \
+  'at-spi2-core>=2.46' 'libcups<3' \
+  xorg-libxcomposite xorg-libxdamage xorg-libxfixes xorg-libxrandr \
+  mesalib cairo pango alsa-lib
+```
+
+Un lanceur a été créé pour permettre à Chrome de trouver les bibliothèques de cet environnement :
+
+```text
+/data/projet2/conda/chrome/chrome-cluster.sh
+```
+
+Ce lanceur configure également les emplacements des caches et fichiers temporaires sous `/data/projet2/`. Les paquets Conda sont stockés dans `/data/projet2/conda/pkgs`, sans installation nécessitant `sudo`.
+
+Après correction, la commande de vérification affiche :
+
+```text
+Google Chrome for Testing 142.0.7444.175
+```
+
+Cette vérification confirme le démarrage de Chrome. La validation complète nécessite ensuite la réussite d’un petit export SVG, puis la génération des figures.
+
+### Commandes de génération
+
+Depuis la racine du projet :
+
+```bash
+conda activate /data/projet2/conda/env_sankey
+cd /data/projet2/Syntenie_des_decapodes
+```
+
+Cartes de Jaccard :
+
+```bash
+python scripts/comparaison_contenu_chr.py \
+  --all-pairs \
+  --master-tsv genomes/master_positions_busco.tsv \
+  --out-dir Analyses/Jaccard
+```
+
+Diagrammes Sankey, après réussite du test d’export :
+
+```bash
+python scripts/sankey_syntenie.py \
+  --all-pairs \
+  --master-tsv genomes/master_positions_busco.tsv \
+  --outdir Analyses/Diagramme_Sankey \
+  --runtime-dir /data/projet2/conda \
+  --browser-path /data/projet2/conda/chrome/chrome-cluster.sh \
+  --require-svg \
+  --overwrite
+```
+
+### Outputs et utilisation
+
+Les sorties sont enregistrées dans :
+
+```text
+/data/projet2/Syntenie_des_decapodes/Analyses/Jaccard/
+/data/projet2/Syntenie_des_decapodes/Analyses/Diagramme_Sankey/
+```
+
+Les SVG servent à la lecture des valeurs et à la préparation des figures du rapport. Les HTML permettent l’exploration interactive, tandis que les TSV conservent les valeurs numériques exactes.
+
+Dans les cartes SVG de Jaccard, les scores positifs sont affichés à trois décimales, avec une indication spécifique pour les valeurs inférieures à 0,001. Les cases sans nombre correspondent à un score nul.
+
+Cette étape améliore la présentation des comparaisons de contenu chromosomique. L’interprétation reste fondée sur les marqueurs partagés et leur répartition entre chromosomes. La conservation de leur ordre doit être examinée séparément avec les dotplots et les analyses de voisinage.
+
+À ce stade, le démarrage de Chrome est confirmé ; la réussite de l’export SVG et la production complète des 55 comparaisons restent à consigner après exécution.
+
+### But
+
+Compléter les comparaisons de contenu chromosomique par une annotation des BUSCO classés dupliqués. L’objectif est de visualiser leur répartition entre chromosomes tout en conservant les analyses de référence fondées sur les BUSCO complets à copie unique.
+
+### Scripts et inputs
+
+Création de deux fichiers dans `scripts/` :
+
+- `generer_master_duplication_gene.py` : extraction des positions des BUSCO complets et dupliqués depuis les 11 `full_table.tsv`.
+- `busco_duplications.py` : fonctions partagées de validation et de comptage, utilisées automatiquement par le générateur et les scripts graphiques.
+
+Les correspondances entre identifiants de séquences, chromosomes et scaffolds proviennent de :
+
+```text
+genomes/identifiant_chr_scaffold.tsv
+```
+
+Le générateur produit :
+
+```text
+genomes/master_duplication_gene.tsv
+genomes/master_duplication_gene_bilan.json
+```
+
+Ce master complémentaire conserve une ligne par locus, avec le statut BUSCO, les coordonnées, le chromosome ou scaffold et les nombres de copies dans le génome et sur la séquence. Il contient les statuts `Complete` et `Duplicated`, car les BUSCO à copie unique sont nécessaires au calcul du dénominateur des annotations.
+
+Les lignes répétant un même locus sont dédoublonnées. Les incohérences de statut, de coordonnées ou de métadonnées sont signalées. Aucun téléchargement de génome ni nouveau calcul BUSCO n’a été nécessaire.
+
+### Modification des figures
+
+Les scripts `sankey_syntenie.py` et `comparaison_contenu_chr.py` acceptent désormais l’option :
+
+```bash
+--duplication-master genomes/master_duplication_gene.tsv
+```
+
+Le master initial `genomes/master_positions_busco.tsv` reste utilisé pour calculer les correspondances entre espèces.
+
+Pour chaque chromosome, l’annotation indique :
+
+- le nombre de familles BUSCO classées `Duplicated` présentes ;
+- le nombre total de familles BUSCO complètes présentes ;
+- leur proportion : `100 × familles D / familles complètes` ;
+- le nombre de copies dupliquées présentes sur ce chromosome.
+
+Chaque famille est comptée une seule fois par chromosome, indépendamment de son nombre de copies. Une famille dupliquée répartie sur plusieurs chromosomes peut donc contribuer aux annotations de plusieurs chromosomes.
+
+Ces valeurs sont calculées avant l’intersection des marqueurs communs à la paire. Leur dénominateur diffère ainsi de celui des effectifs représentés dans les liens.
+
+Les cartes Jaccard présentent des barres orange marginales. Les Sankey affichent les valeurs de duplication dans les libellés. Les HTML permettent également de consulter les identifiants BUSCO et leurs positions. Les scores Jaccard et les épaisseurs des liens Sankey restent calculés sur les BUSCO à copie unique.
+
+### Difficultés rencontrées et corrections
+
+L’export des Sankey a également rencontré un dépassement du délai de 60 secondes, accompagné du message `Resorting to unclean kill browser`. Le script attendait la fermeture du navigateur avant d’enregistrer le SVG.
+
+L’export a été corrigé pour enregistrer et vérifier le SVG avant la fermeture de Chrome. Le délai de rendu a été porté à 180 secondes par défaut, avec un délai séparé pour le nettoyage du navigateur. Un SVG complet est conservé si seule la fermeture bloque. Le rendu utilise le Plotly.js local et désactive le chargement de MathJax en ligne.
+
+### Outputs et vérification
+
+Les résultats sont enregistrés dans :
+
+```text
+Analyses/Diagramme_Sankey/
+Analyses/Jaccard/
+```
+
+Les noms ont été raccourcis selon le modèle :
+
+```text
+sankey_Espece1_Espece2.html
+sankey_Espece1_Espece2.svg
+jaccard_Espece1_Espece2.html
+jaccard_Espece1_Espece2.svg
+```
+
+Les fichiers `*_duplications.tsv` détaillent les annotations, y compris pour les séquences absentes des figures faute de BUSCO à copie unique communs.
+
+### Figures retenues pour le rapport
+
+Quatre figures sont conservées pour les deux comparaisons principales :
+
+- Jaccard et Sankey de *Macrobrachium nipponense* × *Macrobrachium rosenbergii* ;
+- Jaccard et Sankey d’*Eriocheir sinensis* × *Scylla paramamosain*.
+
+Chez Macrobrachium, le chromosome 21 de M. nipponense partage ses 45 marqueurs BUSCO avec le chromosome 5 de M. rosenbergii (Jaccard = 1). Le chromosome 1 présente une autre répartition : 62 de ses 67 marqueurs se retrouvent sur les chromosomes 3 et 19 de M. rosenbergii.
+
+Chez les crabes, les chromosomes 36 et 62 d’E. sinensis partagent respectivement 35 et 11 marqueurs avec le chromosome 20 de S. paramamosain, couvrant ainsi ses 46 marqueurs. Ces correspondances montrent qu’un ensemble de marqueurs peut rester groupé sur un chromosome chez une espèce et se répartir sur deux chez l’autre. Une fusion ou une fission reste une hypothèse à tester.

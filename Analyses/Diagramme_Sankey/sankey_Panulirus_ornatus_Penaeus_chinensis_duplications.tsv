@@ -1,0 +1,117 @@
+assembly	species	sequence_id	role	chromosome	represented_in_figure	single_families	duplicated_families	complete_families	duplicated_copies	duplication_percent	duplicated_busco_ids	duplicated_loci_json
+GCF_036320965.1	Panulirus ornatus	NC_092224.1	chromosome	1	1	39	1	40	1	2.500000	38506at6657	"[{""busco_id"": ""38506at6657"", ""sequence"": ""NC_092224.1"", ""start"": 1051253, ""end"": 1052659, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_036320965.1	Panulirus ornatus	NC_092225.1	chromosome	2	1	47	3	50	3	6.000000	17878at6657;43441at6657;7748at6657	"[{""busco_id"": ""43441at6657"", ""sequence"": ""NC_092225.1"", ""start"": 41901993, ""end"": 41900843, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}, {""busco_id"": ""7748at6657"", ""sequence"": ""NC_092225.1"", ""start"": 73006081, ""end"": 73004951, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}, {""busco_id"": ""17878at6657"", ""sequence"": ""NC_092225.1"", ""start"": 102134526, ""end"": 102119334, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_036320965.1	Panulirus ornatus	NC_092226.1	chromosome	3	1	27	0	27	0	0.000000		[]
+GCF_036320965.1	Panulirus ornatus	NC_092227.1	chromosome	4	1	24	1	25	1	4.000000	2142at6657	"[{""busco_id"": ""2142at6657"", ""sequence"": ""NC_092227.1"", ""start"": 26029903, ""end"": 26029468, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_036320965.1	Panulirus ornatus	NC_092228.1	chromosome	5	1	20	0	20	0	0.000000		[]
+GCF_036320965.1	Panulirus ornatus	NC_092229.1	chromosome	6	1	31	1	32	1	3.125000	1306at6657	"[{""busco_id"": ""1306at6657"", ""sequence"": ""NC_092229.1"", ""start"": 19540489, ""end"": 19541389, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_036320965.1	Panulirus ornatus	NC_092230.1	chromosome	7	1	31	2	33	3	6.060606	22391at6657;41424at6657	"[{""busco_id"": ""22391at6657"", ""sequence"": ""NC_092230.1"", ""start"": 9023288, ""end"": 9011831, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}, {""busco_id"": ""41424at6657"", ""sequence"": ""NC_092230.1"", ""start"": 44425845, ""end"": 44397961, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}, {""busco_id"": ""41424at6657"", ""sequence"": ""NC_092230.1"", ""start"": 44467569, ""end"": 44438981, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_036320965.1	Panulirus ornatus	NC_092231.1	chromosome	8	1	24	0	24	0	0.000000		[]
+GCF_036320965.1	Panulirus ornatus	NC_092232.1	chromosome	9	1	33	0	33	0	0.000000		[]
+GCF_036320965.1	Panulirus ornatus	NC_092233.1	chromosome	10	1	28	1	29	1	3.448276	22391at6657	"[{""busco_id"": ""22391at6657"", ""sequence"": ""NC_092233.1"", ""start"": 52074851, ""end"": 52075334, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_036320965.1	Panulirus ornatus	NC_092234.1	chromosome	11	1	31	0	31	0	0.000000		[]
+GCF_036320965.1	Panulirus ornatus	NC_092235.1	chromosome	12	1	32	1	33	3	3.030303	14343at6657	"[{""busco_id"": ""14343at6657"", ""sequence"": ""NC_092235.1"", ""start"": 12258790, ""end"": 12258430, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 12}, {""busco_id"": ""14343at6657"", ""sequence"": ""NC_092235.1"", ""start"": 36769641, ""end"": 36775421, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 12}, {""busco_id"": ""14343at6657"", ""sequence"": ""NC_092235.1"", ""start"": 40206410, ""end"": 40209605, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 12}]"
+GCF_036320965.1	Panulirus ornatus	NC_092236.1	chromosome	13	1	21	1	22	1	4.545455	14343at6657	"[{""busco_id"": ""14343at6657"", ""sequence"": ""NC_092236.1"", ""start"": 11623249, ""end"": 11615433, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 12}]"
+GCF_036320965.1	Panulirus ornatus	NC_092237.1	chromosome	14	1	30	1	31	2	3.225806	14343at6657	"[{""busco_id"": ""14343at6657"", ""sequence"": ""NC_092237.1"", ""start"": 12714099, ""end"": 12713739, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 12}, {""busco_id"": ""14343at6657"", ""sequence"": ""NC_092237.1"", ""start"": 23861570, ""end"": 23861930, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 12}]"
+GCF_036320965.1	Panulirus ornatus	NC_092238.1	chromosome	15	1	17	1	18	2	5.555556	8187at6657	"[{""busco_id"": ""8187at6657"", ""sequence"": ""NC_092238.1"", ""start"": 52466936, ""end"": 52466393, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 4}, {""busco_id"": ""8187at6657"", ""sequence"": ""NC_092238.1"", ""start"": 52543376, ""end"": 52542833, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 4}]"
+GCF_036320965.1	Panulirus ornatus	NC_092239.1	chromosome	16	1	27	0	27	0	0.000000		[]
+GCF_036320965.1	Panulirus ornatus	NC_092240.1	chromosome	17	1	43	0	43	0	0.000000		[]
+GCF_036320965.1	Panulirus ornatus	NC_092241.1	chromosome	18	1	23	1	24	1	4.166667	30306at6657	"[{""busco_id"": ""30306at6657"", ""sequence"": ""NC_092241.1"", ""start"": 39212686, ""end"": 39122444, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_036320965.1	Panulirus ornatus	NC_092242.1	chromosome	19	1	31	1	32	2	3.125000	14343at6657	"[{""busco_id"": ""14343at6657"", ""sequence"": ""NC_092242.1"", ""start"": 5509349, ""end"": 5509739, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 12}, {""busco_id"": ""14343at6657"", ""sequence"": ""NC_092242.1"", ""start"": 11609435, ""end"": 11609819, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 12}]"
+GCF_036320965.1	Panulirus ornatus	NC_092243.1	chromosome	20	1	30	2	32	2	6.250000	1306at6657;14343at6657	"[{""busco_id"": ""14343at6657"", ""sequence"": ""NC_092243.1"", ""start"": 39293681, ""end"": 39293297, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 12}, {""busco_id"": ""1306at6657"", ""sequence"": ""NC_092243.1"", ""start"": 40330722, ""end"": 40268011, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_036320965.1	Panulirus ornatus	NC_092244.1	chromosome	21	1	23	1	24	1	4.166667	2142at6657	"[{""busco_id"": ""2142at6657"", ""sequence"": ""NC_092244.1"", ""start"": 7001743, ""end"": 6987810, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_036320965.1	Panulirus ornatus	NC_092245.1	chromosome	22	1	12	0	12	0	0.000000		[]
+GCF_036320965.1	Panulirus ornatus	NC_092246.1	chromosome	23	1	28	2	30	2	6.666667	14343at6657;30306at6657	"[{""busco_id"": ""30306at6657"", ""sequence"": ""NC_092246.1"", ""start"": 13254121, ""end"": 13255063, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}, {""busco_id"": ""14343at6657"", ""sequence"": ""NC_092246.1"", ""start"": 16511297, ""end"": 16510937, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 12}]"
+GCF_036320965.1	Panulirus ornatus	NC_092247.1	chromosome	24	1	8	0	8	0	0.000000		[]
+GCF_036320965.1	Panulirus ornatus	NC_092248.1	chromosome	25	1	8	1	9	1	11.111111	38506at6657	"[{""busco_id"": ""38506at6657"", ""sequence"": ""NC_092248.1"", ""start"": 2390446, ""end"": 2416061, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_036320965.1	Panulirus ornatus	NC_092249.1	chromosome	26	1	5	0	5	0	0.000000		[]
+GCF_036320965.1	Panulirus ornatus	NC_092250.1	chromosome	27	1	12	1	13	1	7.692308	7748at6657	"[{""busco_id"": ""7748at6657"", ""sequence"": ""NC_092250.1"", ""start"": 17227578, ""end"": 17284756, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_036320965.1	Panulirus ornatus	NC_092251.1	chromosome	28	1	11	0	11	0	0.000000		[]
+GCF_036320965.1	Panulirus ornatus	NC_092252.1	chromosome	29	1	21	0	21	0	0.000000		[]
+GCF_036320965.1	Panulirus ornatus	NC_092253.1	chromosome	30	1	11	2	13	2	15.384615	17878at6657;48556at6657	"[{""busco_id"": ""17878at6657"", ""sequence"": ""NC_092253.1"", ""start"": 15451146, ""end"": 15450231, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}, {""busco_id"": ""48556at6657"", ""sequence"": ""NC_092253.1"", ""start"": 19038262, ""end"": 19039108, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_036320965.1	Panulirus ornatus	NC_092254.1	chromosome	31	1	31	0	31	0	0.000000		[]
+GCF_036320965.1	Panulirus ornatus	NC_092255.1	chromosome	32	1	23	0	23	0	0.000000		[]
+GCF_036320965.1	Panulirus ornatus	NC_092256.1	chromosome	33	1	17	1	18	1	5.555556	6882at6657	"[{""busco_id"": ""6882at6657"", ""sequence"": ""NC_092256.1"", ""start"": 21834047, ""end"": 21843274, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_036320965.1	Panulirus ornatus	NC_092257.1	chromosome	34	1	14	0	14	0	0.000000		[]
+GCF_036320965.1	Panulirus ornatus	NC_092258.1	chromosome	35	1	18	0	18	0	0.000000		[]
+GCF_036320965.1	Panulirus ornatus	NC_092259.1	chromosome	36	1	21	0	21	0	0.000000		[]
+GCF_036320965.1	Panulirus ornatus	NC_092260.1	chromosome	37	1	24	0	24	0	0.000000		[]
+GCF_036320965.1	Panulirus ornatus	NC_092261.1	chromosome	38	1	22	0	22	0	0.000000		[]
+GCF_036320965.1	Panulirus ornatus	NC_092262.1	chromosome	39	1	20	0	20	0	0.000000		[]
+GCF_036320965.1	Panulirus ornatus	NC_092263.1	chromosome	40	1	23	0	23	0	0.000000		[]
+GCF_036320965.1	Panulirus ornatus	NC_092264.1	chromosome	41	1	11	0	11	0	0.000000		[]
+GCF_036320965.1	Panulirus ornatus	NC_092265.1	chromosome	42	1	16	0	16	0	0.000000		[]
+GCF_036320965.1	Panulirus ornatus	NC_092266.1	chromosome	43	1	20	0	20	0	0.000000		[]
+GCF_036320965.1	Panulirus ornatus	NC_092267.1	chromosome	44	1	12	0	12	0	0.000000		[]
+GCF_036320965.1	Panulirus ornatus	NC_092268.1	chromosome	45	1	9	0	9	0	0.000000		[]
+GCF_036320965.1	Panulirus ornatus	NC_092269.1	chromosome	46	1	24	1	25	1	4.000000	34228at6657	"[{""busco_id"": ""34228at6657"", ""sequence"": ""NC_092269.1"", ""start"": 29675213, ""end"": 29673983, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_036320965.1	Panulirus ornatus	NC_092270.1	chromosome	47	1	26	0	26	0	0.000000		[]
+GCF_036320965.1	Panulirus ornatus	NC_092271.1	chromosome	48	1	27	0	27	0	0.000000		[]
+GCF_036320965.1	Panulirus ornatus	NC_092272.1	chromosome	49	1	15	0	15	0	0.000000		[]
+GCF_036320965.1	Panulirus ornatus	NC_092273.1	chromosome	50	1	22	1	23	1	4.347826	43441at6657	"[{""busco_id"": ""43441at6657"", ""sequence"": ""NC_092273.1"", ""start"": 28918617, ""end"": 28998760, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_036320965.1	Panulirus ornatus	NC_092274.1	chromosome	51	1	16	0	16	0	0.000000		[]
+GCF_036320965.1	Panulirus ornatus	NC_092275.1	chromosome	52	1	10	0	10	0	0.000000		[]
+GCF_036320965.1	Panulirus ornatus	NC_092276.1	chromosome	53	1	12	0	12	0	0.000000		[]
+GCF_036320965.1	Panulirus ornatus	NC_092278.1	chromosome	55	1	33	1	34	1	2.941176	14343at6657	"[{""busco_id"": ""14343at6657"", ""sequence"": ""NC_092278.1"", ""start"": 901165, ""end"": 900805, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 12}]"
+GCF_036320965.1	Panulirus ornatus	NC_092279.1	chromosome	56	1	30	1	31	1	3.225806	34228at6657	"[{""busco_id"": ""34228at6657"", ""sequence"": ""NC_092279.1"", ""start"": 3593944, ""end"": 3618037, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_036320965.1	Panulirus ornatus	NC_092280.1	chromosome	57	1	33	0	33	0	0.000000		[]
+GCF_036320965.1	Panulirus ornatus	NC_092281.1	chromosome	58	1	24	0	24	0	0.000000		[]
+GCF_036320965.1	Panulirus ornatus	NC_092282.1	chromosome	59	1	20	1	21	1	4.761905	6882at6657	"[{""busco_id"": ""6882at6657"", ""sequence"": ""NC_092282.1"", ""start"": 17812508, ""end"": 17813352, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_036320965.1	Panulirus ornatus	NC_092284.1	chromosome	61	1	12	0	12	0	0.000000		[]
+GCF_036320965.1	Panulirus ornatus	NC_092285.1	chromosome	62	1	16	0	16	0	0.000000		[]
+GCF_036320965.1	Panulirus ornatus	NC_092286.1	chromosome	63	1	20	1	21	1	4.761905	8187at6657	"[{""busco_id"": ""8187at6657"", ""sequence"": ""NC_092286.1"", ""start"": 21616017, ""end"": 21615474, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 4}]"
+GCF_036320965.1	Panulirus ornatus	NC_092287.1	chromosome	64	1	17	0	17	0	0.000000		[]
+GCF_036320965.1	Panulirus ornatus	NC_092288.1	chromosome	65	1	20	1	21	1	4.761905	48556at6657	"[{""busco_id"": ""48556at6657"", ""sequence"": ""NC_092288.1"", ""start"": 6647125, ""end"": 6673507, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_036320965.1	Panulirus ornatus	NC_092289.1	chromosome	66	1	17	0	17	0	0.000000		[]
+GCF_036320965.1	Panulirus ornatus	NC_092290.1	chromosome	67	1	20	1	21	1	4.761905	8187at6657	"[{""busco_id"": ""8187at6657"", ""sequence"": ""NC_092290.1"", ""start"": 9970068, ""end"": 9973192, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 4}]"
+GCF_036320965.1	Panulirus ornatus	NC_092291.1	chromosome	68	1	25	0	25	0	0.000000		[]
+GCF_036320965.1	Panulirus ornatus	NC_092292.1	chromosome	69	1	7	0	7	0	0.000000		[]
+GCF_036320965.1	Panulirus ornatus	NC_092294.1	chromosome	71	1	9	0	9	0	0.000000		[]
+GCF_036320965.1	Panulirus ornatus	NC_092295.1	chromosome	72	1	4	0	4	0	0.000000		[]
+GCF_036320965.1	Panulirus ornatus	NC_092296.1	chromosome	73	1	20	0	20	0	0.000000		[]
+GCF_036320965.1	Panulirus ornatus	NW_027264276.1	scaffold		0	0	1	1	1	100.000000	14343at6657	"[{""busco_id"": ""14343at6657"", ""sequence"": ""NW_027264276.1"", ""start"": 7085, ""end"": 7445, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 12}]"
+GCF_019202785.1	Penaeus chinensis	NC_061819.1	chromosome	1	1	45	0	45	0	0.000000		[]
+GCF_019202785.1	Penaeus chinensis	NC_061820.1	chromosome	2	1	48	0	48	0	0.000000		[]
+GCF_019202785.1	Penaeus chinensis	NC_061821.1	chromosome	3	1	58	0	58	0	0.000000		[]
+GCF_019202785.1	Penaeus chinensis	NC_061822.1	chromosome	4	1	50	0	50	0	0.000000		[]
+GCF_019202785.1	Penaeus chinensis	NC_061823.1	chromosome	5	1	30	1	31	1	3.225806	20953at6657	"[{""busco_id"": ""20953at6657"", ""sequence"": ""NC_061823.1"", ""start"": 11130174, ""end"": 11028975, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_019202785.1	Penaeus chinensis	NC_061824.1	chromosome	6	1	30	0	30	0	0.000000		[]
+GCF_019202785.1	Penaeus chinensis	NC_061825.1	chromosome	7	1	37	0	37	0	0.000000		[]
+GCF_019202785.1	Penaeus chinensis	NC_061826.1	chromosome	8	1	38	0	38	0	0.000000		[]
+GCF_019202785.1	Penaeus chinensis	NC_061827.1	chromosome	9	1	57	1	58	1	1.724138	20953at6657	"[{""busco_id"": ""20953at6657"", ""sequence"": ""NC_061827.1"", ""start"": 29682105, ""end"": 29695306, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_019202785.1	Penaeus chinensis	NC_061828.1	chromosome	10	1	51	0	51	0	0.000000		[]
+GCF_019202785.1	Penaeus chinensis	NC_061829.1	chromosome	11	1	39	0	39	0	0.000000		[]
+GCF_019202785.1	Penaeus chinensis	NC_061830.1	chromosome	12	1	43	0	43	0	0.000000		[]
+GCF_019202785.1	Penaeus chinensis	NC_061831.1	chromosome	13	1	26	0	26	0	0.000000		[]
+GCF_019202785.1	Penaeus chinensis	NC_061832.1	chromosome	14	1	34	0	34	0	0.000000		[]
+GCF_019202785.1	Penaeus chinensis	NC_061833.1	chromosome	15	1	18	0	18	0	0.000000		[]
+GCF_019202785.1	Penaeus chinensis	NC_061834.1	chromosome	16	1	42	0	42	0	0.000000		[]
+GCF_019202785.1	Penaeus chinensis	NC_061835.1	chromosome	17	1	22	0	22	0	0.000000		[]
+GCF_019202785.1	Penaeus chinensis	NC_061836.1	chromosome	18	1	24	0	24	0	0.000000		[]
+GCF_019202785.1	Penaeus chinensis	NC_061837.1	chromosome	19	1	36	0	36	0	0.000000		[]
+GCF_019202785.1	Penaeus chinensis	NC_061838.1	chromosome	20	1	31	0	31	0	0.000000		[]
+GCF_019202785.1	Penaeus chinensis	NC_061839.1	chromosome	21	1	39	0	39	0	0.000000		[]
+GCF_019202785.1	Penaeus chinensis	NC_061840.1	chromosome	22	1	27	0	27	0	0.000000		[]
+GCF_019202785.1	Penaeus chinensis	NC_061841.1	chromosome	23	1	26	0	26	0	0.000000		[]
+GCF_019202785.1	Penaeus chinensis	NC_061842.1	chromosome	24	1	28	0	28	0	0.000000		[]
+GCF_019202785.1	Penaeus chinensis	NC_061843.1	chromosome	25	1	17	0	17	0	0.000000		[]
+GCF_019202785.1	Penaeus chinensis	NC_061844.1	chromosome	26	1	28	0	28	0	0.000000		[]
+GCF_019202785.1	Penaeus chinensis	NC_061845.1	chromosome	27	1	41	0	41	0	0.000000		[]
+GCF_019202785.1	Penaeus chinensis	NC_061846.1	chromosome	28	1	27	0	27	0	0.000000		[]
+GCF_019202785.1	Penaeus chinensis	NC_061847.1	chromosome	29	1	35	0	35	0	0.000000		[]
+GCF_019202785.1	Penaeus chinensis	NC_061848.1	chromosome	30	1	40	0	40	0	0.000000		[]
+GCF_019202785.1	Penaeus chinensis	NC_061849.1	chromosome	31	1	32	0	32	0	0.000000		[]
+GCF_019202785.1	Penaeus chinensis	NC_061850.1	chromosome	32	1	33	0	33	0	0.000000		[]
+GCF_019202785.1	Penaeus chinensis	NC_061851.1	chromosome	33	1	32	0	32	0	0.000000		[]
+GCF_019202785.1	Penaeus chinensis	NC_061852.1	chromosome	34	1	40	0	40	0	0.000000		[]
+GCF_019202785.1	Penaeus chinensis	NC_061853.1	chromosome	35	1	27	0	27	0	0.000000		[]
+GCF_019202785.1	Penaeus chinensis	NC_061854.1	chromosome	36	1	44	0	44	0	0.000000		[]
+GCF_019202785.1	Penaeus chinensis	NC_061855.1	chromosome	37	1	43	0	43	0	0.000000		[]
+GCF_019202785.1	Penaeus chinensis	NC_061856.1	chromosome	38	1	28	0	28	0	0.000000		[]
+GCF_019202785.1	Penaeus chinensis	NC_061857.1	chromosome	39	1	42	0	42	0	0.000000		[]
+GCF_019202785.1	Penaeus chinensis	NC_061858.1	chromosome	40	1	17	0	17	0	0.000000		[]
+GCF_019202785.1	Penaeus chinensis	NC_061859.1	chromosome	41	1	24	1	25	2	4.000000	30920at6657	"[{""busco_id"": ""30920at6657"", ""sequence"": ""NC_061859.1"", ""start"": 21910967, ""end"": 21910373, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}, {""busco_id"": ""30920at6657"", ""sequence"": ""NC_061859.1"", ""start"": 21918834, ""end"": 21918240, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_019202785.1	Penaeus chinensis	NC_061860.1	chromosome	42	1	24	0	24	0	0.000000		[]
+GCF_019202785.1	Penaeus chinensis	NC_061861.1	chromosome	43	1	19	0	19	0	0.000000		[]
+GCF_019202785.1	Penaeus chinensis	NW_025918124.1	scaffold		1	1	0	1	0	0.000000		[]
+GCF_019202785.1	Penaeus chinensis	NW_025918411.1	scaffold		1	1	0	1	0	0.000000		[]

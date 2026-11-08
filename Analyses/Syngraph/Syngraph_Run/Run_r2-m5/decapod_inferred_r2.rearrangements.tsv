@@ -1,0 +1,5 @@
+#parent	child	event	multiplicity	ref_seqs
+n4	Macrobrachium_rosenbergii	fission	1	['Scylla_paramamosain_NC_087182.1']
+n1	n4	fusion	1	[['Scylla_paramamosain_NC_087182.1'], ['Scylla_paramamosain_NC_087182.1']]
+n1	n4	fission	1	[]
+

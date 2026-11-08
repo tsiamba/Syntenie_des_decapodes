@@ -1,0 +1,88 @@
+{
+  "comparison": "comparaison",
+  "species": [
+    "Macrobrachium rosenbergii",
+    "Portunus trituberculatus"
+  ],
+  "assemblies": [
+    "GCF_040412425.1",
+    "GCF_017591435.1"
+  ],
+  "common_single_copy_buscos": 1458,
+  "sum_link_weights": 1458,
+  "number_links": 486,
+  "plotly_version": "6.9.0",
+  "svg": "ok",
+  "svg_export": {
+    "render_seconds": 4.825,
+    "cleanup": "ok",
+    "cleanup_warnings": [],
+    "mathjax": false,
+    "plotlyjs": "local"
+  },
+  "sequence_labels": "identifiants originaux; noms et roles issus de la source de metadonnees disponible",
+  "fasta_sources": {},
+  "sequence_metadata_sources": {
+    "GCF_040412425.1": {
+      "path": "/data/projet2/Syntenie_des_decapodes/genomes/master_positions_busco.tsv",
+      "kind": "master_tsv",
+      "sha256": "ae81aa1fdbecda467ad99196df569fed3012a9b413b118659eee7ee6f1d17f6f"
+    },
+    "GCF_017591435.1": {
+      "path": "/data/projet2/Syntenie_des_decapodes/genomes/master_positions_busco.tsv",
+      "kind": "master_tsv",
+      "sha256": "ae81aa1fdbecda467ad99196df569fed3012a9b413b118659eee7ee6f1d17f6f"
+    }
+  },
+  "duplication_annotation": {
+    "path": "/data/projet2/Syntenie_des_decapodes/genomes/master_duplication_gene.tsv",
+    "sha256": "45ba5b2153595be9bf02e332521bef4a8097079781affcf6d047ae787ba5a19e",
+    "lineage": "crustacea_odb12",
+    "lineage_date": "2026-05-22",
+    "denominator": "distinct complete BUSCO families present on each sequence, before pair filtering",
+    "scope": "all complete loci in the duplication master; annotations do not alter single-copy links",
+    "table": "sankey_Macrobrachium_rosenbergii_Portunus_trituberculatus_duplications.tsv"
+  },
+  "inputs": [
+    {
+      "path": "/data/projet2/Syntenie_des_decapodes/genomes/master_positions_busco.tsv",
+      "sha256": "ae81aa1fdbecda467ad99196df569fed3012a9b413b118659eee7ee6f1d17f6f",
+      "metadata": {
+        "source_format": "master_tsv",
+        "assembly": "GCF_040412425.1",
+        "lineage_verification": [
+          "full_table_verifie"
+        ],
+        "selection": "master_fourni_deja_filtre_Complete_single_copy",
+        "lineage": "crustacea_odb12",
+        "creation_date": "2026-05-22"
+      },
+      "stats": {
+        "rows_in_master": 1486,
+        "unique_busco_ids": 1486,
+        "single_copy_retained": 1486,
+        "excluded_by_reason": {}
+      }
+    },
+    {
+      "path": "/data/projet2/Syntenie_des_decapodes/genomes/master_positions_busco.tsv",
+      "sha256": "ae81aa1fdbecda467ad99196df569fed3012a9b413b118659eee7ee6f1d17f6f",
+      "metadata": {
+        "source_format": "master_tsv",
+        "assembly": "GCF_017591435.1",
+        "lineage_verification": [
+          "full_table_verifie"
+        ],
+        "selection": "master_fourni_deja_filtre_Complete_single_copy",
+        "lineage": "crustacea_odb12",
+        "creation_date": "2026-05-22"
+      },
+      "stats": {
+        "rows_in_master": 1505,
+        "unique_busco_ids": 1505,
+        "single_copy_retained": 1505,
+        "excluded_by_reason": {}
+      }
+    }
+  ]
+}

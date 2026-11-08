@@ -8,7 +8,6 @@ envs/*
 !envs/versions.txt
 !envs/env_dotplot.txt
 
-genomes/
 precomputed_crustacea_odb12
 *.zip
 *.tar.gz

@@ -1,0 +1,114 @@
+assembly	species	sequence_id	role	chromosome	represented_in_figure	single_families	duplicated_families	complete_families	duplicated_copies	duplication_percent	duplicated_busco_ids	duplicated_loci_json
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089741.1	chromosome	1	1	32	1	33	2	3.030303	47117at6657	"[{""busco_id"": ""47117at6657"", ""sequence"": ""NC_089741.1"", ""start"": 946440, ""end"": 876268, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}, {""busco_id"": ""47117at6657"", ""sequence"": ""NC_089741.1"", ""start"": 984066, ""end"": 959590, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089742.1	chromosome	2	1	34	1	35	1	2.857143	11097at6657	"[{""busco_id"": ""11097at6657"", ""sequence"": ""NC_089742.1"", ""start"": 44559847, ""end"": 44579517, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089743.1	chromosome	3	1	42	0	42	0	0.000000		[]
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089744.1	chromosome	4	1	45	1	46	1	2.173913	17669at6657	"[{""busco_id"": ""17669at6657"", ""sequence"": ""NC_089744.1"", ""start"": 60065140, ""end"": 60129408, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089745.1	chromosome	5	1	47	0	47	0	0.000000		[]
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089746.1	chromosome	6	1	51	0	51	0	0.000000		[]
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089747.1	chromosome	7	1	31	0	31	0	0.000000		[]
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089748.1	chromosome	8	1	43	0	43	0	0.000000		[]
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089749.1	chromosome	9	1	36	1	37	1	2.702703	11097at6657	"[{""busco_id"": ""11097at6657"", ""sequence"": ""NC_089749.1"", ""start"": 10145191, ""end"": 10139671, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089750.1	chromosome	10	1	39	1	40	1	2.500000	859at6657	"[{""busco_id"": ""859at6657"", ""sequence"": ""NC_089750.1"", ""start"": 59265897, ""end"": 59259057, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089751.1	chromosome	11	1	28	0	28	0	0.000000		[]
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089752.1	chromosome	12	1	39	0	39	0	0.000000		[]
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089753.1	chromosome	13	1	40	1	41	1	2.439024	859at6657	"[{""busco_id"": ""859at6657"", ""sequence"": ""NC_089753.1"", ""start"": 25131136, ""end"": 25101783, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089754.1	chromosome	14	1	45	0	45	0	0.000000		[]
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089755.1	chromosome	15	1	24	0	24	0	0.000000		[]
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089756.1	chromosome	16	1	29	0	29	0	0.000000		[]
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089757.1	chromosome	17	1	14	0	14	0	0.000000		[]
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089758.1	chromosome	18	1	12	0	12	0	0.000000		[]
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089759.1	chromosome	19	1	28	0	28	0	0.000000		[]
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089760.1	chromosome	20	1	23	0	23	0	0.000000		[]
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089761.1	chromosome	21	1	32	0	32	0	0.000000		[]
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089762.1	chromosome	22	1	16	0	16	0	0.000000		[]
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089763.1	chromosome	23	1	39	0	39	0	0.000000		[]
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089764.1	chromosome	24	1	10	0	10	0	0.000000		[]
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089765.1	chromosome	25	1	25	0	25	0	0.000000		[]
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089766.1	chromosome	26	1	28	0	28	0	0.000000		[]
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089767.1	chromosome	27	1	26	1	27	2	3.703704	6689at6657	"[{""busco_id"": ""6689at6657"", ""sequence"": ""NC_089767.1"", ""start"": 4694391, ""end"": 4741932, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}, {""busco_id"": ""6689at6657"", ""sequence"": ""NC_089767.1"", ""start"": 4889067, ""end"": 4837824, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089768.1	chromosome	28	1	26	0	26	0	0.000000		[]
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089769.1	chromosome	29	1	8	0	8	0	0.000000		[]
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089770.1	chromosome	30	1	25	1	26	1	3.846154	17669at6657	"[{""busco_id"": ""17669at6657"", ""sequence"": ""NC_089770.1"", ""start"": 15304235, ""end"": 15315789, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089771.1	chromosome	31	1	14	0	14	0	0.000000		[]
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089772.1	chromosome	32	1	11	0	11	0	0.000000		[]
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089773.1	chromosome	33	1	9	0	9	0	0.000000		[]
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089774.1	chromosome	34	1	9	0	9	0	0.000000		[]
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089775.1	chromosome	35	1	22	1	23	1	4.347826	16653at6657	"[{""busco_id"": ""16653at6657"", ""sequence"": ""NC_089775.1"", ""start"": 6721204, ""end"": 6550403, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089776.1	chromosome	36	1	11	0	11	0	0.000000		[]
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089777.1	chromosome	37	1	18	0	18	0	0.000000		[]
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089779.1	chromosome	39	1	11	0	11	0	0.000000		[]
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089780.1	chromosome	40	1	17	0	17	0	0.000000		[]
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089781.1	chromosome	41	1	31	0	31	0	0.000000		[]
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089782.1	chromosome	42	1	34	0	34	0	0.000000		[]
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089783.1	chromosome	43	1	36	0	36	0	0.000000		[]
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089784.1	chromosome	44	1	30	0	30	0	0.000000		[]
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089785.1	chromosome	45	1	25	0	25	0	0.000000		[]
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089786.1	chromosome	46	1	16	0	16	0	0.000000		[]
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089787.1	chromosome	47	1	19	1	20	2	5.000000	27419at6657	"[{""busco_id"": ""27419at6657"", ""sequence"": ""NC_089787.1"", ""start"": 30458175, ""end"": 30457092, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}, {""busco_id"": ""27419at6657"", ""sequence"": ""NC_089787.1"", ""start"": 41559260, ""end"": 41560319, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089788.1	chromosome	48	1	35	0	35	0	0.000000		[]
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089789.1	chromosome	49	1	23	0	23	0	0.000000		[]
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089790.1	chromosome	50	1	27	0	27	0	0.000000		[]
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089791.1	chromosome	51	1	18	0	18	0	0.000000		[]
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089792.1	chromosome	52	1	17	0	17	0	0.000000		[]
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089793.1	chromosome	53	1	21	0	21	0	0.000000		[]
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089794.1	chromosome	54	1	14	1	15	2	6.666667	8622at6657	"[{""busco_id"": ""8622at6657"", ""sequence"": ""NC_089794.1"", ""start"": 40256497, ""end"": 40291206, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}, {""busco_id"": ""8622at6657"", ""sequence"": ""NC_089794.1"", ""start"": 40434611, ""end"": 40463244, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089795.1	chromosome	55	1	31	0	31	0	0.000000		[]
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089796.1	chromosome	56	1	32	1	33	1	3.030303	16653at6657	"[{""busco_id"": ""16653at6657"", ""sequence"": ""NC_089796.1"", ""start"": 41368374, ""end"": 41433053, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089797.1	chromosome	57	1	13	0	13	0	0.000000		[]
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089798.1	chromosome	58	1	9	0	9	0	0.000000		[]
+GCF_040412425.1	Macrobrachium rosenbergii	NC_089799.1	chromosome	59	1	12	0	12	0	0.000000		[]
+GCF_040412425.1	Macrobrachium rosenbergii	NW_027100729.1	scaffold		0	2	0	2	0	0.000000		[]
+GCF_040412425.1	Macrobrachium rosenbergii	NW_027100732.1	scaffold		0	2	0	2	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059255.1	chromosome	1	1	17	0	17	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059256.1	chromosome	2	1	58	1	59	2	1.694915	1771at6657	"[{""busco_id"": ""1771at6657"", ""sequence"": ""NC_059256.1"", ""start"": 2603962, ""end"": 2612716, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}, {""busco_id"": ""1771at6657"", ""sequence"": ""NC_059256.1"", ""start"": 2619704, ""end"": 2615029, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_017591435.1	Portunus trituberculatus	NC_059257.1	chromosome	3	1	13	0	13	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059258.1	chromosome	4	1	23	0	23	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059259.1	chromosome	5	1	13	1	14	1	7.142857	42470at6657	"[{""busco_id"": ""42470at6657"", ""sequence"": ""NC_059259.1"", ""start"": 2744395, ""end"": 2553724, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_017591435.1	Portunus trituberculatus	NC_059260.1	chromosome	6	1	13	0	13	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059261.1	chromosome	7	1	22	0	22	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059262.1	chromosome	8	1	19	0	19	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059263.1	chromosome	9	1	41	0	41	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059264.1	chromosome	10	1	16	0	16	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059265.1	chromosome	11	1	2	1	3	1	33.333333	2411at6657	"[{""busco_id"": ""2411at6657"", ""sequence"": ""NC_059265.1"", ""start"": 5817923, ""end"": 5800864, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_017591435.1	Portunus trituberculatus	NC_059266.1	chromosome	12	1	34	0	34	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059267.1	chromosome	13	1	27	0	27	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059268.1	chromosome	14	1	38	0	38	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059269.1	chromosome	15	1	27	1	28	1	3.571429	7965at6657	"[{""busco_id"": ""7965at6657"", ""sequence"": ""NC_059269.1"", ""start"": 8358032, ""end"": 8294307, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_017591435.1	Portunus trituberculatus	NC_059270.1	chromosome	16	1	16	0	16	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059271.1	chromosome	17	1	35	0	35	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059272.1	chromosome	18	1	47	1	48	2	2.083333	31225at6657	"[{""busco_id"": ""31225at6657"", ""sequence"": ""NC_059272.1"", ""start"": 4175767, ""end"": 4094930, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}, {""busco_id"": ""31225at6657"", ""sequence"": ""NC_059272.1"", ""start"": 6135500, ""end"": 5945927, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_017591435.1	Portunus trituberculatus	NC_059273.1	chromosome	19	1	29	0	29	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059274.1	chromosome	20	1	19	1	20	1	5.000000	7965at6657	"[{""busco_id"": ""7965at6657"", ""sequence"": ""NC_059274.1"", ""start"": 9001395, ""end"": 8990731, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_017591435.1	Portunus trituberculatus	NC_059275.1	chromosome	21	1	42	0	42	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059276.1	chromosome	22	1	25	1	26	1	3.846154	2411at6657	"[{""busco_id"": ""2411at6657"", ""sequence"": ""NC_059276.1"", ""start"": 4752186, ""end"": 4758110, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_017591435.1	Portunus trituberculatus	NC_059277.1	chromosome	23	1	26	0	26	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059278.1	chromosome	24	1	31	0	31	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059279.1	chromosome	25	1	32	0	32	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059280.1	chromosome	26	1	9	0	9	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059281.1	chromosome	27	1	47	1	48	1	2.083333	36824at6657	"[{""busco_id"": ""36824at6657"", ""sequence"": ""NC_059281.1"", ""start"": 15309289, ""end"": 15305209, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_017591435.1	Portunus trituberculatus	NC_059282.1	chromosome	28	1	32	0	32	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059283.1	chromosome	29	1	17	0	17	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059284.1	chromosome	30	1	30	0	30	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059285.1	chromosome	31	1	40	0	40	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059286.1	chromosome	32	1	21	0	21	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059287.1	chromosome	33	1	29	0	29	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059288.1	chromosome	34	1	27	0	27	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059289.1	chromosome	35	1	21	1	22	1	4.545455	42470at6657	"[{""busco_id"": ""42470at6657"", ""sequence"": ""NC_059289.1"", ""start"": 20004470, ""end"": 19974005, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_017591435.1	Portunus trituberculatus	NC_059290.1	chromosome	36	1	29	0	29	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059291.1	chromosome	37	1	45	0	45	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059292.1	chromosome	38	1	54	0	54	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059293.1	chromosome	39	1	34	0	34	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059294.1	chromosome	40	1	33	0	33	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059295.1	chromosome	41	1	61	0	61	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059296.1	chromosome	42	1	37	0	37	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059297.1	chromosome	43	1	31	0	31	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059298.1	chromosome	44	1	32	0	32	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059299.1	chromosome	45	1	33	0	33	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059300.1	chromosome	46	1	34	0	34	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059301.1	chromosome	47	1	43	1	44	1	2.272727	36824at6657	"[{""busco_id"": ""36824at6657"", ""sequence"": ""NC_059301.1"", ""start"": 22464635, ""end"": 22469687, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_017591435.1	Portunus trituberculatus	NC_059302.1	chromosome	48	1	39	0	39	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059303.1	chromosome	49	1	22	0	22	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059304.1	chromosome	50	1	37	0	37	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NW_025541370.1	scaffold		0	1	0	1	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NW_025541559.1	scaffold		0	1	0	1	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NW_025541621.1	scaffold		0	1	0	1	0	0.000000		[]

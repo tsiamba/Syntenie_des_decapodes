@@ -1,0 +1,9 @@
+#parent	child	event	multiplicity	ref_seqs
+n8	Scylla_paramamosain	fission	1	['Scylla_paramamosain_NC_087177.1', 'Scylla_paramamosain_NC_087192.1']
+n4	Macrobrachium_nipponense	fusion	1	[['Scylla_paramamosain_NC_087180.1', 'Scylla_paramamosain_NC_087184.1'], []]
+n4	Macrobrachium_rosenbergii	fission	1	['Scylla_paramamosain_NC_087182.1', 'Scylla_paramamosain_NC_087183.1', 'Scylla_paramamosain_NC_087161.1']
+n1	Procambarus_clarkii	fusion	1	[[], ['Scylla_paramamosain_NC_087193.1']]
+n1	n4	fusion	1	[['Scylla_paramamosain_NC_087182.1'], ['Scylla_paramamosain_NC_087182.1']]
+n1	n4	fission	1	[]
+n1	n4	fission	1	['Scylla_paramamosain_NC_087156.1']
+

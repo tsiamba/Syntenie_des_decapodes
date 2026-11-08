@@ -1,0 +1,217 @@
+assembly	species	sequence_id	role	chromosome	represented_in_figure	single_families	duplicated_families	complete_families	duplicated_copies	duplication_percent	duplicated_busco_ids	duplicated_loci_json
+GCF_038502225.1	Cherax quadricarinatus	NC_091292.1	chromosome	1	1	26	0	26	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091293.1	chromosome	2	1	12	1	13	1	7.692308	18595at6657	"[{""busco_id"": ""18595at6657"", ""sequence"": ""NC_091293.1"", ""start"": 42426058, ""end"": 42425380, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_038502225.1	Cherax quadricarinatus	NC_091294.1	chromosome	3	1	15	0	15	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091295.1	chromosome	4	1	18	0	18	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091296.1	chromosome	5	1	33	1	34	1	2.941176	29818at6657	"[{""busco_id"": ""29818at6657"", ""sequence"": ""NC_091296.1"", ""start"": 57876476, ""end"": 57841903, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_038502225.1	Cherax quadricarinatus	NC_091297.1	chromosome	6	1	17	0	17	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091298.1	chromosome	7	1	19	0	19	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091299.1	chromosome	8	1	10	0	10	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091300.1	chromosome	9	1	17	0	17	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091301.1	chromosome	10	1	13	0	13	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091302.1	chromosome	11	1	19	0	19	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091303.1	chromosome	12	1	8	0	8	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091304.1	chromosome	13	1	11	0	11	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091305.1	chromosome	14	1	10	1	11	2	9.090909	7998at6657	"[{""busco_id"": ""7998at6657"", ""sequence"": ""NC_091305.1"", ""start"": 39639628, ""end"": 39690844, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}, {""busco_id"": ""7998at6657"", ""sequence"": ""NC_091305.1"", ""start"": 39785942, ""end"": 39723786, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_038502225.1	Cherax quadricarinatus	NC_091306.1	chromosome	15	1	18	0	18	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091307.1	chromosome	16	1	11	0	11	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091308.1	chromosome	17	1	14	0	14	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091309.1	chromosome	18	1	18	1	19	1	5.263158	33979at6657	"[{""busco_id"": ""33979at6657"", ""sequence"": ""NC_091309.1"", ""start"": 2403588, ""end"": 2322088, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_038502225.1	Cherax quadricarinatus	NC_091310.1	chromosome	19	1	16	0	16	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091311.1	chromosome	20	1	7	0	7	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091312.1	chromosome	21	1	11	0	11	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091313.1	chromosome	22	1	16	0	16	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091314.1	chromosome	23	1	16	3	19	3	15.789474	14972at6657;28310at6657;4068at6657	"[{""busco_id"": ""28310at6657"", ""sequence"": ""NC_091314.1"", ""start"": 8638108, ""end"": 8516949, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}, {""busco_id"": ""4068at6657"", ""sequence"": ""NC_091314.1"", ""start"": 10586884, ""end"": 10620311, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}, {""busco_id"": ""14972at6657"", ""sequence"": ""NC_091314.1"", ""start"": 40872830, ""end"": 40791812, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_038502225.1	Cherax quadricarinatus	NC_091315.1	chromosome	24	1	21	0	21	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091316.1	chromosome	25	1	10	0	10	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091317.1	chromosome	26	1	11	0	11	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091318.1	chromosome	27	1	18	0	18	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091319.1	chromosome	28	1	15	0	15	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091320.1	chromosome	29	1	13	0	13	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091321.1	chromosome	30	1	26	0	26	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091322.1	chromosome	31	1	20	0	20	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091323.1	chromosome	32	1	17	0	17	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091324.1	chromosome	33	1	18	0	18	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091325.1	chromosome	34	1	10	0	10	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091326.1	chromosome	35	1	17	0	17	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091327.1	chromosome	36	1	9	1	10	1	10.000000	13453at6657	"[{""busco_id"": ""13453at6657"", ""sequence"": ""NC_091327.1"", ""start"": 30326993, ""end"": 30218153, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_038502225.1	Cherax quadricarinatus	NC_091328.1	chromosome	37	1	14	0	14	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091329.1	chromosome	38	1	17	0	17	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091330.1	chromosome	39	1	14	0	14	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091331.1	chromosome	40	1	10	0	10	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091332.1	chromosome	41	1	20	0	20	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091333.1	chromosome	42	1	14	0	14	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091334.1	chromosome	43	1	23	0	23	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091335.1	chromosome	44	1	25	0	25	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091336.1	chromosome	45	1	15	0	15	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091337.1	chromosome	46	1	15	0	15	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091338.1	chromosome	47	1	11	0	11	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091339.1	chromosome	48	1	17	0	17	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091340.1	chromosome	49	1	9	0	9	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091341.1	chromosome	50	1	23	0	23	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091342.1	chromosome	51	1	12	0	12	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091343.1	chromosome	52	1	3	1	4	1	25.000000	14972at6657	"[{""busco_id"": ""14972at6657"", ""sequence"": ""NC_091343.1"", ""start"": 24652396, ""end"": 24643418, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_038502225.1	Cherax quadricarinatus	NC_091344.1	chromosome	53	1	9	2	11	2	18.181818	11492at6657;20298at6657	"[{""busco_id"": ""11492at6657"", ""sequence"": ""NC_091344.1"", ""start"": 13360297, ""end"": 13343036, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}, {""busco_id"": ""20298at6657"", ""sequence"": ""NC_091344.1"", ""start"": 16679894, ""end"": 16681325, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_038502225.1	Cherax quadricarinatus	NC_091345.1	chromosome	54	1	10	0	10	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091346.1	chromosome	55	1	6	0	6	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091347.1	chromosome	56	1	19	1	20	1	5.000000	24992at6657	"[{""busco_id"": ""24992at6657"", ""sequence"": ""NC_091347.1"", ""start"": 22810669, ""end"": 22820600, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_038502225.1	Cherax quadricarinatus	NC_091348.1	chromosome	57	1	8	0	8	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091349.1	chromosome	58	1	9	0	9	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091350.1	chromosome	59	1	13	0	13	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091351.1	chromosome	60	1	6	0	6	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091352.1	chromosome	61	1	15	0	15	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091353.1	chromosome	62	1	7	0	7	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091354.1	chromosome	63	1	21	0	21	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091355.1	chromosome	64	1	9	0	9	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091356.1	chromosome	65	1	8	0	8	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091357.1	chromosome	66	1	26	0	26	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091358.1	chromosome	67	1	7	0	7	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091359.1	chromosome	68	1	23	0	23	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091360.1	chromosome	69	1	11	1	12	1	8.333333	26167at6657	"[{""busco_id"": ""26167at6657"", ""sequence"": ""NC_091360.1"", ""start"": 22707588, ""end"": 22653530, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_038502225.1	Cherax quadricarinatus	NC_091361.1	chromosome	70	1	3	0	3	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091362.1	chromosome	71	1	13	1	14	1	7.142857	26059at6657	"[{""busco_id"": ""26059at6657"", ""sequence"": ""NC_091362.1"", ""start"": 363330, ""end"": 360663, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_038502225.1	Cherax quadricarinatus	NC_091363.1	chromosome	72	1	9	1	10	2	10.000000	36977at6657	"[{""busco_id"": ""36977at6657"", ""sequence"": ""NC_091363.1"", ""start"": 10777304, ""end"": 10749272, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}, {""busco_id"": ""36977at6657"", ""sequence"": ""NC_091363.1"", ""start"": 11510926, ""end"": 11483920, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_038502225.1	Cherax quadricarinatus	NC_091364.1	chromosome	73	1	8	0	8	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091365.1	chromosome	74	1	8	0	8	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091366.1	chromosome	75	1	20	0	20	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091367.1	chromosome	76	1	9	0	9	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091368.1	chromosome	77	1	3	1	4	1	25.000000	502at6657	"[{""busco_id"": ""502at6657"", ""sequence"": ""NC_091368.1"", ""start"": 13751021, ""end"": 13749671, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_038502225.1	Cherax quadricarinatus	NC_091369.1	chromosome	78	1	10	0	10	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091370.1	chromosome	79	1	12	1	13	1	7.692308	502at6657	"[{""busco_id"": ""502at6657"", ""sequence"": ""NC_091370.1"", ""start"": 19131653, ""end"": 19114214, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_038502225.1	Cherax quadricarinatus	NC_091371.1	chromosome	80	1	10	0	10	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091372.1	chromosome	81	1	13	0	13	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091373.1	chromosome	82	1	7	0	7	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091374.1	chromosome	83	1	14	0	14	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091375.1	chromosome	84	1	16	0	16	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091376.1	chromosome	85	1	11	0	11	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091377.1	chromosome	86	1	11	0	11	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091378.1	chromosome	87	1	6	0	6	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091379.1	chromosome	88	1	11	2	13	2	15.384615	18595at6657;26059at6657	"[{""busco_id"": ""18595at6657"", ""sequence"": ""NC_091379.1"", ""start"": 6276830, ""end"": 6273526, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}, {""busco_id"": ""26059at6657"", ""sequence"": ""NC_091379.1"", ""start"": 7364744, ""end"": 7399174, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_038502225.1	Cherax quadricarinatus	NC_091380.1	chromosome	89	1	14	0	14	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091382.1	chromosome	91	1	8	0	8	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091383.1	chromosome	92	1	7	0	7	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091384.1	chromosome	93	1	10	1	11	1	9.090909	29818at6657	"[{""busco_id"": ""29818at6657"", ""sequence"": ""NC_091384.1"", ""start"": 14192326, ""end"": 14191351, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_038502225.1	Cherax quadricarinatus	NC_091385.1	chromosome	94	1	2	1	3	1	33.333333	459at6657	"[{""busco_id"": ""459at6657"", ""sequence"": ""NC_091385.1"", ""start"": 10668780, ""end"": 10628771, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_038502225.1	Cherax quadricarinatus	NC_091386.1	chromosome	95	1	7	0	7	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091387.1	chromosome	96	1	7	0	7	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091388.1	chromosome	97	1	13	0	13	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091389.1	chromosome	98	1	11	1	12	1	8.333333	28310at6657	"[{""busco_id"": ""28310at6657"", ""sequence"": ""NC_091389.1"", ""start"": 9904593, ""end"": 9929443, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_038502225.1	Cherax quadricarinatus	NC_091390.1	chromosome	99	1	2	0	2	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NC_091391.1	chromosome	100	1	5	0	5	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NW_027195029.1	scaffold		1	4	0	4	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NW_027195033.1	scaffold		1	1	0	1	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NW_027195035.1	scaffold		1	1	0	1	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NW_027195038.1	scaffold		1	2	0	2	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NW_027195041.1	scaffold		1	1	0	1	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NW_027195042.1	scaffold		1	2	0	2	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NW_027195049.1	scaffold		1	1	0	1	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NW_027195051.1	scaffold		1	1	0	1	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NW_027195052.1	scaffold		1	2	0	2	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NW_027195056.1	scaffold		1	1	0	1	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NW_027195063.1	scaffold		1	2	0	2	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NW_027195070.1	scaffold		1	1	0	1	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NW_027195076.1	scaffold		1	1	0	1	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NW_027195084.1	scaffold		1	1	0	1	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NW_027195101.1	scaffold		1	2	0	2	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NW_027195111.1	scaffold		1	2	0	2	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NW_027195124.1	scaffold		1	1	1	2	1	50.000000	20298at6657	"[{""busco_id"": ""20298at6657"", ""sequence"": ""NW_027195124.1"", ""start"": 98226, ""end"": 177947, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_038502225.1	Cherax quadricarinatus	NW_027195125.1	scaffold		1	1	0	1	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NW_027195181.1	scaffold		1	1	0	1	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NW_027195186.1	scaffold		1	1	0	1	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NW_027195202.1	scaffold		1	1	0	1	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NW_027195212.1	scaffold		0	0	1	1	1	100.000000	26167at6657	"[{""busco_id"": ""26167at6657"", ""sequence"": ""NW_027195212.1"", ""start"": 32399, ""end"": 233881, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_038502225.1	Cherax quadricarinatus	NW_027195226.1	scaffold		1	1	0	1	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NW_027195265.1	scaffold		1	1	0	1	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NW_027195271.1	scaffold		1	1	0	1	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NW_027195279.1	scaffold		1	1	0	1	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NW_027195281.1	scaffold		1	1	0	1	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NW_027195283.1	scaffold		1	1	0	1	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NW_027195297.1	scaffold		1	1	0	1	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NW_027195317.1	scaffold		1	1	0	1	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NW_027195349.1	scaffold		1	1	0	1	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NW_027195359.1	scaffold		1	1	0	1	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NW_027195458.1	scaffold		1	1	0	1	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NW_027195527.1	scaffold		1	1	0	1	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NW_027195684.1	scaffold		1	1	0	1	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NW_027195896.1	scaffold		1	1	0	1	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NW_027196103.1	scaffold		0	0	1	1	1	100.000000	13453at6657	"[{""busco_id"": ""13453at6657"", ""sequence"": ""NW_027196103.1"", ""start"": 65101, ""end"": 34537, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_038502225.1	Cherax quadricarinatus	NW_027196186.1	scaffold		1	1	0	1	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NW_027196233.1	scaffold		1	1	0	1	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NW_027196290.1	scaffold		1	1	0	1	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NW_027196406.1	scaffold		1	1	0	1	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NW_027196531.1	scaffold		1	1	0	1	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NW_027196551.1	scaffold		0	0	1	1	1	100.000000	11492at6657	"[{""busco_id"": ""11492at6657"", ""sequence"": ""NW_027196551.1"", ""start"": 15494, ""end"": 45440, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_038502225.1	Cherax quadricarinatus	NW_027197218.1	scaffold		0	0	1	1	1	100.000000	4068at6657	"[{""busco_id"": ""4068at6657"", ""sequence"": ""NW_027197218.1"", ""start"": 29404, ""end"": 62111, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_038502225.1	Cherax quadricarinatus	NW_027197907.1	scaffold		0	0	1	1	1	100.000000	24992at6657	"[{""busco_id"": ""24992at6657"", ""sequence"": ""NW_027197907.1"", ""start"": 33588, ""end"": 48524, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_038502225.1	Cherax quadricarinatus	NW_027198061.1	scaffold		1	1	0	1	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NW_027198259.1	scaffold		0	0	1	1	1	100.000000	459at6657	"[{""busco_id"": ""459at6657"", ""sequence"": ""NW_027198259.1"", ""start"": 39098, ""end"": 4466, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_038502225.1	Cherax quadricarinatus	NW_027198300.1	scaffold		1	1	0	1	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NW_027198355.1	scaffold		1	1	0	1	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NW_027198576.1	scaffold		0	0	1	1	1	100.000000	33979at6657	"[{""busco_id"": ""33979at6657"", ""sequence"": ""NW_027198576.1"", ""start"": 17553, ""end"": 36444, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_038502225.1	Cherax quadricarinatus	NW_027198793.1	scaffold		1	1	0	1	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NW_027199446.1	scaffold		1	1	0	1	0	0.000000		[]
+GCF_038502225.1	Cherax quadricarinatus	NW_027199545.1	scaffold		1	1	0	1	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087151.1	chromosome	1	1	62	0	62	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087152.1	chromosome	2	1	44	1	45	1	2.222222	36824at6657	"[{""busco_id"": ""36824at6657"", ""sequence"": ""NC_087152.1"", ""start"": 11538941, ""end"": 11530667, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_035594125.1	Scylla paramamosain	NC_087153.1	chromosome	3	1	56	0	56	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087154.1	chromosome	4	1	35	0	35	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087155.1	chromosome	5	1	32	1	33	1	3.030303	42559at6657	"[{""busco_id"": ""42559at6657"", ""sequence"": ""NC_087155.1"", ""start"": 18025092, ""end"": 18000344, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 13}]"
+GCF_035594125.1	Scylla paramamosain	NC_087156.1	chromosome	6	1	37	1	38	2	2.631579	6752at6657	"[{""busco_id"": ""6752at6657"", ""sequence"": ""NC_087156.1"", ""start"": 866982, ""end"": 887850, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}, {""busco_id"": ""6752at6657"", ""sequence"": ""NC_087156.1"", ""start"": 34877411, ""end"": 34920537, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_035594125.1	Scylla paramamosain	NC_087157.1	chromosome	7	1	36	1	37	3	2.702703	11112at6657	"[{""busco_id"": ""11112at6657"", ""sequence"": ""NC_087157.1"", ""start"": 9506143, ""end"": 9495281, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 3}, {""busco_id"": ""11112at6657"", ""sequence"": ""NC_087157.1"", ""start"": 9638368, ""end"": 9627534, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 3}, {""busco_id"": ""11112at6657"", ""sequence"": ""NC_087157.1"", ""start"": 9761312, ""end"": 9756010, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 3}]"
+GCF_035594125.1	Scylla paramamosain	NC_087158.1	chromosome	8	1	46	2	48	3	4.166667	3048at6657;9737at6657	"[{""busco_id"": ""9737at6657"", ""sequence"": ""NC_087158.1"", ""start"": 3703699, ""end"": 3765140, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}, {""busco_id"": ""9737at6657"", ""sequence"": ""NC_087158.1"", ""start"": 4472479, ""end"": 4463981, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}, {""busco_id"": ""3048at6657"", ""sequence"": ""NC_087158.1"", ""start"": 19031685, ""end"": 19032129, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_035594125.1	Scylla paramamosain	NC_087159.1	chromosome	9	1	34	2	36	3	5.555556	16504at6657;21913at6657	"[{""busco_id"": ""21913at6657"", ""sequence"": ""NC_087159.1"", ""start"": 861824, ""end"": 865744, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 9}, {""busco_id"": ""16504at6657"", ""sequence"": ""NC_087159.1"", ""start"": 24693071, ""end"": 24695368, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}, {""busco_id"": ""16504at6657"", ""sequence"": ""NC_087159.1"", ""start"": 30850139, ""end"": 30852238, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_035594125.1	Scylla paramamosain	NC_087160.1	chromosome	10	1	46	0	46	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087161.1	chromosome	11	1	41	1	42	1	2.380952	5460at6657	"[{""busco_id"": ""5460at6657"", ""sequence"": ""NC_087161.1"", ""start"": 28218917, ""end"": 28229171, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_035594125.1	Scylla paramamosain	NC_087162.1	chromosome	12	1	41	2	43	2	4.651163	42559at6657;5460at6657	"[{""busco_id"": ""42559at6657"", ""sequence"": ""NC_087162.1"", ""start"": 37968, ""end"": 47212, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 13}, {""busco_id"": ""5460at6657"", ""sequence"": ""NC_087162.1"", ""start"": 7284894, ""end"": 7299453, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_035594125.1	Scylla paramamosain	NC_087163.1	chromosome	13	1	18	1	19	1	5.263158	42559at6657	"[{""busco_id"": ""42559at6657"", ""sequence"": ""NC_087163.1"", ""start"": 27113882, ""end"": 27104560, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 13}]"
+GCF_035594125.1	Scylla paramamosain	NC_087164.1	chromosome	14	1	28	0	28	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087165.1	chromosome	15	1	30	0	30	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087166.1	chromosome	16	1	21	0	21	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087167.1	chromosome	17	1	21	1	22	1	4.545455	3905at6657	"[{""busco_id"": ""3905at6657"", ""sequence"": ""NC_087167.1"", ""start"": 22103525, ""end"": 22104182, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_035594125.1	Scylla paramamosain	NC_087168.1	chromosome	18	1	34	0	34	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087169.1	chromosome	19	1	34	0	34	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087170.1	chromosome	20	1	47	1	48	1	2.083333	36824at6657	"[{""busco_id"": ""36824at6657"", ""sequence"": ""NC_087170.1"", ""start"": 9969484, ""end"": 9962798, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_035594125.1	Scylla paramamosain	NC_087171.1	chromosome	21	1	38	0	38	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087172.1	chromosome	22	1	42	1	43	1	2.325581	42559at6657	"[{""busco_id"": ""42559at6657"", ""sequence"": ""NC_087172.1"", ""start"": 60163, ""end"": 69457, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 13}]"
+GCF_035594125.1	Scylla paramamosain	NC_087173.1	chromosome	23	1	26	1	27	1	3.703704	3048at6657	"[{""busco_id"": ""3048at6657"", ""sequence"": ""NC_087173.1"", ""start"": 16843493, ""end"": 16845912, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_035594125.1	Scylla paramamosain	NC_087174.1	chromosome	24	1	31	0	31	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087175.1	chromosome	25	1	16	0	16	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087176.1	chromosome	26	1	20	1	21	1	4.761905	21913at6657	"[{""busco_id"": ""21913at6657"", ""sequence"": ""NC_087176.1"", ""start"": 21581414, ""end"": 21589786, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 9}]"
+GCF_035594125.1	Scylla paramamosain	NC_087177.1	chromosome	27	1	25	0	25	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087178.1	chromosome	28	1	32	0	32	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087179.1	chromosome	29	1	42	2	44	2	4.545455	21913at6657;42559at6657	"[{""busco_id"": ""21913at6657"", ""sequence"": ""NC_087179.1"", ""start"": 7180917, ""end"": 7189273, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 9}, {""busco_id"": ""42559at6657"", ""sequence"": ""NC_087179.1"", ""start"": 19710523, ""end"": 19698590, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 13}]"
+GCF_035594125.1	Scylla paramamosain	NC_087180.1	chromosome	30	1	18	0	18	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087181.1	chromosome	31	1	29	0	29	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087182.1	chromosome	32	1	32	0	32	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087183.1	chromosome	33	1	33	0	33	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087184.1	chromosome	34	1	28	0	28	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087185.1	chromosome	35	1	17	0	17	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087186.1	chromosome	36	1	34	0	34	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087187.1	chromosome	37	1	34	0	34	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087188.1	chromosome	38	1	27	0	27	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087189.1	chromosome	39	1	27	0	27	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087190.1	chromosome	40	1	14	0	14	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087191.1	chromosome	41	1	14	0	14	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087192.1	chromosome	42	1	10	0	10	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087193.1	chromosome	43	1	28	1	29	1	3.448276	42559at6657	"[{""busco_id"": ""42559at6657"", ""sequence"": ""NC_087193.1"", ""start"": 12855442, ""end"": 12843452, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 13}]"
+GCF_035594125.1	Scylla paramamosain	NC_087194.1	chromosome	44	1	22	0	22	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087195.1	chromosome	45	1	13	0	13	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087196.1	chromosome	46	1	22	2	24	6	8.333333	42559at6657;45623at6657	"[{""busco_id"": ""45623at6657"", ""sequence"": ""NC_087196.1"", ""start"": 9360400, ""end"": 9352837, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 5}, {""busco_id"": ""45623at6657"", ""sequence"": ""NC_087196.1"", ""start"": 9370068, ""end"": 9366750, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 5}, {""busco_id"": ""45623at6657"", ""sequence"": ""NC_087196.1"", ""start"": 9379955, ""end"": 9376496, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 5}, {""busco_id"": ""45623at6657"", ""sequence"": ""NC_087196.1"", ""start"": 9389869, ""end"": 9383542, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 5}, {""busco_id"": ""45623at6657"", ""sequence"": ""NC_087196.1"", ""start"": 9399864, ""end"": 9393479, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 5}, {""busco_id"": ""42559at6657"", ""sequence"": ""NC_087196.1"", ""start"": 10539691, ""end"": 10527611, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 13}]"
+GCF_035594125.1	Scylla paramamosain	NC_087197.1	chromosome	47	1	19	0	19	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087199.1	chromosome	49	1	13	0	13	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NW_026973666.1	scaffold		1	17	0	17	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NW_026973667.1	scaffold		1	24	0	24	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NW_026973668.1	scaffold		1	21	1	22	1	4.545455	3905at6657	"[{""busco_id"": ""3905at6657"", ""sequence"": ""NW_026973668.1"", ""start"": 1935153, ""end"": 1939056, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_035594125.1	Scylla paramamosain	NW_026973669.1	scaffold		1	5	0	5	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NW_026973670.1	scaffold		1	3	0	3	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NW_026973673.1	scaffold		0	0	1	1	1	100.000000	21913at6657	"[{""busco_id"": ""21913at6657"", ""sequence"": ""NW_026973673.1"", ""start"": 1761403, ""end"": 1769739, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 9}]"
+GCF_035594125.1	Scylla paramamosain	NW_026973676.1	scaffold		0	0	1	1	2	100.000000	42559at6657	"[{""busco_id"": ""42559at6657"", ""sequence"": ""NW_026973676.1"", ""start"": 1412316, ""end"": 1392530, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 13}, {""busco_id"": ""42559at6657"", ""sequence"": ""NW_026973676.1"", ""start"": 1444905, ""end"": 1425429, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 13}]"
+GCF_035594125.1	Scylla paramamosain	NW_026973696.1	scaffold		1	4	0	4	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NW_026973698.1	scaffold		0	0	1	1	1	100.000000	21913at6657	"[{""busco_id"": ""21913at6657"", ""sequence"": ""NW_026973698.1"", ""start"": 611233, ""end"": 602872, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 9}]"
+GCF_035594125.1	Scylla paramamosain	NW_026973699.1	scaffold		0	0	1	1	1	100.000000	21913at6657	"[{""busco_id"": ""21913at6657"", ""sequence"": ""NW_026973699.1"", ""start"": 743265, ""end"": 734879, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 9}]"
+GCF_035594125.1	Scylla paramamosain	NW_026973706.1	scaffold		0	0	1	1	1	100.000000	21913at6657	"[{""busco_id"": ""21913at6657"", ""sequence"": ""NW_026973706.1"", ""start"": 718368, ""end"": 710007, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 9}]"
+GCF_035594125.1	Scylla paramamosain	NW_026973709.1	scaffold		0	0	1	1	1	100.000000	21913at6657	"[{""busco_id"": ""21913at6657"", ""sequence"": ""NW_026973709.1"", ""start"": 8244, ""end"": 16613, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 9}]"
+GCF_035594125.1	Scylla paramamosain	NW_026973727.1	scaffold		0	0	1	1	1	100.000000	21913at6657	"[{""busco_id"": ""21913at6657"", ""sequence"": ""NW_026973727.1"", ""start"": 52700, ""end"": 44383, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 9}]"
+GCF_035594125.1	Scylla paramamosain	NW_026973737.1	scaffold		0	0	1	1	1	100.000000	42559at6657	"[{""busco_id"": ""42559at6657"", ""sequence"": ""NW_026973737.1"", ""start"": 458670, ""end"": 438605, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 13}]"
+GCF_035594125.1	Scylla paramamosain	NW_026973743.1	scaffold		0	0	1	1	1	100.000000	42559at6657	"[{""busco_id"": ""42559at6657"", ""sequence"": ""NW_026973743.1"", ""start"": 57793, ""end"": 67228, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 13}]"
+GCF_035594125.1	Scylla paramamosain	NW_026973804.1	scaffold		0	0	1	1	2	100.000000	42559at6657	"[{""busco_id"": ""42559at6657"", ""sequence"": ""NW_026973804.1"", ""start"": 54728, ""end"": 35179, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 13}, {""busco_id"": ""42559at6657"", ""sequence"": ""NW_026973804.1"", ""start"": 101451, ""end"": 91003, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 13}]"

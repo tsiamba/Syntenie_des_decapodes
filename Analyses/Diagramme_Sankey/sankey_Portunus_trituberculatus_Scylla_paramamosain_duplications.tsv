@@ -1,0 +1,118 @@
+assembly	species	sequence_id	role	chromosome	represented_in_figure	single_families	duplicated_families	complete_families	duplicated_copies	duplication_percent	duplicated_busco_ids	duplicated_loci_json
+GCF_017591435.1	Portunus trituberculatus	NC_059255.1	chromosome	1	1	17	0	17	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059256.1	chromosome	2	1	58	1	59	2	1.694915	1771at6657	"[{""busco_id"": ""1771at6657"", ""sequence"": ""NC_059256.1"", ""start"": 2603962, ""end"": 2612716, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}, {""busco_id"": ""1771at6657"", ""sequence"": ""NC_059256.1"", ""start"": 2619704, ""end"": 2615029, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_017591435.1	Portunus trituberculatus	NC_059257.1	chromosome	3	1	13	0	13	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059258.1	chromosome	4	1	23	0	23	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059259.1	chromosome	5	1	13	1	14	1	7.142857	42470at6657	"[{""busco_id"": ""42470at6657"", ""sequence"": ""NC_059259.1"", ""start"": 2744395, ""end"": 2553724, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_017591435.1	Portunus trituberculatus	NC_059260.1	chromosome	6	1	13	0	13	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059261.1	chromosome	7	1	22	0	22	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059262.1	chromosome	8	1	19	0	19	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059263.1	chromosome	9	1	41	0	41	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059264.1	chromosome	10	1	16	0	16	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059265.1	chromosome	11	1	2	1	3	1	33.333333	2411at6657	"[{""busco_id"": ""2411at6657"", ""sequence"": ""NC_059265.1"", ""start"": 5817923, ""end"": 5800864, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_017591435.1	Portunus trituberculatus	NC_059266.1	chromosome	12	1	34	0	34	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059267.1	chromosome	13	1	27	0	27	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059268.1	chromosome	14	1	38	0	38	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059269.1	chromosome	15	1	27	1	28	1	3.571429	7965at6657	"[{""busco_id"": ""7965at6657"", ""sequence"": ""NC_059269.1"", ""start"": 8358032, ""end"": 8294307, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_017591435.1	Portunus trituberculatus	NC_059270.1	chromosome	16	1	16	0	16	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059271.1	chromosome	17	1	35	0	35	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059272.1	chromosome	18	1	47	1	48	2	2.083333	31225at6657	"[{""busco_id"": ""31225at6657"", ""sequence"": ""NC_059272.1"", ""start"": 4175767, ""end"": 4094930, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}, {""busco_id"": ""31225at6657"", ""sequence"": ""NC_059272.1"", ""start"": 6135500, ""end"": 5945927, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_017591435.1	Portunus trituberculatus	NC_059273.1	chromosome	19	1	29	0	29	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059274.1	chromosome	20	1	19	1	20	1	5.000000	7965at6657	"[{""busco_id"": ""7965at6657"", ""sequence"": ""NC_059274.1"", ""start"": 9001395, ""end"": 8990731, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_017591435.1	Portunus trituberculatus	NC_059275.1	chromosome	21	1	42	0	42	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059276.1	chromosome	22	1	25	1	26	1	3.846154	2411at6657	"[{""busco_id"": ""2411at6657"", ""sequence"": ""NC_059276.1"", ""start"": 4752186, ""end"": 4758110, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_017591435.1	Portunus trituberculatus	NC_059277.1	chromosome	23	1	26	0	26	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059278.1	chromosome	24	1	31	0	31	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059279.1	chromosome	25	1	32	0	32	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059280.1	chromosome	26	1	9	0	9	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059281.1	chromosome	27	1	47	1	48	1	2.083333	36824at6657	"[{""busco_id"": ""36824at6657"", ""sequence"": ""NC_059281.1"", ""start"": 15309289, ""end"": 15305209, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_017591435.1	Portunus trituberculatus	NC_059282.1	chromosome	28	1	32	0	32	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059283.1	chromosome	29	1	17	0	17	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059284.1	chromosome	30	1	30	0	30	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059285.1	chromosome	31	1	40	0	40	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059286.1	chromosome	32	1	21	0	21	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059287.1	chromosome	33	1	29	0	29	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059288.1	chromosome	34	1	27	0	27	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059289.1	chromosome	35	1	21	1	22	1	4.545455	42470at6657	"[{""busco_id"": ""42470at6657"", ""sequence"": ""NC_059289.1"", ""start"": 20004470, ""end"": 19974005, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_017591435.1	Portunus trituberculatus	NC_059290.1	chromosome	36	1	29	0	29	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059291.1	chromosome	37	1	45	0	45	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059292.1	chromosome	38	1	54	0	54	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059293.1	chromosome	39	1	34	0	34	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059294.1	chromosome	40	1	33	0	33	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059295.1	chromosome	41	1	61	0	61	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059296.1	chromosome	42	1	37	0	37	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059297.1	chromosome	43	1	31	0	31	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059298.1	chromosome	44	1	32	0	32	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059299.1	chromosome	45	1	33	0	33	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059300.1	chromosome	46	1	34	0	34	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059301.1	chromosome	47	1	43	1	44	1	2.272727	36824at6657	"[{""busco_id"": ""36824at6657"", ""sequence"": ""NC_059301.1"", ""start"": 22464635, ""end"": 22469687, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_017591435.1	Portunus trituberculatus	NC_059302.1	chromosome	48	1	39	0	39	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059303.1	chromosome	49	1	22	0	22	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NC_059304.1	chromosome	50	1	37	0	37	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NW_025541370.1	scaffold		0	1	0	1	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NW_025541559.1	scaffold		1	1	0	1	0	0.000000		[]
+GCF_017591435.1	Portunus trituberculatus	NW_025541621.1	scaffold		1	1	0	1	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087151.1	chromosome	1	1	62	0	62	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087152.1	chromosome	2	1	44	1	45	1	2.222222	36824at6657	"[{""busco_id"": ""36824at6657"", ""sequence"": ""NC_087152.1"", ""start"": 11538941, ""end"": 11530667, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_035594125.1	Scylla paramamosain	NC_087153.1	chromosome	3	1	56	0	56	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087154.1	chromosome	4	1	35	0	35	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087155.1	chromosome	5	1	32	1	33	1	3.030303	42559at6657	"[{""busco_id"": ""42559at6657"", ""sequence"": ""NC_087155.1"", ""start"": 18025092, ""end"": 18000344, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 13}]"
+GCF_035594125.1	Scylla paramamosain	NC_087156.1	chromosome	6	1	37	1	38	2	2.631579	6752at6657	"[{""busco_id"": ""6752at6657"", ""sequence"": ""NC_087156.1"", ""start"": 866982, ""end"": 887850, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}, {""busco_id"": ""6752at6657"", ""sequence"": ""NC_087156.1"", ""start"": 34877411, ""end"": 34920537, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_035594125.1	Scylla paramamosain	NC_087157.1	chromosome	7	1	36	1	37	3	2.702703	11112at6657	"[{""busco_id"": ""11112at6657"", ""sequence"": ""NC_087157.1"", ""start"": 9506143, ""end"": 9495281, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 3}, {""busco_id"": ""11112at6657"", ""sequence"": ""NC_087157.1"", ""start"": 9638368, ""end"": 9627534, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 3}, {""busco_id"": ""11112at6657"", ""sequence"": ""NC_087157.1"", ""start"": 9761312, ""end"": 9756010, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 3}]"
+GCF_035594125.1	Scylla paramamosain	NC_087158.1	chromosome	8	1	46	2	48	3	4.166667	3048at6657;9737at6657	"[{""busco_id"": ""9737at6657"", ""sequence"": ""NC_087158.1"", ""start"": 3703699, ""end"": 3765140, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}, {""busco_id"": ""9737at6657"", ""sequence"": ""NC_087158.1"", ""start"": 4472479, ""end"": 4463981, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}, {""busco_id"": ""3048at6657"", ""sequence"": ""NC_087158.1"", ""start"": 19031685, ""end"": 19032129, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_035594125.1	Scylla paramamosain	NC_087159.1	chromosome	9	1	34	2	36	3	5.555556	16504at6657;21913at6657	"[{""busco_id"": ""21913at6657"", ""sequence"": ""NC_087159.1"", ""start"": 861824, ""end"": 865744, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 9}, {""busco_id"": ""16504at6657"", ""sequence"": ""NC_087159.1"", ""start"": 24693071, ""end"": 24695368, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}, {""busco_id"": ""16504at6657"", ""sequence"": ""NC_087159.1"", ""start"": 30850139, ""end"": 30852238, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_035594125.1	Scylla paramamosain	NC_087160.1	chromosome	10	1	46	0	46	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087161.1	chromosome	11	1	41	1	42	1	2.380952	5460at6657	"[{""busco_id"": ""5460at6657"", ""sequence"": ""NC_087161.1"", ""start"": 28218917, ""end"": 28229171, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_035594125.1	Scylla paramamosain	NC_087162.1	chromosome	12	1	41	2	43	2	4.651163	42559at6657;5460at6657	"[{""busco_id"": ""42559at6657"", ""sequence"": ""NC_087162.1"", ""start"": 37968, ""end"": 47212, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 13}, {""busco_id"": ""5460at6657"", ""sequence"": ""NC_087162.1"", ""start"": 7284894, ""end"": 7299453, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_035594125.1	Scylla paramamosain	NC_087163.1	chromosome	13	1	18	1	19	1	5.263158	42559at6657	"[{""busco_id"": ""42559at6657"", ""sequence"": ""NC_087163.1"", ""start"": 27113882, ""end"": 27104560, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 13}]"
+GCF_035594125.1	Scylla paramamosain	NC_087164.1	chromosome	14	1	28	0	28	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087165.1	chromosome	15	1	30	0	30	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087166.1	chromosome	16	1	21	0	21	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087167.1	chromosome	17	1	21	1	22	1	4.545455	3905at6657	"[{""busco_id"": ""3905at6657"", ""sequence"": ""NC_087167.1"", ""start"": 22103525, ""end"": 22104182, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_035594125.1	Scylla paramamosain	NC_087168.1	chromosome	18	1	34	0	34	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087169.1	chromosome	19	1	34	0	34	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087170.1	chromosome	20	1	47	1	48	1	2.083333	36824at6657	"[{""busco_id"": ""36824at6657"", ""sequence"": ""NC_087170.1"", ""start"": 9969484, ""end"": 9962798, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_035594125.1	Scylla paramamosain	NC_087171.1	chromosome	21	1	38	0	38	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087172.1	chromosome	22	1	42	1	43	1	2.325581	42559at6657	"[{""busco_id"": ""42559at6657"", ""sequence"": ""NC_087172.1"", ""start"": 60163, ""end"": 69457, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 13}]"
+GCF_035594125.1	Scylla paramamosain	NC_087173.1	chromosome	23	1	26	1	27	1	3.703704	3048at6657	"[{""busco_id"": ""3048at6657"", ""sequence"": ""NC_087173.1"", ""start"": 16843493, ""end"": 16845912, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_035594125.1	Scylla paramamosain	NC_087174.1	chromosome	24	1	31	0	31	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087175.1	chromosome	25	1	16	0	16	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087176.1	chromosome	26	1	20	1	21	1	4.761905	21913at6657	"[{""busco_id"": ""21913at6657"", ""sequence"": ""NC_087176.1"", ""start"": 21581414, ""end"": 21589786, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 9}]"
+GCF_035594125.1	Scylla paramamosain	NC_087177.1	chromosome	27	1	25	0	25	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087178.1	chromosome	28	1	32	0	32	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087179.1	chromosome	29	1	42	2	44	2	4.545455	21913at6657;42559at6657	"[{""busco_id"": ""21913at6657"", ""sequence"": ""NC_087179.1"", ""start"": 7180917, ""end"": 7189273, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 9}, {""busco_id"": ""42559at6657"", ""sequence"": ""NC_087179.1"", ""start"": 19710523, ""end"": 19698590, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 13}]"
+GCF_035594125.1	Scylla paramamosain	NC_087180.1	chromosome	30	1	18	0	18	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087181.1	chromosome	31	1	29	0	29	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087182.1	chromosome	32	1	32	0	32	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087183.1	chromosome	33	1	33	0	33	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087184.1	chromosome	34	1	28	0	28	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087185.1	chromosome	35	1	17	0	17	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087186.1	chromosome	36	1	34	0	34	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087187.1	chromosome	37	1	34	0	34	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087188.1	chromosome	38	1	27	0	27	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087189.1	chromosome	39	1	27	0	27	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087190.1	chromosome	40	1	14	0	14	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087191.1	chromosome	41	1	14	0	14	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087192.1	chromosome	42	1	10	0	10	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087193.1	chromosome	43	1	28	1	29	1	3.448276	42559at6657	"[{""busco_id"": ""42559at6657"", ""sequence"": ""NC_087193.1"", ""start"": 12855442, ""end"": 12843452, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 13}]"
+GCF_035594125.1	Scylla paramamosain	NC_087194.1	chromosome	44	1	22	0	22	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087195.1	chromosome	45	1	13	0	13	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087196.1	chromosome	46	1	22	2	24	6	8.333333	42559at6657;45623at6657	"[{""busco_id"": ""45623at6657"", ""sequence"": ""NC_087196.1"", ""start"": 9360400, ""end"": 9352837, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 5}, {""busco_id"": ""45623at6657"", ""sequence"": ""NC_087196.1"", ""start"": 9370068, ""end"": 9366750, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 5}, {""busco_id"": ""45623at6657"", ""sequence"": ""NC_087196.1"", ""start"": 9379955, ""end"": 9376496, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 5}, {""busco_id"": ""45623at6657"", ""sequence"": ""NC_087196.1"", ""start"": 9389869, ""end"": 9383542, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 5}, {""busco_id"": ""45623at6657"", ""sequence"": ""NC_087196.1"", ""start"": 9399864, ""end"": 9393479, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 5}, {""busco_id"": ""42559at6657"", ""sequence"": ""NC_087196.1"", ""start"": 10539691, ""end"": 10527611, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 13}]"
+GCF_035594125.1	Scylla paramamosain	NC_087197.1	chromosome	47	1	19	0	19	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NC_087199.1	chromosome	49	1	13	0	13	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NW_026973666.1	scaffold		1	17	0	17	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NW_026973667.1	scaffold		1	24	0	24	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NW_026973668.1	scaffold		1	21	1	22	1	4.545455	3905at6657	"[{""busco_id"": ""3905at6657"", ""sequence"": ""NW_026973668.1"", ""start"": 1935153, ""end"": 1939056, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 2}]"
+GCF_035594125.1	Scylla paramamosain	NW_026973669.1	scaffold		1	5	0	5	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NW_026973670.1	scaffold		1	3	0	3	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NW_026973673.1	scaffold		0	0	1	1	1	100.000000	21913at6657	"[{""busco_id"": ""21913at6657"", ""sequence"": ""NW_026973673.1"", ""start"": 1761403, ""end"": 1769739, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 9}]"
+GCF_035594125.1	Scylla paramamosain	NW_026973676.1	scaffold		0	0	1	1	2	100.000000	42559at6657	"[{""busco_id"": ""42559at6657"", ""sequence"": ""NW_026973676.1"", ""start"": 1412316, ""end"": 1392530, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 13}, {""busco_id"": ""42559at6657"", ""sequence"": ""NW_026973676.1"", ""start"": 1444905, ""end"": 1425429, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 13}]"
+GCF_035594125.1	Scylla paramamosain	NW_026973696.1	scaffold		1	4	0	4	0	0.000000		[]
+GCF_035594125.1	Scylla paramamosain	NW_026973698.1	scaffold		0	0	1	1	1	100.000000	21913at6657	"[{""busco_id"": ""21913at6657"", ""sequence"": ""NW_026973698.1"", ""start"": 611233, ""end"": 602872, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 9}]"
+GCF_035594125.1	Scylla paramamosain	NW_026973699.1	scaffold		0	0	1	1	1	100.000000	21913at6657	"[{""busco_id"": ""21913at6657"", ""sequence"": ""NW_026973699.1"", ""start"": 743265, ""end"": 734879, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 9}]"
+GCF_035594125.1	Scylla paramamosain	NW_026973706.1	scaffold		0	0	1	1	1	100.000000	21913at6657	"[{""busco_id"": ""21913at6657"", ""sequence"": ""NW_026973706.1"", ""start"": 718368, ""end"": 710007, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 9}]"
+GCF_035594125.1	Scylla paramamosain	NW_026973709.1	scaffold		0	0	1	1	1	100.000000	21913at6657	"[{""busco_id"": ""21913at6657"", ""sequence"": ""NW_026973709.1"", ""start"": 8244, ""end"": 16613, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 9}]"
+GCF_035594125.1	Scylla paramamosain	NW_026973727.1	scaffold		0	0	1	1	1	100.000000	21913at6657	"[{""busco_id"": ""21913at6657"", ""sequence"": ""NW_026973727.1"", ""start"": 52700, ""end"": 44383, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 9}]"
+GCF_035594125.1	Scylla paramamosain	NW_026973737.1	scaffold		0	0	1	1	1	100.000000	42559at6657	"[{""busco_id"": ""42559at6657"", ""sequence"": ""NW_026973737.1"", ""start"": 458670, ""end"": 438605, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 13}]"
+GCF_035594125.1	Scylla paramamosain	NW_026973743.1	scaffold		0	0	1	1	1	100.000000	42559at6657	"[{""busco_id"": ""42559at6657"", ""sequence"": ""NW_026973743.1"", ""start"": 57793, ""end"": 67228, ""strand"": ""+"", ""status"": ""Duplicated"", ""copies_in_genome"": 13}]"
+GCF_035594125.1	Scylla paramamosain	NW_026973804.1	scaffold		0	0	1	1	2	100.000000	42559at6657	"[{""busco_id"": ""42559at6657"", ""sequence"": ""NW_026973804.1"", ""start"": 54728, ""end"": 35179, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 13}, {""busco_id"": ""42559at6657"", ""sequence"": ""NW_026973804.1"", ""start"": 101451, ""end"": 91003, ""strand"": ""-"", ""status"": ""Duplicated"", ""copies_in_genome"": 13}]"

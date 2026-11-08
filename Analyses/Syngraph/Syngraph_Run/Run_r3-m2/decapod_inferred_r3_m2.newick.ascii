@@ -1,0 +1,22 @@
+
+      /-Procambarus_clarkii
+     |
+     |   /-Macrobrachium_nipponense
+     |-n4
+     |   \-Macrobrachium_rosenbergii
+     |
+     |--Panulirus_ornatus
+     |
+     |--Cherax_quadricarinatus
+   /n1
+  |  |   /-Penaeus_chinensis
+  |  |-n7
+  |  |   \-Penaeus_vannamei
+  |  |
+-n0  |   /-Portunus_trituberculatus
+  |  |-n8
+  |  |   \-Scylla_paramamosain
+  |  |
+  |   \-Eriocheir_sinensis
+  |
+   \-Jaera_praehirsuta
