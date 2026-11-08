@@ -2,7 +2,7 @@
 
 ## Description
 
-Le script `dotplot_all_pairs_V2.py` compare les 11 génomes deux à deux à partir
+Le script `dotplot_all_pairs.py` compare les 11 génomes deux à deux à partir
 des BUSCO complets à copie unique issus de `crustacea_odb12`.
 
 Il réalise les 55 comparaisons possibles et produit un dot plot pour chaque paire.
