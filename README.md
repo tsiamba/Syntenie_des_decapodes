@@ -8,11 +8,11 @@ Ce projet compare **dix génomes de Décapodes et un Isopode utilisé comme grou
 
 ## 1. Contexte et question biologique
 
-La **synténie** désigne ici le maintien de gènes sur un même chromosome au cours de l’évolution. Nous distinguons la **macrosynténie**, étudiée par la conservation du contenu chromosomique, de la **colinéarité**, qui concerne la conservation de l’ordre des marqueurs. Deux chromosomes peuvent ainsi conserver une grande partie de leur contenu tout en présentant un ordre interne remanié. À plus grande échelle, ces correspondances peuvent contribuer à identifier des **groupes de liaison ancestraux**, ou ALG (*ancestral linkage groups*). [Simakov et al., 2022](https://doi.org/10.1126/sciadv.abi5884).
+La **synténie** désigne ici le maintien de gènes sur un même chromosome au cours de l’évolution. Nous distinguons la **macrosynténie**, étudiée par la conservation du contenu chromosomique, de la **colinéarité**, qui concerne la conservation de l’ordre des marqueurs. Deux chromosomes peuvent ainsi conserver une grande partie de leur contenu tout en présentant un ordre interne remanié. À plus grande échelle, ces correspondances peuvent contribuer à identifier des **groupes de liaison ancestraux**, ou ALG (*ancestral linkage groups*).
 
 Les Décapodes regroupent notamment les crevettes, les crabes, les écrevisses, les langoustes et les homards. Leur diversité s’accompagne d’une forte variation de l’organisation génomique : dans notre échantillon, les assemblages de Décapodes comportent de **43 à 100 chromosomes nucléaires identifiés**. Cette variation pose la question de l’homologie des chromosomes entre espèces et de la persistance de groupes de gènes liés malgré les fissions, fusions ou autres réarrangements.
 
-L’étude de ces génomes a longtemps été compliquée par leur taille, leur richesse en séquences répétées et la difficulté à obtenir des assemblages continus. Ces obstacles sont notamment documentés chez la crevette *Penaeus vannamei*, nommée *Litopenaeus vannamei* dans la publication, et le crabe *Eriocheir sinensis*. Les lectures longues et l’ancrage chromosomique rendent désormais accessibles des comparaisons à l’échelle des chromosomes. Les caractéristiques des assemblages publiés dans ces études ne doivent pas être confondues avec celles des versions sélectionnées ici. [Zhang et al., 2019](https://doi.org/10.1038/s41467-018-08197-4), [Cui et al., 2021](https://doi.org/10.1038/s41467-021-22604-3).
+L’étude de ces génomes a longtemps été compliquée par leur taille, leur richesse en séquences répétées et la difficulté à obtenir des assemblages continus. Ces obstacles sont notamment documentés chez la crevette *Penaeus vannamei*, nommée *Litopenaeus vannamei* dans la publication, et le crabe *Eriocheir sinensis*. Les lectures longues et l’ancrage chromosomique rendent désormais accessibles des comparaisons à l’échelle des chromosomes.
 
 **Question centrale : une macrosynténie subsiste-t-elle entre les génomes des Décapodes malgré leurs différences de nombre de chromosomes ?**
 
@@ -76,7 +76,7 @@ flowchart TD
 
 ### BUSCO : marqueurs et complétude
 
-BUSCO (*Benchmarking Universal Single-Copy Orthologs*) recherche des groupes orthologues attendus dans un lignage. Il fournit à la fois une évaluation du contenu génique attendu et des positions de marqueurs utilisables pour la comparaison. Les catégories sont : **S**, complets à copie unique ; **D**, complets dupliqués ; **F**, fragmentés ; **M**, manquants, avec **C = S + D**. Un BUSCO manquant n’établit pas à lui seul une perte biologique. [Manni et al., 2021](https://doi.org/10.1093/molbev/msab199).
+BUSCO (*Benchmarking Universal Single-Copy Orthologs*) recherche des groupes orthologues attendus dans un lignage. Il fournit à la fois une évaluation du contenu génique attendu et des positions de marqueurs utilisables pour la comparaison. Les catégories sont : **S**, complets à copie unique ; **D**, complets dupliqués ; **F**, fragmentés ; **M**, manquants, avec **C = S + D**. Un BUSCO manquant n’établit pas à lui seul une perte biologique.
 
 Les premiers essais utilisaient MetaEuk et `arthropoda_odb10`. La série retenue utilise **Miniprot et `crustacea_odb12`**, créé le **22 mai 2026**, comprenant **1 536 groupes BUSCO**. Elle rassemble six calculs locaux avec BUSCO **6.1.0** / Miniprot **0.18-r281**, et cinq résultats avec BUSCO **5.8.2** / Miniprot **0.13-r248**. Cette différence de versions constitue une limite méthodologique documentée dans [la synthèse BUSCO](Analyses/busco_crustacea_odb12.md).
 
@@ -132,7 +132,7 @@ Le fichier [phylotree.newick](Analyses/Syngraph/phylo_tree/phylotree.newick) pla
 
 [SynGraph](https://github.com/A-J-F-Mackintosh/syngraph) utilise les cooccurrences de marqueurs sur les chromosomes et un arbre pour inférer les groupes de liaison ancestraux et les réarrangements. Le mode `infer -r 2` considère les fusions/fissions ; `-r 3` ajoute les translocations réciproques, dans un mode annoncé expérimental par l’outil. Le paramètre `infer -m` fixe le nombre minimal de marqueurs impliqués dans un réarrangement. Les runs exploratoires sont organisés en séries `r2/r3` et seuils `m1` à `m5`. [Documentation SynGraph](https://github.com/A-J-F-Mackintosh/syngraph).
 
-SynGraph travaille **indépendamment de l’ordre local des marqueurs**. Un faible nombre d’événements ne peut donc pas être expliqué directement par une absence de colinéarité dans les dotplots. Il faut examiner le support en marqueurs, les filtres, les seuils, les assemblages et l’arbre. [Wright et al., 2024](https://doi.org/10.1038/s41559-024-02329-4).
+SynGraph travaille **indépendamment de l’ordre local des marqueurs**. Un faible nombre d’événements ne peut donc pas être expliqué directement par une absence de colinéarité dans les dotplots. Il faut examiner le support en marqueurs, les filtres, les seuils, les assemblages et l’arbre.
 
 ## 5. Organisation du projet et utilisation
 
